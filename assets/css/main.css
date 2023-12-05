@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-p, h1, h2, h3, h4, h5, h6, span, a {
+p, h1, h2, h3, h4, h5, h6, a {
   font-family: GeorgiaPro;
 }
 
@@ -81,7 +81,7 @@ h1 {
 }
 
 h2 {
-  font-family: Marykate
+  font-family: Marykate;
 }
 
 h3 {
@@ -92,6 +92,20 @@ h4 {
   font-family: French Canon;
 }
 
+h5 {
+  font-family: Apple Juice;
+}
+
 h6 {
   font-family: Bellota;
+}
+
+body {
+  font-family: Georgia Pro;
+}
+
+.tale {
+  font-family: Apple Juice;
+  position: absolute;
+  font-size: 2rem;
 }

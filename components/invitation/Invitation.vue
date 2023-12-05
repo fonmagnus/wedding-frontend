@@ -11,7 +11,10 @@
     </div>
 
     <div class="flex flex-col gap-2 w-full">
-      <Button class="w-full border border-white hover:bg-black transition-all">
+      <Button
+        class="w-full border border-white hover:bg-black transition-all"
+        @click="$router.push(`story?code=${$route.query.code}`)"
+      >
         <span> Our Story </span>
       </Button>
       <Button
