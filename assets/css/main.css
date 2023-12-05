@@ -110,4 +110,5 @@ body {
   font-family: Apple Juice;
   position: absolute;
   font-size: 2rem;
+  z-index: 10;
 }

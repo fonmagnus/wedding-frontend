@@ -1,5 +1,6 @@
 <template>
   <div
+    id="animation-container"
     class="flex flex-col items-center relative py-16 px-8 bg-black text-white w-full"
   >
     <span>
@@ -233,8 +234,41 @@ export default {
         const y = targetY - rect.top;
 
         const duration = Math.random() * 2.5 + 1;
-        this.$gsap.to(elem, { x, y, duration, ease: "power1.inOut" });
+        this.$gsap.to(elem, { x, y, duration });
+
+        const repeat = Math.floor(Math.random(20) + 20);
+
+        for (let j = 0; j < repeat; j++) {
+          setTimeout(() => {
+            this.animateStars(elem, i, j);
+          }, (j / repeat) * duration * 1000);
+        }
       }
+    },
+
+    animateStars(elem, i, j) {
+      const container = document.getElementById("animation-container");
+      const star = document.createElement("div");
+      star.id = `star-${i}-${j}`;
+      const rect = elem.getBoundingClientRect();
+      // star.classList.add("fa");
+      // star.classList.add("fa-stars");
+      star.style.height = "5px";
+      star.style.width = "5px";
+      star.style.position = "absolute";
+      star.style.top = `${rect.top}px`;
+      star.style.left = `${rect.left}px`;
+      star.style.color = "yellow";
+      star.innerText = "✨";
+
+      container.appendChild(star);
+
+      this.$gsap.to(star, {
+        y: 500,
+        opacity: 0,
+        duration: 0.5,
+        ease: "power1.inOut",
+      });
     },
   },
 };
