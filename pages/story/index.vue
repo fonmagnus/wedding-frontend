@@ -58,180 +58,161 @@ export default {
   },
   methods: {
     initializeCoordinates() {
+      const leftOffset = [-10, -23, -10];
       this.coordinates = [
         {
           id: 0,
-          xPercent: 5,
-          yPercent: -40,
-          add: 1.5,
+          top: 10,
+          add: -90 + leftOffset[0],
         },
-        {
-          id: 1,
-          xPercent: 11,
-          yPercent: -25,
-          add: 1,
-        },
-        {
-          id: 2,
-          xPercent: 19.5,
-          yPercent: -35,
-          add: 1,
-        },
-        {
-          id: 3,
-          xPercent: 35,
-          yPercent: -40,
-          add: 1.5,
-        },
-        {
-          id: 4,
-          xPercent: 27,
-          yPercent: -40,
-          add: 1.5,
-        },
-        {
-          id: 5,
-          xPercent: 18,
-          yPercent: -30,
-          add: 1,
-        },
-        {
-          id: 6,
-          xPercent: -5,
-          yPercent: -25,
-          add: 1,
-        },
-        {
-          id: 7,
-          xPercent: -7,
-          yPercent: -30,
-          add: 0,
-        },
-        {
-          id: 8,
-          xPercent: -20,
-          yPercent: -25,
-          add: 1,
-        },
-        {
-          id: 9,
-          xPercent: -23,
-          yPercent: -35,
-          add: 1,
-        },
-        {
-          id: 10,
-          xPercent: -12,
-          yPercent: -40,
-          add: 1.5,
-        },
-        {
-          id: 11,
-          xPercent: -21,
-          yPercent: -30,
-          add: 1,
-        },
-        {
-          id: 12,
-          xPercent: -10,
-          yPercent: -25,
-          add: 1,
-        },
-        {
-          id: 13,
-          xPercent: -25,
-          yPercent: -25,
-          add: 1,
-        },
-        {
-          id: 14,
-          xPercent: 37,
-          yPercent: -50,
-          add: 1.5,
-        },
-        {
-          id: 15,
-          xPercent: 44,
-          yPercent: -35,
-          add: 1,
-        },
-        {
-          id: 16,
-          xPercent: 0,
-          yPercent: -35,
-          add: 1,
-        },
-        {
-          id: 17,
-          xPercent: 41,
-          yPercent: -50,
-          add: 1.5,
-        },
-        {
-          id: 18,
-          xPercent: 1.5,
-          yPercent: -35,
-          add: 1,
-        },
-        {
-          id: 19,
-          xPercent: 4,
-          yPercent: -50,
-          add: 1.5,
-        },
-        {
-          id: 20,
-          xPercent: 6,
-          yPercent: -35,
-          add: 1,
-        },
-        {
-          id: 21,
-          xPercent: -10,
-          yPercent: -50,
-          add: 1.5,
-        },
-        {
-          id: 22,
-          xPercent: 22,
-          yPercent: -50,
-          add: 1.5,
-        },
-        {
-          id: 23,
-          xPercent: -17,
-          yPercent: -40,
-          add: 1,
-        },
-        {
-          id: 24,
-          xPercent: -27,
-          yPercent: -40,
-          add: 0,
-        },
-        {
-          id: 25,
-          xPercent: -20,
-          yPercent: -45,
-          add: 1,
-        },
+        //----
         {
           id: 26,
-          xPercent: -50,
-          yPercent: -50,
-          add: 1.5,
-        },
-        {
-          id: 27,
-          xPercent: -10,
-          yPercent: -35,
-          add: 1,
+          top: 10,
+          add: -60 + leftOffset[0],
         },
         {
           id: 28,
-          xPercent: -55,
-          yPercent: -50,
-          add: 1.5,
+          top: 10,
+          add: -45 + leftOffset[0],
+        },
+        {
+          id: 21,
+          top: 10,
+          add: -25 + leftOffset[0],
+        },
+        {
+          id: 19,
+          top: 10,
+          add: -15 + leftOffset[0],
+        },
+        //----
+        {
+          id: 14,
+          top: 10,
+          add: 10 + leftOffset[0],
+        },
+        {
+          id: 10,
+          top: 10,
+          add: 28 + leftOffset[0],
+        },
+        {
+          id: 4,
+          top: 10,
+          add: 48 + leftOffset[0],
+        },
+        {
+          id: 3,
+          top: 10,
+          add: 60 + leftOffset[0],
+        },
+        {
+          id: 17,
+          top: 10,
+          add: 80 + leftOffset[0],
+        },
+        {
+          id: 22,
+          top: 10,
+          add: 95 + leftOffset[0],
+        },
+        // -------
+        // -------
+        {
+          id: 9,
+          top: 15,
+          add: -60 + leftOffset[1],
+        },
+        {
+          id: 2,
+          top: 15,
+          add: -45 + leftOffset[1],
+        },
+        // -------
+        {
+          id: 25,
+          top: 15,
+          add: -15 + leftOffset[1],
+        },
+        // --------
+        {
+          id: 24,
+          top: 15,
+          add: 15 + leftOffset[1],
+        },
+        {
+          id: 7,
+          top: 15,
+          add: 35 + leftOffset[1],
+        },
+        {
+          id: 23,
+          top: 15,
+          add: 50 + leftOffset[1],
+        },
+        {
+          id: 11,
+          top: 15,
+          add: 70 + leftOffset[1],
+        },
+        {
+          id: 5,
+          top: 15,
+          add: 90 + leftOffset[1],
+        },
+        // -------
+        // -------
+        {
+          id: 16,
+          top: 20,
+          add: -90 + leftOffset[2],
+        },
+        {
+          id: 1,
+          top: 20,
+          add: -70 + leftOffset[2],
+        },
+        {
+          id: 18,
+          top: 20,
+          add: -50 + leftOffset[2],
+        },
+        {
+          id: 8,
+          top: 20,
+          add: -35 + leftOffset[2],
+        },
+        {
+          id: 6,
+          top: 20,
+          add: -15 + leftOffset[2],
+        },
+        {
+          id: 20,
+          top: 20,
+          add: 5 + leftOffset[2],
+        },
+        // -------
+        {
+          id: 13,
+          top: 20,
+          add: 35 + leftOffset[2],
+        },
+        {
+          id: 15,
+          top: 20,
+          add: 55 + leftOffset[2],
+        },
+        {
+          id: 12,
+          top: 20,
+          add: 75 + leftOffset[2],
+        },
+        {
+          id: 27,
+          top: 20,
+          add: 95 + leftOffset[2],
         },
       ];
     },
@@ -239,18 +220,17 @@ export default {
       const rem = parseFloat(
         getComputedStyle(document.documentElement).fontSize
       );
-      for (let i = 0; i < 29; i++) {
-        const elemId = `A${i}`;
+      for (let i = 0; i < this.coordinates.length; i++) {
+        const elemId = `A${this.coordinates[i].id}`;
         const elem = document.getElementById(elemId);
 
-        const { xPercent, yPercent, add } = this.coordinates[i];
+        const { top, left, add } = this.coordinates[i];
+        const targetX = (50 / 100) * window.innerWidth;
+        const targetY = (top / 100) * window.innerHeight;
+        const rect = elem.getBoundingClientRect();
 
-        const targetX = window.innerWidth * (xPercent / 100);
-        const targetY = window.innerHeight * (yPercent / 100);
-
-        const additionalPixel = add * rem;
-        const x = targetX + additionalPixel;
-        const y = targetY;
+        const x = targetX - rect.left + add;
+        const y = targetY - rect.top;
 
         const duration = Math.random() * 2.5 + 1;
         this.$gsap.to(elem, { x, y, duration, ease: "power1.inOut" });
@@ -258,130 +238,176 @@ export default {
     },
   },
 };
+
+/**
+A   0     0
+
+T  26     1
+A  28     2
+L  21     3
+E  19     4
+
+G  14     5
+A  10     6
+L   4     7
+O   3     8
+R  17     9
+E  22    10
+
+----------
+
+I   9    11
+N   2    12
+
+A  25    13
+
+G  24    14
+R   7    15
+A  23    16
+N  11    17
+D   5    18
+
+------------
+
+B  16    19
+R   1    20
+I  18    21
+D   8    22
+A   6    23 
+L  20    24
+
+O  13    25
+A  15    26
+T  12    27
+H  27    28
+
+ */
 </script>
 
 <style scoped>
 #A0 {
-  top: 50%;
-  left: calc(10% + 0 * 1.1rem);
+  top: 45%;
+  left: calc(50% - 7 * 1rem);
 }
 
 #A1 {
-  top: 50%;
-  left: calc(10% + 1 * 1.1rem);
+  top: 45%;
+  left: calc(50% - 6 * 1rem);
 }
 
 #A2 {
-  top: 50%;
-  left: calc(10% + 2 * 1.1rem);
+  top: 45%;
+  left: calc(50% - 5 * 1rem);
 }
 
 #A3 {
-  top: 50%;
-  left: calc(10% + 3 * 1.1rem);
+  top: 45%;
+  left: calc(50% - 4 * 1rem);
 }
 
 #A4 {
-  top: 50%;
-  left: calc(10% + 4 * 1.1rem);
+  top: 45%;
+  left: calc(50% - 3 * 1rem);
 }
 
 #A5 {
-  top: 50%;
-  left: calc(10% + 5 * 1.1rem);
+  top: 45%;
+  left: calc(50% - 2 * 1rem);
 }
 
 #A6 {
-  top: 50%;
-  left: calc(10% + 7 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 0 * 1rem);
 }
 #A7 {
-  top: 50%;
-  left: calc(10% + 8 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 1 * 1rem);
 }
 #A8 {
-  top: 50%;
-  left: calc(10% + 9 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 2 * 1rem);
 }
 #A9 {
-  top: 50%;
-  left: calc(10% + 10 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 3.3 * 1rem);
 }
 #A10 {
-  top: 50%;
-  left: calc(10% + 11 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 4 * 1rem);
 }
 #A11 {
-  top: 50%;
-  left: calc(10% + 12 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 5 * 1rem);
 }
 #A12 {
-  top: 50%;
-  left: calc(10% + 13 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 6 * 1rem);
 }
 #A13 {
-  top: 50%;
-  left: calc(10% + 14 * 1.1rem);
+  top: 45%;
+  left: calc(50% + 7 * 1rem);
 }
 
+/* --------------------- */
+
 #A14 {
-  top: 60%;
-  left: calc(10% + 0 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 7.5 * 1rem);
 }
 #A15 {
-  top: 60%;
-  left: calc(10% + 1 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 6.5 * 1rem);
 }
 #A16 {
-  top: 60%;
-  left: calc(10% + 2 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 5.5 * 1rem);
 }
 #A17 {
-  top: 60%;
-  left: calc(10% + 3 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 4.3 * 1rem);
 }
 #A18 {
-  top: 60%;
-  left: calc(10% + 4 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 3.3 * 1rem);
 }
 #A19 {
-  top: 60%;
-  left: calc(10% + 5 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 2.5 * 1rem);
 }
 #A20 {
-  top: 60%;
-  left: calc(10% + 6 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 1.5 * 1rem);
 }
 #A21 {
-  top: 60%;
-  left: calc(10% + 7 * 1.1rem);
+  top: 55%;
+  left: calc(50% - 0.5 * 1rem);
 }
 #A22 {
-  top: 60%;
-  left: calc(10% + 8 * 1.1rem);
+  top: 55%;
+  left: calc(50% + 0.5 * 1rem);
 }
 #A23 {
-  top: 60%;
-  left: calc(10% + 10 * 1.1rem);
+  top: 55%;
+  left: calc(50% + 2.5 * 1rem);
 }
 #A24 {
-  top: 60%;
-  left: calc(10% + 11 * 1.1rem);
+  top: 55%;
+  left: calc(50% + 3.5 * 1rem);
 }
 #A25 {
-  top: 60%;
-  left: calc(10% + 12 * 1.1rem);
+  top: 55%;
+  left: calc(50% + 4.5 * 1rem);
 }
 #A26 {
-  top: 60%;
-  left: calc(10% + 13 * 1.1rem);
+  top: 55%;
+  left: calc(50% + 5.5 * 1rem);
 }
 #A27 {
-  top: 60%;
-  left: calc(10% + 14 * 1.1rem);
+  top: 55%;
+  left: calc(50% + 6.5 * 1rem);
 }
 #A28 {
-  top: 60%;
-  left: calc(10% + 15 * 1.1rem);
+  top: 55%;
+  left: calc(50% + 7.5 * 1rem);
 }
 </style>

@@ -2,16 +2,16 @@
   <div
     class="flex flex-col justify-between absolute top-0 py-20 text-white items-center h-screen w-full overflow-scroll"
   >
-    <div class="flex flex-col gap-4 px-8">
+    <div class="flex flex-col gap-4">
       <span class="text-center">The Wedding of</span>
 
-      <div class="flex flex-col items-center text-yellow-500">
-        <h1 class="text-4xl">Arnold</h1>
-        <h1 class="text-2xl">&</h1>
-        <h1 class="text-4xl">Gabrielle</h1>
+      <div class="flex items-center text-white">
+        <h1>(Arnold & Gabrielle)</h1>
       </div>
 
-      <h3 class="text-sm text-yellow-400">#ATaleGaloreInAGrandBridalOath</h3>
+      <h3 class="text-xs text-center text-white">
+        #ATaleGaloreInAGrandBridalOath
+      </h3>
     </div>
 
     <div class="flex flex-col gap-4 items-center text-center px-8 text-sm">
