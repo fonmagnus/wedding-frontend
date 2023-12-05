@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p, h1, h2, h3, h4, h5, h6, span, a {
+  font-family: GeorgiaPro;
+}
+
+@font-face {
+  font-family: 'Geraldine'; 
+  src: url('~static/fonts/Geraldine.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apple Juice'; 
+  src: url('~static/fonts/Apple Juice.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cardo'; 
+  src: url('~static/fonts/Cardo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeorgiaPro'; 
+  src: url('~static/fonts/GeorgiaPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marykate'; 
+  src: url('~static/fonts/Marykate.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Joshico'; 
+  src: url('~static/fonts/Joshico.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Loverine'; 
+  src: url('~static/fonts/Loverine.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overthink'; 
+  src: url('~static/fonts/Overthink.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Stolen Times'; 
+  src: url('~static/fonts/Stolen Times.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'French Canon'; 
+  src: url('~static/fonts/French Canon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: Loverine;
+}
+
+h2 {
+  font-family: Marykate
+}
+
+h3 {
+  font-family: French Canon;
+}
+
+h4 {
+  font-family: French Canon;
+}
+
+h6 {
+  font-family: Bellota;
+}
