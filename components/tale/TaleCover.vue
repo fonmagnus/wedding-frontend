@@ -13,7 +13,7 @@
     }}</span>
     <h6 class="absolute bottom-8 opacity-0 content text-sm">
       <i id="hand-pointer" class="text-xs fa fa-hand-pointer"></i>
-      {{ lang === "EN" ? "swipe left" : "swipe right" }}
+      {{ lang === "EN" ? "swipe left" : "geser kiri" }}
     </h6>
   </div>
 </template>
