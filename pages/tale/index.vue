@@ -74,12 +74,24 @@ export default {
       this.startX = e.changedTouches[0].screenX;
     },
     onHold(e) {
-      const x = Math.min(0, e.changedTouches[0].screenX - this.startX);
+      const d = e.changedTouches[0].screenX - this.startX;
+      const x = d;
       const ele = document.getElementById("tale-page");
       const width = ele.getBoundingClientRect().width;
-      this.$gsap.to(`#${this.pages[this.page]}`, {
-        x,
-      });
+
+      if (x < 0) {
+        if (this.page === this.pages.length - 1) return;
+        this.$gsap.to(`#${this.pages[this.page]}`, {
+          x,
+        });
+      } else {
+        if (this.page === 0) return;
+
+        this.$gsap.to(`#${this.pages[this.page - 1]}`, {
+          x: -window.innerWidth + x,
+          transform: "rotateY(0)",
+        });
+      }
     },
   },
 };
