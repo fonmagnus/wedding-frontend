@@ -262,6 +262,7 @@ export default {
       star.style.top = `${rect.top}px`;
       star.style.left = `${rect.left}px`;
       star.style.color = "yellow";
+      star.style.opacity = 0.5;
       star.innerText = "🌟";
 
       container.appendChild(star);
