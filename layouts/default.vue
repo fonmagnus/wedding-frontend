@@ -78,7 +78,7 @@
           <i class="fa fa-play"></i>
         </div>
       </div>
-      
+
       <template v-for="(genre, i) in musicSrcSet">
         <template v-for="(music, j) in genre.music">
           <audio
@@ -121,6 +121,12 @@ export default {
       const { genre, index } = data;
       this.playAudio(genre, index);
     });
+    this.$nuxt.$on("stopAudio", () => {
+      this.stopAudio();
+    });
+    this.$nuxt.$on("pauseAudio", () => {
+      this.pauseAudio();
+    });
   },
   watch: {
     isOpenMusicDialog(val) {
@@ -145,7 +151,15 @@ export default {
     }),
     selectAudio() {},
     playAudio(i, j) {
-      this.stopAudio();
+      if (i === null) {
+        i = this.activeMusicGenreIndex;
+      }
+      if (j === null) {
+        j = this.activeMusicIndex;
+      }
+      if (i !== this.activeMusicGenreIndex || j !== this.activeMusicIndex) {
+        this.stopAudio();
+      }
       this.activeMusicGenreIndex = i;
       this.activeMusicIndex = j;
       this.activeMusic =

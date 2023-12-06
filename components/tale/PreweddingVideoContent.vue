@@ -74,9 +74,11 @@ export default {
     },
     onPlayerStateChange(event) {
       if (event.data === YT.PlayerState.PLAYING) {
+        this.$nuxt.$emit("pauseAudio");
         this.timeline.resume();
       } else {
         this.timeline.pause();
+        this.$nuxt.$emit("playAudio", { genre: null, index: null });
       }
     },
     renderedMarkdown(message) {

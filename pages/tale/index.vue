@@ -125,7 +125,6 @@ export default {
     onTouchEnd(e) {
       const d = e.changedTouches[0].screenX - this.startX;
       const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
-      console.log(percentOnScreen);
       if (d < 0 && percentOnScreen <= 25) {
         if (this.page === this.pages.length - 1) return;
         this.$gsap.to(`#${this.pages[this.page]}`, { x: 0 });
