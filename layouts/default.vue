@@ -12,34 +12,104 @@
 
     <div
       class="fixed z-30 bottom-0 right-0 rounded-full px-4 py-3 bg-white cursor-pointer m-3"
-      @click="playAudio"
+      @click="toggleMusicDialog"
     >
       🎵
     </div>
-    <nuxt-child />
-    <audio
-      v-for="(src, i) in musicSrcSet"
-      :key="i"
-      :ref="`music-${i}`"
-      @ended="switchMusic"
+    <div
+      id="music-dialog"
+      class="w-0 h-0 fixed z-30 bottom-12 right-12 bg-black text-white border border-white shadow-lg rounded-lg flex flex-col overflow-hidden"
     >
-      <source :src="src" type="audio/ogg" />
-    </audio>
+      <div
+        class="absolute top-2 right-2 rounded-full flex justify-center items-center z-40 bg-black w-7 h-7"
+        @click.stop="toggleMusicDialog"
+      >
+        <i class="fa fa-close"></i>
+      </div>
+      <div class="w-full px-3 py-4 flex flex-col top-0 gap-6 overflow-auto">
+        <div
+          v-for="(genre, i) in musicSrcSet"
+          :key="i"
+          class="flex flex-col gap-2"
+        >
+          <h6 class="font-black">{{ genre.genre }}</h6>
+          <div
+            v-for="(music, j) in genre.music"
+            :key="j"
+            class="flex gap-2 rounded-lg pl-2 py-2 hover:bg-slate-800 transition-all"
+            :class="[
+              {
+                'bg-slate-800':
+                  i === activeMusicGenreIndex && j === activeMusicIndex,
+              },
+            ]"
+            @click.stop="playAudio(i, j)"
+          >
+            <img :src="music.icon" alt="" class="w-12 h-12 object-cover" />
+            <div class="flex flex-col justify-center">
+              <h6 class="text-sm">
+                {{ music.title }}
+              </h6>
+              <h6 class="text-xs">{{ music.artist }}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-end gap-2 absolute bottom-4 right-4">
+        <div
+          v-if="!musicIsStopped"
+          @click.stop="stopAudio"
+          class="border border-white rounded-full w-8 h-8 flex items-center justify-center"
+        >
+          <i class="fa fa-stop"></i>
+        </div>
+        <div
+          v-if="musicIsPlayed"
+          @click.stop="pauseAudio"
+          class="border border-white rounded-full w-8 h-8 flex items-center justify-center"
+        >
+          <i class="fa fa-pause"></i>
+        </div>
+        <div
+          v-if="!musicIsPlayed || musicIsStopped"
+          @click.stop="playAudio(0, 0)"
+          class="border border-white rounded-full w-8 h-8 flex items-center justify-center"
+        >
+          <i class="fa fa-play"></i>
+        </div>
+      </div>
+
+      <template v-for="(genre, i) in musicSrcSet">
+        <template v-for="(music, j) in genre.music">
+          <audio
+            :ref="`music-${music.slug}`"
+            :key="`${i},${j}`"
+            @ended="switchMusic"
+          >
+            <source :src="music.src" type="audio/ogg" />
+          </audio>
+        </template>
+      </template>
+    </div>
+    <nuxt-child />
   </div>
 </template>
 
 <script>
 import { mapActions } from "vuex";
+import musics from "~/assets/data/musics.json";
 
 export default {
   data() {
     return {
       musicIsPlayed: false,
-      activeMusic: 0,
+      musicIsStopped: true,
+      isOpenMusicDialog: false,
+      activeMusic: "",
+      activeMusicGenreIndex: 0,
+      activeMusicIndex: 0,
       musicPlayer: null,
-      musicSrcSet: [
-        "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1696465740/audio/Richard_Clayderman_-_Ballade_Pour_Adeline_hb5mvk.mp4",
-      ],
+      musicSrcSet: musics,
     };
   },
   mounted() {
@@ -47,22 +117,68 @@ export default {
     this.getInvitee();
   },
   created() {
-    this.$nuxt.$on("playAudio", () => {
-      this.playAudio();
+    this.$nuxt.$on("playAudio", (data) => {
+      const { genre, index } = data;
+      this.playAudio(genre, index);
     });
+  },
+  watch: {
+    isOpenMusicDialog(val) {
+      if (val) {
+        this.$gsap.to("#music-dialog", {
+          width: "20rem",
+          height: "30rem",
+          overflow: "auto",
+        });
+      } else {
+        this.$gsap.to("#music-dialog", {
+          width: "0rem",
+          height: "0rem",
+          overflow: "hidden",
+        });
+      }
+    },
   },
   methods: {
     ...mapActions({
       setInvitee: "data/setInvitee",
     }),
     selectAudio() {},
-    playAudio() {
+    playAudio(i, j) {
+      this.stopAudio();
+      this.activeMusicGenreIndex = i;
+      this.activeMusicIndex = j;
+      this.activeMusic =
+        this.musicSrcSet[this.activeMusicGenreIndex].music[
+          this.activeMusicIndex
+        ].slug;
+
       this.musicPlayer = this.$refs[`music-${this.activeMusic}`][0];
       this.musicPlayer.play();
       this.musicIsPlayed = true;
+      this.musicIsStopped = false;
     },
-    switchMusic() {
-      this.activeMusic = (this.activeMusic + 1) % this.musicSrcSet.length;
+    pauseAudio() {
+      this.musicPlayer = this.$refs[`music-${this.activeMusic}`][0];
+      this.musicPlayer.pause();
+      this.musicIsPlayed = false;
+    },
+    stopAudio() {
+      this.activeMusic =
+        this.musicSrcSet[this.activeMusicGenreIndex].music[
+          this.activeMusicIndex
+        ].slug;
+      this.musicPlayer = this.$refs[`music-${this.activeMusic}`][0];
+      this.musicPlayer.pause();
+      this.musicPlayer.currentTime = 0;
+      this.musicIsPlayed = false;
+      this.musicIsStopped = true;
+    },
+    switchMusic(repeat = true) {
+      if (!repeat)
+        this.activeMusicIndex =
+          (this.activeMusicIndex + 1) %
+          this.musicSrcSet[this.activeMusicGenreIndex].music.length;
       this.playAudio();
     },
     getInvitee() {
@@ -79,6 +195,9 @@ export default {
     },
     goBack() {
       this.$router.back(); // This is a shortcut for going back to the previous page
+    },
+    toggleMusicDialog() {
+      this.isOpenMusicDialog = !this.isOpenMusicDialog;
     },
   },
 };

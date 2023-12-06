@@ -3,7 +3,7 @@
     <div
       v-for="(image, index) in images"
       :key="image"
-      class="image-wrapper h-full"
+      class="image-wrapper h-full w-full"
       :class="{ 'is-active': index === activeIndex }"
     >
       <img

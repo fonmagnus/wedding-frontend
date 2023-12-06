@@ -11,14 +11,7 @@
     <!-- <span class="absolute bottom-20 opacity-0 content text-xs">{{
       lang === "EN" ? "or" : "atau"
     }}</span> -->
-    <h6 class="absolute bottom-24 opacity-0 content text-sm">
-      <i id="hand-pointer" class="text-xs fa fa-hand-pointer"></i>
-      {{
-        lang === "EN"
-          ? "swipe left to read our tale"
-          : "geser kiri untuk membaca"
-      }}
-    </h6>
+    <Swipe class="absolute bottom-24 opacity-0 content" />
   </div>
 </template>
 
@@ -53,12 +46,6 @@ export default {
         },
         { opacity: 1 }
       );
-
-      this.$gsap.to("#hand-pointer", {
-        x: -10,
-        repeat: -1,
-        duration: 1,
-      });
     },
   },
 };

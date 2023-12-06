@@ -1,0 +1,175 @@
+[
+  {
+    "genre": "Piano",
+    "music": [
+      {
+        "slug": "kiss-the-rain",
+        "title": "Kiss the Rain",
+        "artist": "Yiruma",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701855990/audio/tomp3.cc_-_Yiruma_%E1%84%8B%E1%85%B5%E1%84%85%E1%85%AE%E1%84%86%E1%85%A1_Kiss_the_Rain_zwl0sy.mp3",
+        "icon": "https://i1.sndcdn.com/artworks-000067025938-rq3p8i-t500x500.jpg"
+      },
+      {
+        "slug": "ballade-pour-adeline",
+        "title": "Ballade Pour Adeline",
+        "artist": "Richard Clayderman",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701860138/audio/tomp3.cc_-_Richard_Clayderman_Ballade_Pour_Adeline_ehxsfp.mp3",
+        "icon": "https://store.pianodisc.com/cdn/shop/products/OP9354_800x.jpg?v=1562627078"
+      }
+    ]
+  },
+  {
+    "genre": "Vintage",
+    "music": [
+      {
+        "slug": "nothings-gonna-change",
+        "title": "Nothing's Gonna Change My Love For You",
+        "artist": "George Benson",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701859191/audio/tomp3.cc_-_NOTHINGS_GONNA_CHANGE_MY_LOVE_FOR_YOU_with_lyrics_GEORGE_BENSON_tottxh.mp3",
+        "icon": "https://upload.wikimedia.org/wikipedia/en/3/32/Nothing%27s_Gonna_Change_My_Love_for_You_by_George_Benson_German-made_single.png"
+      },
+      {
+        "slug": "across-the-universe",
+        "title": "Across the Universe",
+        "artist": "The Beatles",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701860229/audio/tomp3.cc_-_Across_The_Universe_The_Beatles_Lyrics_wwxoka.mp3",
+        "icon": "https://moviemusicuk.files.wordpress.com/2010/10/acrossuniversecover.jpg"
+      },
+      {
+        "slug": "how-deep-is-your-love",
+        "title": "How Deep is Your Love",
+        "artist": "Bee Gees",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701860334/audio/tomp3.cc_-_Bee_Gees_How_Deep_Is_Your_Love_Official_Video_nd2am9.mp3",
+        "icon": "https://m.media-amazon.com/images/I/61zi9hJsGLL._UF1000,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "genre": "Church",
+    "music": [
+      {
+        "slug": "he-loved-me",
+        "title": "He Loved Me",
+        "artist": "Tom Fettke",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701859997/audio/tomp3.cc_-_He_Loved_Me_Tom_Fettke_HD_Lyric_Video_oicuoe.mp3",
+        "icon": "https://i1.sndcdn.com/artworks-000173761893-hvrl7x-t500x500.jpg"
+      },
+      {
+        "slug": "wonderful-day",
+        "title": "Wonderful Day",
+        "artist": "Maranatha",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701860471/audio/tomp3.cc_-_This_Wonderful_Day_Gloria_Trio_with_lyric_fv6drk.mp3",
+        "icon": "https://i.ytimg.com/vi/IPvYQh0NdBI/maxresdefault.jpg"
+      }
+    ]
+  },
+  {
+    "genre": "Game",
+    "music": [
+      {
+        "slug": "beneath-the-mask",
+        "title": "Beneath the Mask",
+        "artist": "Shoji Meguro",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701858558/audio/tomp3.cc_-_Beneath_the_Mask_e5voz0.mp3",
+        "icon": "https://assetsio.reedpopcdn.com/digitalfoundry-2017-persona-5-ps3-vs-ps4-face-off-1492771676038.jpg?width=1600&height=900&fit=crop&quality=100&format=png&enable=upscale&auto=webp"
+      },
+      {
+        "slug": "hometown-sun",
+        "title": "Hometown Sun",
+        "artist": "Ken Nakagawa",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701860775/audio/tomp3.cc_-Atelier_Iris_3_Grand_Phantasm_Original_Soundtrack_Hometown_Sun_ulb33b.mp3",
+        "icon": "https://cdn.thegamesdb.net/images/medium/fanart/8545-1.jpg"
+      }
+    ]
+  },
+  {
+    "genre": "Pop",
+    "music": [
+      {
+        "slug": "love-story",
+        "title": "Love Story",
+        "artist": "Taylor Swift",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701859418/audio/tomp3.cc_-_Taylor_Swift_Love_Story_qp7zks.mp3",
+        "icon": "https://www.j-14.com/wp-content/uploads/2018/09/taylor-swift-love-story-2008.jpg?fit=1340%2C750&quality=86&strip=all"
+      },
+      {
+        "slug": "perfect",
+        "title": "Perfect",
+        "artist": "Ed Sheeran",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701861608/audio/tomp3.cc_-_Ed_Sheeran_Perfect_Lyrics_gqq6fj.mp3",
+        "icon": "https://upload.wikimedia.org/wikipedia/en/8/80/Ed_Sheeran_Perfect_Single_cover.jpg"
+      }
+    ]
+  },
+  {
+    "genre": "Magical",
+    "music": [
+      {
+        "slug": "always-with-me",
+        "title": "Always with Me",
+        "artist": "Hayao Miyazaki",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701859860/audio/tomp3.cc_-_Always_With_Me_Spirited_Away_Piano_dzxppb.mp3",
+        "icon": "https://i1.sndcdn.com/artworks-yY0wIuUbiRQVpsvY-iuXAdw-t500x500.jpg"
+      },
+      {
+        "slug": "i-see-the-light",
+        "title": "I See the Light",
+        "artist": "Mandy Moore",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701861071/audio/tomp3.cc_-_I_See_the_Light_From_Tangled_Soundtrack_Version_yz2dtm.mp3",
+        "icon": "https://lumiere-a.akamaihd.net/v1/images/p_tangled_20509_cd0a5809.jpeg?region=0%2C0%2C540%2C810"
+      },
+      {
+        "slug": "beauty-and-the-beast",
+        "title": "Beauty and the Beast",
+        "artist": "Ariana Grande & John Legend",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701861811/audio/tomp3.cc_-_Beauty_and_the_Beast_From_Beauty_and_the_BeastOfficial_Video_x0pdlr.mp3",
+        "icon": "https://people.com/thmb/t8sGfbj_AlqE_UKOINuasd499Io=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/beauty-and-the-beast-879e99af252745f9800e64393dd87587.jpg"
+      }
+    ]
+  },
+  {
+    "genre": "Melancholic",
+    "music": [
+      {
+        "slug": "iris",
+        "title": "Iris",
+        "artist": "Shiwase no Hako",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701859051/audio/tomp3.cc_-_Iris_Music_Box_Version_fjq8sf.mp3",
+        "icon": "https://i.pinimg.com/564x/87/63/78/876378a6de646a00d95f9f402d73d23b.jpg"
+      },
+      {
+        "slug": "how-did-i-fall-in-love-with-you",
+        "title": "How Did I Fall in Love With You",
+        "artist": "Yao Si Ting",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701861525/audio/tomp3.cc_-_Yao_Si_Ting_How_Did_I_Fall_In_Love_With_You_Official_Video_qbuhie.mp3",
+        "icon": "https://i.ytimg.com/vi/eCcYYf1trY4/maxresdefault.jpg"
+      }
+    ]
+  },
+  {
+    "genre": "Cute",
+    "music": [
+      {
+        "slug": "waterdrop",
+        "title": "Waterdrop",
+        "artist": "Tido Kang",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701859715/audio/tomp3.cc_-_Waterdrop_ib0azs.mp3",
+        "icon": "https://m.media-amazon.com/images/I/51k0Y4lIX4L._UXNaN_FMjpg_QL85_.jpg"
+      },
+      {
+        "slug": "a-little-love",
+        "title": "A Little Love",
+        "artist": "Fiona Fung",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701860832/audio/tomp3.cc_-_A_little_love_by_Fiona_Fung_bqnf9a.mp3",
+        "icon": "https://upload.wikimedia.org/wikipedia/en/9/96/Album_A_Little_Love_Cover.jpg"
+      },
+      {
+        "slug": "sampo-rilakkuma",
+        "title": "Sampo (Rilakkuma)",
+        "artist": "Shigeru Kishida",
+        "src": "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701860972/audio/tomp3.cc_-_SAMPO_r53fik.mp3",
+        "icon": "https://i.ytimg.com/vi/xPsATKtrsl4/maxresdefault.jpg"
+      }
+    ]
+  }
+]

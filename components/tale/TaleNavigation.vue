@@ -44,13 +44,13 @@ export default {
 
   methods: {
     scrollNav() {
-      this.$gsap.to("#nav-prev", { opacity: 0, duration: 1 });
-      this.$gsap.to("#nav-next", { opacity: 0, duration: 1 });
+      this.$gsap.to("#nav-prev", { opacity: 0, duration: 0.5 });
+      this.$gsap.to("#nav-next", { opacity: 0, duration: 0.5 });
 
       setTimeout(() => {
-        this.$gsap.to("#nav-prev", { opacity: 1, duration: 1 });
-        this.$gsap.to("#nav-next", { opacity: 1, duration: 1 });
-      }, 2000);
+        this.$gsap.to("#nav-prev", { opacity: 1, duration: 0.5 });
+        this.$gsap.to("#nav-next", { opacity: 1, duration: 0.5 });
+      }, 3000);
     },
     touchStart(e) {
       this.touchStartX = e.changedTouches[0].screenX;
@@ -62,6 +62,7 @@ export default {
     handleSwipe() {
       const d = this.touchEndX - this.touchStartX;
       const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
+      this.scrollNav();
       if (d < 0 && percentOnScreen > 25) {
         // console.log("Swiped left");
         this.$emit("nextPage");

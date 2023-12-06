@@ -14,6 +14,13 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+    <RedContent
+      id="red-content"
+      class="absolute top-0"
+      style="z-index: 8"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
     <TaleNavigation
       class="z-30"
       :page="page"
@@ -28,7 +35,11 @@ export default {
   data() {
     return {
       page: 0,
-      pages: ["tale-cover", "black-content"],
+      pages: [
+        "tale-cover", 
+        "black-content", 
+        "red-content"
+      ],
       startX: 0,
     };
   },

@@ -1,8 +1,10 @@
 <template>
   <div
-    class="flex flex-col h-full w-full items-center py-8 bg-black text-white gap-6 overflow-auto"
+    class="flex flex-col h-full w-full items-center bg-black py-8 text-white gap-6 overflow-auto"
   >
-    <h3>BLACK</h3>
+    <div class="w-full fixed top-0 bg-black py-4 z-20">
+      <h3 class="text-center">BLACK</h3>
+    </div>
     <div class="w-full">
       <ImageCollection
         :images="[
@@ -36,13 +38,7 @@
       </ul>
       <span>{{ _content.epilogue[lang] }}</span>
     </div>
-
-    <Button
-      class="border border-white mt-12 hover:bg-white hover:text-black transition-all"
-      @click="$emit('nextPage')"
-    >
-      <h6><span class="text-red-500">Red</span></h6>
-    </Button>
+    <Swipe />
   </div>
 </template>
 
@@ -74,6 +70,10 @@ export default {
           EN: "Wedding Hashtag",
           ID: "Tagar (Hashtag) Pernikahan",
         },
+        {
+          EN: "Black",
+          ID: "Hitam",
+        },
       ],
 
       contentSectionSubtitle: [
@@ -84,6 +84,10 @@ export default {
         {
           EN: "#ATaleGaloreInAGrandBridalOath",
           ID: "#ATaleGaloreInAGrandBridalOath",
+        },
+        {
+          EN: "Meaning of Black",
+          ID: "Makna Hitam",
         },
       ],
 
@@ -158,6 +162,15 @@ export default {
             EN: "The letter union from our name resembles our life that previously separated now have become one through marriage",
             ID: "Penggabungan huruf huruf dari nama kami bermakna hidup kami yang tadinya terpisahkan sekarang menjadi satu melalui pernikahan",
           },
+        },
+
+        {
+          prologue: {
+            EN: "Black resembles the color when life feels dull and bland before love give its meaning. When we busy to work with routines and daily lives day by day.",
+            ID: "Hitam menggambarkan warna ketika hidup terasa membosankan dan hambar sebelum cinta memberinya makna. Ketika kami sibuk bekerja dan menjalankan kegiatan sehari-hari dengan biasa",
+          },
+          children: [],
+          epilogue: {},
         },
       ],
     };
