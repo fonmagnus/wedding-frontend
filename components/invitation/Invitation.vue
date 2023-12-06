@@ -8,6 +8,13 @@
         {{ invitee && invitee.name ? invitee.name : "Guest" }}
       </h4>
       <span class="text-sm mt-4" v-html="renderedMarkdown"></span>
+
+      <span v-if="invitee && invitee.name" class="mt-12 text-xs"
+        >My RSVP Code is :</span
+      >
+      <h6 class="font-bold text-2xl" v-if="invitee && invitee.name">
+        {{ $route.query.code }}
+      </h6>
     </div>
 
     <div class="flex flex-col gap-2 w-full">
