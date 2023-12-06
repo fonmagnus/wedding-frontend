@@ -2,18 +2,22 @@
   <div class="flex flex-col w-full h-full items-center">
     <Anagram @animationEnded="letterInPlace++" />
     <LanguageSelection class="opacity-0 absolute content" />
-    <Button
+    <!-- <Button
       @click="$emit('nextPage')"
       class="opacity-0 absolute bottom-28 rounded-lg border border-slate-50 content"
     >
       <h6>{{ buttonText[lang] }}</h6>
-    </Button>
-    <span class="absolute bottom-20 opacity-0 content text-xs">{{
+    </Button> -->
+    <!-- <span class="absolute bottom-20 opacity-0 content text-xs">{{
       lang === "EN" ? "or" : "atau"
-    }}</span>
-    <h6 class="absolute bottom-12 opacity-0 content text-sm">
+    }}</span> -->
+    <h6 class="absolute bottom-24 opacity-0 content text-sm">
       <i id="hand-pointer" class="text-xs fa fa-hand-pointer"></i>
-      {{ lang === "EN" ? "swipe left" : "geser kiri" }}
+      {{
+        lang === "EN"
+          ? "swipe left to read our tale"
+          : "geser kiri untuk membaca"
+      }}
     </h6>
   </div>
 </template>
