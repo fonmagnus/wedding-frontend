@@ -62,11 +62,11 @@ export default {
     handleSwipe() {
       const d = this.touchEndX - this.touchStartX;
       console.log(d);
-      if (d < -200) {
+      if (d < -100) {
         console.log("Swiped left");
         this.$emit("nextPage");
       }
-      if (d > 200) {
+      if (d > 100) {
         console.log("Swiped right");
         this.$emit("prevPage");
       }
