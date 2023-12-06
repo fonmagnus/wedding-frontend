@@ -76,10 +76,14 @@ export default {
     nextPage() {
       this.page++;
       if (this.page >= this.pages.length) this.page = this.pages.length - 1;
+      const ele = document.getElementById(`${this.pages[this.page]}`);
+      ele.scrollTo({ top: 0 });
     },
     prevPage() {
       this.page--;
       if (this.page < 0) this.page = 0;
+      const ele = document.getElementById(`${this.pages[this.page]}`);
+      ele.scrollTo({ top: 0 });
     },
     onTouchStart(e) {
       this.startX = e.changedTouches[0].screenX;

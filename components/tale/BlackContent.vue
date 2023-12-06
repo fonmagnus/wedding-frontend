@@ -73,7 +73,7 @@ export default {
         "An unsung past chimes in a dull flashback",
         "When the bland taste of life causes futility to attack",
         "Desolation where the heart asked for what's lacked",
-        "Where soul scettered, mind dispersed, and heart cracked",
+        "Where soul scattered, mind dispersed, and heart cracked",
       ],
 
       contentSectionTitle: [
