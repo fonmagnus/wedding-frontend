@@ -28,7 +28,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="1" />
+      <SwipeDown :page="page" :on-page="2" />
     </div>
 
     <div

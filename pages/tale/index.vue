@@ -7,11 +7,19 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+    <PreweddingVideoContent
+      id="prewed-video-content"
+      :page="page"
+      class="absolute top-0"
+      style="z-index: 9"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
     <BlackContent
       id="black-content"
       :page="page"
       class="absolute top-0"
-      style="z-index: 9"
+      style="z-index: 8"
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
@@ -19,7 +27,7 @@
       id="red-content"
       :page="page"
       class="absolute top-0"
-      style="z-index: 8"
+      style="z-index: 7"
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
@@ -37,7 +45,12 @@ export default {
   data() {
     return {
       page: 0,
-      pages: ["tale-cover", "black-content", "red-content"],
+      pages: [
+        "tale-cover",
+        "prewed-video-content",
+        "black-content",
+        "red-content",
+      ],
       startX: 0,
     };
   },
@@ -94,7 +107,6 @@ export default {
       const ele = document.getElementById("tale-page");
       const width = ele.getBoundingClientRect().width;
       const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
-      console.log(percentOnScreen);
 
       if (x < 0 && percentOnScreen > 14) {
         if (this.page === this.pages.length - 1) return;
