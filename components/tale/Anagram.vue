@@ -55,7 +55,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.animateAnagram();
-    }, 1000);
+    }, 1500);
   },
   methods: {
     initializeCoordinates() {
