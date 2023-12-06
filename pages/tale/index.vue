@@ -97,11 +97,11 @@ export default {
     },
     onTouchEnd(e) {
       const d = e.changedTouches[0].screenX - this.startX;
-      if (d < 0 && d > -30) {
+      if (d < 0 && d > -50) {
         if (this.page === this.pages.length - 1) return;
         this.$gsap.to(`#${this.pages[this.page]}`, { x: 0 });
       }
-      if (d > 0 && d < 30) {
+      if (d > 0 && d < 50) {
         if (this.page === 0) return;
         this.$gsap.to(`#${this.pages[this.page - 1]}`, {
           x: -window.innerWidth,
