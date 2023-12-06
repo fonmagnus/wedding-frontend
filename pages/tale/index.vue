@@ -29,10 +29,17 @@ export default {
     return {
       page: 0,
       pages: ["tale-cover", "black-content"],
+      startX: 0,
     };
   },
   mounted() {
     this.$gsap.to("#tale-page", { opacity: 1, duration: 1 });
+    window.addEventListener("touchstart", this.onStart);
+    window.addEventListener("touchmove", this.onHold);
+  },
+  destroyed() {
+    window.removeEventListener("touchstart", this.onStart);
+    window.removeEventListener("touchmove", this.onHold);
   },
   watch: {
     page(newVal, oldVal) {
@@ -62,6 +69,17 @@ export default {
     prevPage() {
       this.page--;
       if (this.page < 0) this.page = 0;
+    },
+    onStart(e) {
+      this.startX = e.changedTouches[0].screenX;
+    },
+    onHold(e) {
+      const x = Math.min(0, e.changedTouches[0].screenX - this.startX);
+      const ele = document.getElementById("tale-page");
+      const width = ele.getBoundingClientRect().width;
+      this.$gsap.to(`#${this.pages[this.page]}`, {
+        x,
+      });
     },
   },
 };
