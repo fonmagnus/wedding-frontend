@@ -36,17 +36,23 @@
       </span>
     </div>
 
-    <RsvpForm @refetchMessages="fetchMessages" />
+    <RsvpForm v-if="invitee.name" @refetchMessages="fetchMessages" />
     <MessageToBride :messages="messages" />
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       messages: [],
     };
+  },
+  computed: {
+    ...mapGetters({
+      invitee: "data/getInvitee",
+    }),
   },
   mounted() {
     this.fetchMessages();
