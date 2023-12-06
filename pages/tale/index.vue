@@ -34,12 +34,14 @@ export default {
   },
   mounted() {
     this.$gsap.to("#tale-page", { opacity: 1, duration: 1 });
-    window.addEventListener("touchstart", this.onStart);
-    window.addEventListener("touchmove", this.onHold);
+    window.addEventListener("touchstart", this.onTouchStart);
+    window.addEventListener("touchmove", this.onTouchHold);
+    window.addEventListener("touchend", this.onTouchEnd);
   },
   destroyed() {
-    window.removeEventListener("touchstart", this.onStart);
-    window.removeEventListener("touchmove", this.onHold);
+    window.removeEventListener("touchstart", this.onTouchStart);
+    window.removeEventListener("touchmove", this.onTouchHold);
+    window.removeEventListener("touchend", this.onTouchEnd);
   },
   watch: {
     page(newVal, oldVal) {
@@ -70,10 +72,10 @@ export default {
       this.page--;
       if (this.page < 0) this.page = 0;
     },
-    onStart(e) {
+    onTouchStart(e) {
       this.startX = e.changedTouches[0].screenX;
     },
-    onHold(e) {
+    onTouchHold(e) {
       const d = e.changedTouches[0].screenX - this.startX;
       const x = d;
       const ele = document.getElementById("tale-page");
@@ -90,6 +92,19 @@ export default {
         this.$gsap.to(`#${this.pages[this.page - 1]}`, {
           x: -window.innerWidth + x,
           transform: "rotateY(0)",
+        });
+      }
+    },
+    onTouchEnd(e) {
+      const d = e.changedTouches[0].screenX - this.startX;
+      if (d < 0 && d > -30) {
+        if (this.page === this.pages.length - 1) return;
+        this.$gsap.to(`#${this.pages[this.page]}`, { x: 0 });
+      }
+      if (d > 0 && d < 30) {
+        if (this.page === 0) return;
+        this.$gsap.to(`#${this.pages[this.page - 1]}`, {
+          x: -window.innerWidth,
         });
       }
     },
