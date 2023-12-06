@@ -4,40 +4,43 @@
     class="flex flex-col items-center absolute py-16 px-8 bg-black text-white w-full overflow-hidden h-full -z-10"
   >
     <span>
-      <span id="A0" class="tale text-xl text-yellow-500">A</span>
-      <span id="A1" class="tale text-xl text-yellow-500">R</span>
-      <span id="A2" class="tale text-xl text-yellow-500">N</span>
-      <span id="A3" class="tale text-xl text-yellow-500">O</span>
-      <span id="A4" class="tale text-xl text-yellow-500">L</span>
-      <span id="A5" class="tale text-xl text-yellow-500">D</span>
+      <span id="A0" class="tale text-xl">A</span>
+      <span id="A1" class="tale text-xl">R</span>
+      <span id="A2" class="tale text-xl">N</span>
+      <span id="A3" class="tale text-xl">O</span>
+      <span id="A4" class="tale text-xl">L</span>
+      <span id="A5" class="tale text-xl">D</span>
       &nbsp;
-      <span id="A6" class="tale text-xl text-yellow-500">A</span>
-      <span id="A7" class="tale text-xl text-yellow-500">R</span>
-      <span id="A8" class="tale text-xl text-yellow-500">D</span>
-      <span id="A9" class="tale text-xl text-yellow-500">I</span>
-      <span id="A10" class="tale text-xl text-yellow-500">A</span>
-      <span id="A11" class="tale text-xl text-yellow-500">N</span>
-      <span id="A12" class="tale text-xl text-yellow-500">T</span>
-      <span id="A13" class="tale text-xl text-yellow-500">O</span>
+      <span id="A6" class="tale text-xl">A</span>
+      <span id="A7" class="tale text-xl">R</span>
+      <span id="A8" class="tale text-xl">D</span>
+      <span id="A9" class="tale text-xl">I</span>
+      <span id="A10" class="tale text-xl">A</span>
+      <span id="A11" class="tale text-xl">N</span>
+      <span id="A12" class="tale text-xl">T</span>
+      <span id="A13" class="tale text-xl">O</span>
     </span>
     <span>
-      <span id="A14" class="tale text-xl text-yellow-500">G</span>
-      <span id="A15" class="tale text-xl text-yellow-500">A</span>
-      <span id="A16" class="tale text-xl text-yellow-500">B</span>
-      <span id="A17" class="tale text-xl text-yellow-500">R</span>
-      <span id="A18" class="tale text-xl text-yellow-500">I</span>
-      <span id="A19" class="tale text-xl text-yellow-500">E</span>
-      <span id="A20" class="tale text-xl text-yellow-500">L</span>
-      <span id="A21" class="tale text-xl text-yellow-500">L</span>
-      <span id="A22" class="tale text-xl text-yellow-500">E</span>
+      <span id="A14" class="tale text-xl">G</span>
+      <span id="A15" class="tale text-xl">A</span>
+      <span id="A16" class="tale text-xl">B</span>
+      <span id="A17" class="tale text-xl">R</span>
+      <span id="A18" class="tale text-xl">I</span>
+      <span id="A19" class="tale text-xl">E</span>
+      <span id="A20" class="tale text-xl">L</span>
+      <span id="A21" class="tale text-xl">L</span>
+      <span id="A22" class="tale text-xl">E</span>
       &nbsp;
-      <span id="A23" class="tale text-xl text-yellow-500">A</span>
-      <span id="A24" class="tale text-xl text-yellow-500">G</span>
-      <span id="A25" class="tale text-xl text-yellow-500">A</span>
-      <span id="A26" class="tale text-xl text-yellow-500">T</span>
-      <span id="A27" class="tale text-xl text-yellow-500">H</span>
-      <span id="A28" class="tale text-xl text-yellow-500">A</span>
+      <span id="A23" class="tale text-xl">A</span>
+      <span id="A24" class="tale text-xl">G</span>
+      <span id="A25" class="tale text-xl">A</span>
+      <span id="A26" class="tale text-xl">T</span>
+      <span id="A27" class="tale text-xl">H</span>
+      <span id="A28" class="tale text-xl">A</span>
     </span>
+    <audio ref="anagram-sparkle">
+      <source :src="sparkleSound" type="audio/ogg" />
+    </audio>
   </div>
 </template>
 
@@ -47,6 +50,11 @@ export default {
   data() {
     return {
       coordinates: [],
+      sparkleSound:
+        "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701865544/audio/zapsplat_fantasy_magic_glissando_harp_005_86494_nxtpel.mp3",
+      // "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701865545/audio/zapsplat_fantasy_magic_wand_ping_bell_chime_classic_simple_010_92723_pvvyrk.mp3",
+      // "https://res.cloudinary.com/hdi-bee-bot-test-cloud/video/upload/v1701865547/audio/zapsplat_fantasy_magic_magical_glissando_001_99332_zw7cwq.mp3",
+      musicPlayer: {},
     };
   },
   created() {
@@ -54,6 +62,8 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      this.musicPlayer = this.$refs["anagram-sparkle"];
+      this.musicPlayer.play();
       this.animateAnagram();
     }, 1500);
   },
@@ -63,156 +73,156 @@ export default {
       this.coordinates = [
         {
           id: 0,
-          top: 10,
+          top: 17,
           add: -90 + leftOffset[0],
         },
         //----
         {
           id: 26,
-          top: 10,
+          top: 17,
           add: -60 + leftOffset[0],
         },
         {
           id: 28,
-          top: 10,
+          top: 17,
           add: -45 + leftOffset[0],
         },
         {
           id: 21,
-          top: 10,
+          top: 17,
           add: -25 + leftOffset[0],
         },
         {
           id: 19,
-          top: 10,
+          top: 17,
           add: -15 + leftOffset[0],
         },
         //----
         {
           id: 14,
-          top: 10,
+          top: 17,
           add: 10 + leftOffset[0],
         },
         {
           id: 10,
-          top: 10,
+          top: 17,
           add: 28 + leftOffset[0],
         },
         {
           id: 4,
-          top: 10,
+          top: 17,
           add: 48 + leftOffset[0],
         },
         {
           id: 3,
-          top: 10,
+          top: 17,
           add: 60 + leftOffset[0],
         },
         {
           id: 17,
-          top: 10,
+          top: 17,
           add: 80 + leftOffset[0],
         },
         {
           id: 22,
-          top: 10,
+          top: 17,
           add: 95 + leftOffset[0],
         },
         // -------
         // -------
         {
           id: 9,
-          top: 15,
+          top: 22,
           add: -60 + leftOffset[1],
         },
         {
           id: 2,
-          top: 15,
+          top: 22,
           add: -45 + leftOffset[1],
         },
         // -------
         {
           id: 25,
-          top: 15,
+          top: 22,
           add: -15 + leftOffset[1],
         },
         // --------
         {
           id: 24,
-          top: 15,
+          top: 22,
           add: 15 + leftOffset[1],
         },
         {
           id: 7,
-          top: 15,
+          top: 22,
           add: 35 + leftOffset[1],
         },
         {
           id: 23,
-          top: 15,
+          top: 22,
           add: 50 + leftOffset[1],
         },
         {
           id: 11,
-          top: 15,
+          top: 22,
           add: 70 + leftOffset[1],
         },
         {
           id: 5,
-          top: 15,
+          top: 22,
           add: 90 + leftOffset[1],
         },
         // -------
         // -------
         {
           id: 16,
-          top: 20,
+          top: 27,
           add: -90 + leftOffset[2],
         },
         {
           id: 1,
-          top: 20,
+          top: 27,
           add: -70 + leftOffset[2],
         },
         {
           id: 18,
-          top: 20,
+          top: 27,
           add: -50 + leftOffset[2],
         },
         {
           id: 8,
-          top: 20,
+          top: 27,
           add: -35 + leftOffset[2],
         },
         {
           id: 6,
-          top: 20,
+          top: 27,
           add: -15 + leftOffset[2],
         },
         {
           id: 20,
-          top: 20,
+          top: 27,
           add: 5 + leftOffset[2],
         },
         // -------
         {
           id: 13,
-          top: 20,
+          top: 27,
           add: 35 + leftOffset[2],
         },
         {
           id: 15,
-          top: 20,
+          top: 27,
           add: 55 + leftOffset[2],
         },
         {
           id: 12,
-          top: 20,
+          top: 27,
           add: 75 + leftOffset[2],
         },
         {
           id: 27,
-          top: 20,
+          top: 27,
           add: 95 + leftOffset[2],
         },
       ];
@@ -251,6 +261,7 @@ export default {
 
     animateStars(elem, i, j) {
       const container = document.getElementById("animation-container");
+      if (!container) return;
       const star = document.createElement("div");
       star.id = `star-${i}-${j}`;
       const rect = elem.getBoundingClientRect();
@@ -390,63 +401,63 @@ H  27    28
 /* --------------------- */
 
 #A14 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 7.5 * 1rem);
 }
 #A15 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 6.5 * 1rem);
 }
 #A16 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 5.5 * 1rem);
 }
 #A17 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 4.3 * 1rem);
 }
 #A18 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 3.3 * 1rem);
 }
 #A19 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 2.5 * 1rem);
 }
 #A20 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 1.5 * 1rem);
 }
 #A21 {
-  top: 55%;
+  top: 50%;
   left: calc(50% - 0.5 * 1rem);
 }
 #A22 {
-  top: 55%;
+  top: 50%;
   left: calc(50% + 0.5 * 1rem);
 }
 #A23 {
-  top: 55%;
+  top: 50%;
   left: calc(50% + 2.5 * 1rem);
 }
 #A24 {
-  top: 55%;
+  top: 50%;
   left: calc(50% + 3.5 * 1rem);
 }
 #A25 {
-  top: 55%;
+  top: 50%;
   left: calc(50% + 4.5 * 1rem);
 }
 #A26 {
-  top: 55%;
+  top: 50%;
   left: calc(50% + 5.5 * 1rem);
 }
 #A27 {
-  top: 55%;
+  top: 50%;
   left: calc(50% + 6.5 * 1rem);
 }
 #A28 {
-  top: 55%;
+  top: 50%;
   left: calc(50% + 7.5 * 1rem);
 }
 </style>

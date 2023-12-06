@@ -120,6 +120,7 @@ body {
   position: absolute;
   font-size: 2rem;
   z-index: 10;
+  color: #f8dcbf;
 }
 
 .h-screen {

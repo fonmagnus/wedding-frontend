@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col absolute bottom-1/4 w-full items-center gap-4">
+  <div class="flex flex-col absolute bottom-28 w-full items-center gap-2">
     <span class="text-center">{{ contentTitle[lang] }}</span>
     <div class="flex gap-4">
       <div class="flex flex-col gap-1 items-center">
@@ -13,7 +13,6 @@
           ]"
           >🇬🇧</span
         >
-        <span>English</span>
       </div>
       <div class="flex flex-col gap-1 items-center">
         <span
@@ -26,7 +25,6 @@
           ]"
           >🇮🇩</span
         >
-        <span>Indonesia</span>
       </div>
     </div>
   </div>
@@ -43,8 +41,8 @@ export default {
   data() {
     return {
       contentTitle: {
-        EN: "Language",
-        ID: "Bahasa",
+        EN: "Select Language",
+        ID: "Pilih Bahasa",
       },
     };
   },

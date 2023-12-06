@@ -8,11 +8,6 @@
         v-for="(music, j) in genre.music"
         :key="j"
         class="flex gap-2 rounded-lg pl-2 py-2 hover:bg-red-900 transition-all"
-        :class="[
-          {
-            'bg-red-900': i === activeMusicGenreIndex && j === activeMusicIndex,
-          },
-        ]"
         @click.stop="playAudio(i, j)"
       >
         <img :src="music.icon" alt="" class="w-12 h-12 object-cover" />

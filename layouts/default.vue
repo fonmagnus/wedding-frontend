@@ -4,7 +4,7 @@
   >
     <div
       v-if="$route.path !== '/'"
-      class="fixed top-4 left-4 z-30 cursor-pointer bg-black text-white rounded-full w-8 h-8 text-center flex items-center justify-center"
+      class="fixed top-2 left-2 z-30 cursor-pointer bg-black text-white rounded-full w-8 h-8 text-center flex items-center justify-center"
       @click.stop="goBack"
     >
       <span class="text-sm fa fa-chevron-left text-center"></span>
@@ -78,7 +78,7 @@
           <i class="fa fa-play"></i>
         </div>
       </div>
-
+      
       <template v-for="(genre, i) in musicSrcSet">
         <template v-for="(music, j) in genre.music">
           <audio
@@ -179,7 +179,7 @@ export default {
         this.activeMusicIndex =
           (this.activeMusicIndex + 1) %
           this.musicSrcSet[this.activeMusicGenreIndex].music.length;
-      this.playAudio();
+      this.playAudio(this.activeMusicGenreIndex, this.activeMusicIndex);
     },
     getInvitee() {
       fetch(`${process.env.API_URL}/main/me/${this.$route.query.code}`)

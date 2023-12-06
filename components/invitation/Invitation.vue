@@ -15,6 +15,10 @@
       <h6 class="font-bold text-2xl" v-if="invitee && invitee.name">
         {{ $route.query.code }}
       </h6>
+      <span v-if="invitee && invitee.name" class="text-xs"
+        >Please don't share this RSVP code to anyone else because it's just for
+        you</span
+      >
     </div>
 
     <div class="flex flex-col gap-2 w-full">
