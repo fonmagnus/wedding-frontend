@@ -61,11 +61,12 @@ export default {
     },
     handleSwipe() {
       const d = this.touchEndX - this.touchStartX;
-      if (d < -50) {
+      const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
+      if (d < 0 && percentOnScreen > 25) {
         // console.log("Swiped left");
         this.$emit("nextPage");
       }
-      if (d > 50) {
+      if (d > 0 && percentOnScreen > 25) {
         // console.log("Swiped right");
         this.$emit("prevPage");
       }

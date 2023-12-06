@@ -80,13 +80,15 @@ export default {
       const x = d;
       const ele = document.getElementById("tale-page");
       const width = ele.getBoundingClientRect().width;
+      const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
+      console.log(percentOnScreen);
 
-      if (x < 0) {
+      if (x < 0 && percentOnScreen > 14) {
         if (this.page === this.pages.length - 1) return;
         this.$gsap.to(`#${this.pages[this.page]}`, {
           x,
         });
-      } else {
+      } else if (percentOnScreen > 14) {
         if (this.page === 0) return;
 
         this.$gsap.to(`#${this.pages[this.page - 1]}`, {
@@ -97,11 +99,13 @@ export default {
     },
     onTouchEnd(e) {
       const d = e.changedTouches[0].screenX - this.startX;
-      if (d < 0 && d > -50) {
+      const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
+      console.log(percentOnScreen);
+      if (d < 0 && percentOnScreen <= 25) {
         if (this.page === this.pages.length - 1) return;
         this.$gsap.to(`#${this.pages[this.page]}`, { x: 0 });
       }
-      if (d > 0 && d < 50) {
+      if (d > 0 && percentOnScreen <= 25) {
         if (this.page === 0) return;
         this.$gsap.to(`#${this.pages[this.page - 1]}`, {
           x: -window.innerWidth,
