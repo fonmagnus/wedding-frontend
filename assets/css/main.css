@@ -76,6 +76,13 @@ p, h1, h2, h3, h4, h5, h6, a {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Creato'; 
+  src: url('~static/fonts/Creato.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   font-family: Loverine;
   font-size: 2rem;
@@ -84,6 +91,8 @@ h1 {
 
 h2 {
   font-family: Marykate;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 h3 {
@@ -99,7 +108,7 @@ h5 {
 }
 
 h6 {
-  font-family: Bellota;
+  font-family: Creato;
 }
 
 body {
@@ -111,4 +120,8 @@ body {
   position: absolute;
   font-size: 2rem;
   z-index: 10;
+}
+
+.h-screen {
+  height: 100dvh;
 }

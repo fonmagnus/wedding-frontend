@@ -1,7 +1,7 @@
 <template>
   <div
     id="animation-container"
-    class="flex flex-col items-center relative py-16 px-8 bg-black text-white w-full"
+    class="flex flex-col items-center absolute py-16 px-8 bg-black text-white w-full overflow-hidden h-full -z-10"
   >
     <span>
       <span id="A0" class="tale text-xl text-yellow-500">A</span>
@@ -235,6 +235,9 @@ export default {
 
         const duration = Math.random() * 2.5 + 1;
         this.$gsap.to(elem, { x, y, duration });
+        setTimeout(() => {
+          this.$emit("animationEnded");
+        }, duration * 1000);
 
         const repeat = Math.floor(Math.random(20) + 20);
 
@@ -264,7 +267,8 @@ export default {
       container.appendChild(star);
 
       this.$gsap.to(star, {
-        y: 500,
+        y: 1024,
+        fontSize: Math.random() * 96,
         opacity: 0,
         duration: 0.5,
         ease: "power1.inOut",

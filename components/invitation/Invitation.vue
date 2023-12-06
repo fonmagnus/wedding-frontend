@@ -13,15 +13,15 @@
     <div class="flex flex-col gap-2 w-full">
       <Button
         class="w-full border border-white hover:bg-black transition-all"
-        @click="$router.push(`story?code=${$route.query.code}`)"
+        @click="$router.push(`tale?code=${$route.query.code}`)"
       >
-        <span> Our Story </span>
+        <h6>Our Tale</h6>
       </Button>
       <Button
         class="w-full border border-white hover:bg-black transition-all"
         @click="$router.push(`rsvp?code=${$route.query.code}`)"
       >
-        <span> RSVP </span>
+        <h6>RSVP</h6>
       </Button>
     </div>
   </div>

@@ -12,4 +12,10 @@ export default ({ store }) => {
     storage: window.localStorage,
     modules: ['data'],
   }).plugin(store);
+
+  new VuexPersistence({
+    key: ['getLang'],
+    storage: window.localStorage,
+    modules: ['data'],
+  }).plugin(store);
 };

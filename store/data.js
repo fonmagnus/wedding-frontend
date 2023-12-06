@@ -1,6 +1,7 @@
 export const state = () => ({
   secret: '',
   invitee: {},
+  lang: 'EN'
 })
 
 export const mutations = {
@@ -9,6 +10,9 @@ export const mutations = {
   },
   setInvitee(state, invitee) {
     state.invitee = invitee;
+  },
+  setLang(state, lang) {
+    state.lang = lang;
   }
 }
 
@@ -18,6 +22,9 @@ export const getters = {
   },
   getInvitee(state) {
     return state.invitee;
+  },
+  getLang(state) {
+    return state.lang;
   }
 }
 
@@ -28,4 +35,7 @@ export const actions = {
   setInvitee({ commit }, invitee) {
     commit('setInvitee', invitee);
   },
+  setLang({ commit }, lang) {
+    commit('setLang', lang);
+  }
 }

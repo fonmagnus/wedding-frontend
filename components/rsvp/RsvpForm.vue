@@ -22,7 +22,7 @@
         class="hover:bg-black hover:text-black border-2 border-black text-white bg-black transition-all"
         @click="submitRsvp"
       >
-        Submit
+        <h6>Submit</h6>
       </Button>
     </form>
     <div v-else class="flex flex-col gap-2">

@@ -17,7 +17,9 @@
         class="radio-button appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-black checked:border-transparent focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left mr-1 cursor-pointer"
       />
       <span class="select-none">
-        {{ option.label }}
+        <h6>
+          {{ option.label }}
+        </h6>
       </span>
     </label>
   </div>

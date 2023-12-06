@@ -36,14 +36,12 @@
       <span>Dear Our Invited Guest,</span>
       <h4 class="text-2xl">{{ invitee.name }}</h4>
       <span class="text-xs mt-4">You have been invited to our wedding</span>
-      <div
+      <Button
         class="py-2 px-4 rounded-xl bg-black text-yellow-500 mt-2 cursor-pointer hover:bg-yellow-500 hover:text-black transition-all"
         @click="$router.push(`invitation?code=${(code = $route.query.code)}`)"
       >
-        <span>
-          <span class="fa fa-envelope"></span> &nbsp; OPEN INVITATION
-        </span>
-      </div>
+        <h6><span class="fa fa-envelope"></span> &nbsp; OPEN INVITATION</h6>
+      </Button>
     </div>
   </div>
 </template>
