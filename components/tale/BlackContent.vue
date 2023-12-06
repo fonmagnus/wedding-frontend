@@ -5,19 +5,30 @@
     <div class="w-full fixed top-0 bg-black py-4 z-20">
       <h3 class="text-center">BLACK</h3>
     </div>
-    <div class="w-full">
-      <ImageCollection
-        :images="[
-          'https://miro.medium.com/v2/resize:fit:1400/1*NvQM_lGjGcd0ER4LMJKcoQ.jpeg',
-          'https://images.unsplash.com/photo-1543495843-1a119fbbb2fe?q=80&w=1000',
-        ]"
+    <div
+      class="w-full flex flex-col min-h-[96dvh] justify-center gap-8 relative"
+    >
+      <img
+        src="@/assets/images/tale/foot.png"
+        alt=""
+        class="w-36 object-fit absolute top-12 left-1/2 -translate-x-1/2"
       />
-    </div>
+      <div class="w-full">
+        <ImageCollection
+          :images="[
+            'https://miro.medium.com/v2/resize:fit:1400/1*NvQM_lGjGcd0ER4LMJKcoQ.jpeg',
+            'https://images.unsplash.com/photo-1543495843-1a119fbbb2fe?q=80&w=1000',
+          ]"
+        />
+      </div>
 
-    <div class="flex flex-col gap-2 px-4">
-      <h3 v-for="(poem, i) in poemLines" :key="i" class="italic text-sm">
-        {{ poem }}
-      </h3>
+      <div class="flex flex-col gap-2 px-4">
+        <h3 v-for="(poem, i) in poemLines" :key="i" class="italic text-sm">
+          {{ poem }}
+        </h3>
+      </div>
+
+      <SwipeDown :page="page" :on-page="1" />
     </div>
 
     <div
@@ -46,6 +57,9 @@
 import { mapGetters } from "vuex";
 import MarkdownIt from "markdown-it";
 export default {
+  props: {
+    page: Number,
+  },
   computed: {
     ...mapGetters({
       lang: "data/getLang",
@@ -53,6 +67,7 @@ export default {
   },
   data() {
     return {
+      hasScrolledDown: false,
       poemLines: [
         "I remember the times when the landscape was flooded in black",
         "An unsung past chimes in a dull flashback",

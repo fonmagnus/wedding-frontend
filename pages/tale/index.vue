@@ -9,6 +9,7 @@
     />
     <BlackContent
       id="black-content"
+      :page="page"
       class="absolute top-0"
       style="z-index: 9"
       @prevPage="prevPage"
@@ -16,6 +17,7 @@
     />
     <RedContent
       id="red-content"
+      :page="page"
       class="absolute top-0"
       style="z-index: 8"
       @prevPage="prevPage"
@@ -35,11 +37,7 @@ export default {
   data() {
     return {
       page: 0,
-      pages: [
-        "tale-cover", 
-        "black-content", 
-        "red-content"
-      ],
+      pages: ["tale-cover", "black-content", "red-content"],
       startX: 0,
     };
   },
@@ -61,7 +59,7 @@ export default {
         this.$gsap.to(`#${this.pages[oldVal]}`, {
           x: -window.innerWidth,
           duration: 1.5,
-          transform: "rotateY(180deg)",
+          transform: "rotateY(160deg)",
         });
       }
       // open page to left

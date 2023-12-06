@@ -5,20 +5,26 @@
     <div class="w-full fixed top-0 bg-red-800 py-3 z-20">
       <h3 class="text-center">RED</h3>
     </div>
-    <div class="w-full">
-      <ImageCollection
-        :images="[
-          'https://img.freepik.com/premium-photo/young-attractive-asian-couple-wearing-red-t-shirt-white-shorts-sitting-man-playing-ukulele-against-white-background-concept-pre-wedding-photography-isolated_102814-716.jpg?w=2000',
-          'https://media.istockphoto.com/id/1097021538/photo/happy-asian-chinese-couple-wearing-cheongsam-traditional-red-dress-and-t-shirt-and-looking-on.jpg?s=170667a&w=0&k=20&c=HXddNfdu7v0N0RKBKLmJtLBTRQd2qmFm2tw2gMqrWpU=',
-          'https://i.pinimg.com/736x/33/5b/fe/335bfe1d127c0be5b6536f1e0966748c.jpg',
-        ]"
-      />
-    </div>
+    <div
+      class="w-full flex flex-col min-h-[96dvh] justify-center gap-8 relative"
+    >
+      <div class="w-full">
+        <ImageCollection
+          :images="[
+            'https://img.freepik.com/premium-photo/young-attractive-asian-couple-wearing-red-t-shirt-white-shorts-sitting-man-playing-ukulele-against-white-background-concept-pre-wedding-photography-isolated_102814-716.jpg?w=2000',
+            'https://media.istockphoto.com/id/1097021538/photo/happy-asian-chinese-couple-wearing-cheongsam-traditional-red-dress-and-t-shirt-and-looking-on.jpg?s=170667a&w=0&k=20&c=HXddNfdu7v0N0RKBKLmJtLBTRQd2qmFm2tw2gMqrWpU=',
+            'https://i.pinimg.com/736x/33/5b/fe/335bfe1d127c0be5b6536f1e0966748c.jpg',
+          ]"
+        />
+      </div>
 
-    <div class="flex flex-col gap-2 px-4">
-      <h3 v-for="(poem, i) in poemLines" :key="i" class="italic text-sm">
-        {{ poem }}
-      </h3>
+      <div class="flex flex-col gap-2 px-4">
+        <h3 v-for="(poem, i) in poemLines" :key="i" class="italic text-sm">
+          {{ poem }}
+        </h3>
+      </div>
+
+      <SwipeDown :page="page" :on-page="2" />
     </div>
 
     <div
@@ -51,6 +57,9 @@
 import { mapGetters } from "vuex";
 import MarkdownIt from "markdown-it";
 export default {
+  props: {
+    page: Number,
+  },
   computed: {
     ...mapGetters({
       lang: "data/getLang",
