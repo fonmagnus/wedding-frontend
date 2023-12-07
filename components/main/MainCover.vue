@@ -14,8 +14,18 @@
       </h3>
     </div>
 
-    <div class="flex flex-col gap-4 items-center text-center px-8 text-sm">
+    <div class="flex flex-col gap-2 items-center text-center px-8 text-sm">
       <!-- <span class="text-xl">Holy Matrimony</span> -->
+      <span>
+        <a
+          class="text-blue-300"
+          href="https://maps.app.goo.gl/5mCNn4YnmDBN1HZN8"
+          target="_blank"
+          ><span class="fa fa-location-dot"></span> &nbsp; Stella Maris Pluit
+          Catholic Church
+        </a>
+        <br />
+      </span>
       <span>
         <span class="fa fa-calendar"></span> &nbsp; Saturday, 4<sup>th</sup> May
         2024

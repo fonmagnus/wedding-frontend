@@ -100,16 +100,16 @@ export default {
       content: [
         {
           prologue: {
-            EN: "Our journey starts when we meet each other at April 2021. When we get to know each other and our life story, we fell in love with each other and decide to start a romantic relationship at 7 May 2021",
-            ID: "Perjalanan kami dimulai ketika kami bertemu bulan April 2021. Ketika kami mengenal satu sama lain dan mendengarkan kisah hidup satu sama lain, kami jatuh cinta dan memutuskan memulai hubungan pacaran di tanggal 7 Mei 2021",
+            EN: "Just like a charming and alluring red color, our souls are destined to meet. Through our journey we know each other and decided to paint our canvas with colors. We decided to start a romantic relationship at 7 May 2021",
+            ID: "Seperti warna merah yang tajam dan memikat, pertemuan dan masa perkenalan kami memunculkan semangat untuk memulai lembaran baru dan mengisi kanvas kami dengan warna. Kami memutuskan untuk memulai perjalanan cinta kami pada 7 Mei 2021",
           },
           children: [],
           epilogue: {},
         },
         {
           prologue: {
-            EN: "Let's set the vibe for reading our tale so you can read the story that suits your mood best. We hope you can delve deeper into our love story together",
-            ID: "Ayo kita atur vibe untuk membaca kisah kita supaya kamu bisa membaca cerita sesuai dengan moodmu. Kami berharap kamu bisa menjajaki kisah cinta kami lebih dalam bersama-sama",
+            EN: "Reading our love story is personalized for you. Let's set the vibes to read this story according to your music taste and mood. We hope you are able to walk with us to see the kaleidoscope of our love story",
+            ID: "Kisah kami dipersonalisasi untukmu. Ayo atur vibes untuk membaca kisah ini sesuai dengan selera mood dari musik yang kamu pilih. Kami berharap kamu bisa menjajaki kisah cinta kami secara lebih mendalam",
           },
           children: [],
           epilogue: {},

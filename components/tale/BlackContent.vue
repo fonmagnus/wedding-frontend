@@ -101,16 +101,16 @@ export default {
           ID: "#ATaleGaloreInAGrandBridalOath",
         },
         {
-          EN: "Meaning of Black",
-          ID: "Makna Hitam",
+          EN: "A sea of emptiness",
+          ID: "Lautan kekosongan",
         },
       ],
 
       content: [
         {
           prologue: {
-            EN: "The main concept of our wedding is a spectrum of colors. Where we use 9 different colors to represent the story in our relationships",
-            ID: "Konsep utama dari tema pernikahan kami adalah spektrum warna. Dimana kami menggunakan 9 warna berbeda untuk menggambarkan cerita yang penuh warna dalam hubungan cinta kami",
+            EN: "Just like a symphony of spectrum that has many stories to tell, so do our love story. These themes were brought upon our marriage concept which uses 9 different colors that merge into one. In this journey, each color strikes its own beauty in the blank canvas of our story",
+            ID: "Seperti simfoni spektrum warna yang memiliki banyak kisah untuk diceritakan, begitu pula dengan kisah kami. Hal inilah yang diusung dalam konsep pernikahan kami yang menggunakan 9 warna berbeda. Dalam perjalanannya, satu per satu warna berpadu menghiasi kanvas yang semula kosong",
           },
           children: [
             {
@@ -123,7 +123,7 @@ export default {
             },
             {
               EN: "🧡 **Orange** : faith and uncertainty",
-              ID: "🧡 **Jingga** : keyakinan dan ketidakpastian",
+              ID: "🧡 **Jingga** : kebimbangan dan keyakinan",
             },
             {
               EN: "💛 **Yellow** : hope and joy",
@@ -135,11 +135,11 @@ export default {
             },
             {
               EN: "💙 **Blue** : trust and tranquility",
-              ID: "💙 **Biru** : kepercayaan dan ketenangan",
+              ID: "💙 **Biru** : kepercayaan dan kedalaman",
             },
             {
               EN: "💜 **Violet** : elegance and beauty",
-              ID: "💜 **Ungu** : keindahan dan kecantikan",
+              ID: "💜 **Ungu** : elegan dan keindahan",
             },
             {
               EN: "💖 **Pink** : love and affection",
@@ -151,38 +151,38 @@ export default {
             },
           ],
           epilogue: {
-            EN: "Each color have a poem that resembles the state of our feeling related to the color. The poem is designed to be rhymed with the color theme",
-            ID: "Setiap warna memiliki puisi yang menggambarkan kondisi suasana hati yang berhubungan dengan warna tersebut. Bait di setiap puisi dibuat berima dalam bahasa inggris sesuai dengan warna tersebut",
+            EN: "In tones of rainbow and joyful light, the stroke of a love brush draws in our canvas as we draw it together. Every color has a poem that visualize our emotions toward its meaning. Each line of the poem is designed with rhyming words",
+            ID: "Sesuai dengan warna pelangi dan cahaya, kuas cinta melukis kanvas kami sebagaimana kami melukisnya. Setiap warna memiliki puisi yang menggambarkan suasana perasaan yang berhubungan dengan makna warna tersebut. Bait per bait puisi dirangkai dengan rima yang sama dalam bahasa inggris",
           },
         },
 
         {
           prologue: {
-            EN: "The hashtag uses the anagram of our name (Arnold Ardianto & Gabrielle Agatha). Anagram is a sentence that composed with the same letters",
-            ID: "Hashtag tersusun dari anagram nama kami berdua (Arnold Ardianto & Gabrielle Agatha). Anagram adalah kalimat yang memiliki huruf penyusun yang sama",
+            EN: "The hashtag uses the anagram of our name (Arnold Ardianto & Gabrielle Agatha).",
+            ID: "Hashtag tersusun dari anagram nama kami berdua (Arnold Ardianto & Gabrielle Agatha).",
           },
 
           children: [
             {
               EN: "A Tale Galore: Means a lot of stories in our relationship journey",
-              ID: "A Tale Galore: Banyak kisah dan cerita dalam hubungan kami",
+              ID: "A Tale Galore: Sebuah kisah yang berlimpah",
             },
             {
               EN: "In A Grand Bridal Oath: Those stories shaped us to a marriage life that starts with the wedding vow",
-              ID: "In A Grand Bridal Oath: Kisah itu membentuk kami dalam menuju hubungan pernikahan kami yang diawali dengan janji pernikahan",
+              ID: "In A Grand Bridal Oath: yang digenapi lewat janji pernikahan",
             },
           ],
 
           epilogue: {
-            EN: "The letter union from our name resembles our life that previously separated now have become one through marriage",
-            ID: "Penggabungan huruf huruf dari nama kami bermakna hidup kami yang tadinya terpisahkan sekarang menjadi satu melalui pernikahan",
+            EN: "The converging letters (A Tale Galore) that comes from our name means of a previously two separated lives that is united through the sacred marriage (A Grand Bridal Oath)",
+            ID: "Huruf-huruf acak (A Tale Galore) yang digabungkan memaknai dua kehidupan terpisah yang disatukan dalam ikatan pernikahan kudus (A Grand Bridal Oath)",
           },
         },
 
         {
           prologue: {
-            EN: "Black resembles the color when life feels dull and bland before love give its meaning. When we busy to work with routines and daily lives day by day.",
-            ID: "Hitam menggambarkan warna ketika hidup terasa membosankan dan hambar sebelum cinta memberinya makna. Ketika kami sibuk bekerja dan menjalankan kegiatan sehari-hari dengan biasa",
+            EN: "Once upon a time, two souls are separated live their own lives. The monotonous and bland routines, wounds, and grief. Black emphasized vagueness, sorrows, and nothingness. Life of these two souls feel so bland before love comes and give its meaning",
+            ID: "Pada suatu ketika, kedua manusia terpisah menjalani bagian kehidupannya masing-masing. Rutinitas sehari-hari yang monoton, luka, dan duka. Hitam menggambarkan kehampaan, ketiadaan. Hidup dua insan terasa hambar sebelum cinta datang memberi makna",
           },
           children: [],
           epilogue: {},

@@ -57,6 +57,12 @@
       </div>
       <div class="flex justify-end gap-2 absolute bottom-4 right-4">
         <div
+          @click.stop="randomAudio"
+          class="border border-white rounded-full w-8 h-8 flex items-center justify-center"
+        >
+          <i class="fa fa-dice"></i>
+        </div>
+        <div
           v-if="!musicIsStopped"
           @click.stop="stopAudio"
           class="border border-white rounded-full w-8 h-8 flex items-center justify-center"
@@ -162,10 +168,8 @@ export default {
       }
       this.activeMusicGenreIndex = i;
       this.activeMusicIndex = j;
-      this.activeMusic =
-        this.musicSrcSet[this.activeMusicGenreIndex].music[
-          this.activeMusicIndex
-        ].slug;
+      const musicGenre = this.musicSrcSet[this.activeMusicGenreIndex];
+      this.activeMusic = musicGenre.music[this.activeMusicIndex].slug;
 
       this.musicPlayer = this.$refs[`music-${this.activeMusic}`][0];
       this.musicPlayer.play();
@@ -212,6 +216,17 @@ export default {
     },
     toggleMusicDialog() {
       this.isOpenMusicDialog = !this.isOpenMusicDialog;
+    },
+    randomAudio() {
+      this.stopAudio();
+      this.activeMusicGenreIndex = Math.floor(
+        Math.random() * this.musicSrcSet.length
+      );
+      const musicGenre = this.musicSrcSet[this.activeMusicGenreIndex];
+      this.activeMusicIndex = Math.floor(
+        Math.random() * musicGenre.music.length
+      );
+      this.playAudio(this.activeMusicGenreIndex, this.activeMusicIndex);
     },
   },
 };

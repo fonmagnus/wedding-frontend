@@ -46,6 +46,8 @@
 
 <script>
 import { TweenLite } from "gsap";
+import sparklingImage from "@/assets/images/tale/sparkling.png";
+
 export default {
   data() {
     return {
@@ -267,14 +269,14 @@ export default {
       const rect = elem.getBoundingClientRect();
       // star.classList.add("fa");
       // star.classList.add("fa-stars");
-      star.style.height = "5px";
-      star.style.width = "5px";
+      star.style.height = "24px";
+      star.style.width = "24px";
       star.style.position = "absolute";
       star.style.top = `${rect.top}px`;
       star.style.left = `${rect.left}px`;
       star.style.color = "yellow";
       star.style.opacity = 0.5;
-      star.innerText = "🌟";
+      star.innerHTML = `<img src="${sparklingImage}"/>`;
 
       container.appendChild(star);
       const xMovements = [];
