@@ -3,15 +3,14 @@
     <TaleCover
       id="tale-cover"
       class="absolute top-0"
-      style="z-index: 10"
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+
     <PreweddingVideoContent
       id="prewed-video-content"
       :page="page"
       class="absolute top-0"
-      style="z-index: 9"
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
@@ -19,7 +18,6 @@
       id="black-content"
       :page="page"
       class="absolute top-0"
-      style="z-index: 8"
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
@@ -27,7 +25,13 @@
       id="red-content"
       :page="page"
       class="absolute top-0"
-      style="z-index: 7"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
+    <OrangeContent
+      id="orange-content"
+      :page="page"
+      class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
@@ -50,6 +54,7 @@ export default {
         "prewed-video-content",
         "black-content",
         "red-content",
+        "orange-content",
       ],
       startX: 0,
     };
@@ -59,6 +64,7 @@ export default {
     window.addEventListener("touchstart", this.onTouchStart);
     window.addEventListener("touchmove", this.onTouchHold);
     window.addEventListener("touchend", this.onTouchEnd);
+    this.assignZIndex();
   },
   destroyed() {
     window.removeEventListener("touchstart", this.onTouchStart);
@@ -134,6 +140,12 @@ export default {
         this.$gsap.to(`#${this.pages[this.page - 1]}`, {
           x: -window.innerWidth,
         });
+      }
+    },
+    assignZIndex() {
+      for (let i = 0; i < this.pages.length; i++) {
+        const elem = document.getElementById(`${this.pages[i]}`);
+        elem.style.zIndex = this.pages.length - i;
       }
     },
   },

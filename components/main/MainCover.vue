@@ -40,7 +40,7 @@
         class="py-2 px-4 rounded-xl bg-black text-yellow-500 mt-2 cursor-pointer hover:bg-yellow-500 hover:text-black transition-all"
         @click="$router.push(`invitation?code=${(code = $route.query.code)}`)"
       >
-        <h6><span class="fa fa-envelope"></span> &nbsp; OPEN INVITATION</h6>
+        <h6><span class="fa fa-envelope"></span> &nbsp; Open Invitation</h6>
       </Button>
     </div>
   </div>

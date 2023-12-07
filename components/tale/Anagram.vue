@@ -63,7 +63,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.musicPlayer = this.$refs["anagram-sparkle"];
-      this.musicPlayer.play();
+      // this.musicPlayer.play();
       this.animateAnagram();
     }, 1500);
   },
@@ -277,12 +277,25 @@ export default {
       star.innerText = "🌟";
 
       container.appendChild(star);
+      const xMovements = [];
+      let last = 0;
+      for (let k = 0; k < Math.random(50); k++) {
+        const next = last + (Math.random() * 1000 - 500);
+        xMovements.push(next);
+        last = next;
+      }
+
+      const fontMovements = [];
+      for (let k = 0; k < Math.random(50); k++) {
+        fontMovements.push(Math.random() * 96);
+      }
 
       this.$gsap.to(star, {
+        x: xMovements,
         y: 1024,
-        fontSize: Math.random() * 96,
+        fontSize: fontMovements,
         opacity: 0,
-        duration: 0.5,
+        duration: 1,
         ease: "power1.inOut",
       });
     },

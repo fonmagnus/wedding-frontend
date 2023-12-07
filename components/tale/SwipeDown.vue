@@ -1,13 +1,16 @@
 <template>
-  <h6
-    class="scroll-down-instruction text-xs absolute bottom-8 left-1/2 -translate-x-1/2"
+  <div
+    class="flex flex-col absolute bottom-8 left-1/2 -translate-x-1/2 items-center"
   >
-    {{
-      lang === "EN"
-        ? "scroll down to continue"
-        : "geser bawah untuk lanjut baca"
-    }}
-  </h6>
+    <h6 class="scroll-down-instruction text-xs">
+      {{
+        lang === "EN"
+          ? "scroll down to continue"
+          : "geser bawah untuk lanjut baca"
+      }}
+    </h6>
+    <i class="hand-down fa fa-arrow-down"></i>
+  </div>
 </template>
 
 <script>
@@ -30,6 +33,18 @@ export default {
       }, 4000);
     },
   },
-  methods: {},
+  mounted() {
+    this.animateHand();
+  },
+  methods: {
+    animateHand() {
+      this.$gsap.to(".hand-down", {
+        y: 10,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+      });
+    },
+  },
 };
 </script>
