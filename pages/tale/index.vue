@@ -35,6 +35,13 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+    <YellowContent
+      id="yellow-content"
+      :page="page"
+      class="absolute top-0"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
     <TaleNavigation
       class="z-30"
       :page="page"
@@ -55,6 +62,7 @@ export default {
         "black-content",
         "red-content",
         "orange-content",
+        "yellow-content",
       ],
       startX: 0,
     };

@@ -88,8 +88,8 @@ export default {
 
       contentSectionSubtitle: [
         {
-          EN: "Meaning of Red",
-          ID: "Makna Merah",
+          EN: "We fell in love",
+          ID: "Kami jatuh cinta",
         },
         {
           EN: "Before you continue...",
