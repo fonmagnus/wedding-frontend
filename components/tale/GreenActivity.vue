@@ -417,6 +417,7 @@ export default {
             y: -100,
             duration: 1.5,
             fontSize: "4rem",
+            visibility: "hidden"
           });
         }, 25 * i);
       }
