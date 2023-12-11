@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col h-full w-full items-center bg-green-700 py-8 text-white gap-6 overflow-auto"
+    class="flex flex-col h-full w-full items-center bg-green-700 py-8 text-white gap-6 overflow-y-auto overflow-x-hidden"
   >
     <div class="w-full fixed top-0 bg-green-700 py-3 z-20">
       <h3 class="text-center">GREEN</h3>

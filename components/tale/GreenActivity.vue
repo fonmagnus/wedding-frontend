@@ -1,9 +1,12 @@
 <template>
-  <div class="flex flex-col items-center px-4 gap-6">
+  <div
+    id="green-activity"
+    class="flex flex-col items-center px-4 gap-6 relative"
+  >
     <div class="flex flex-col">
       <div class="flex" v-for="(row, i) in maze" :key="i">
         <div
-          class="h-7 w-7 border bg-green-800 text-3xl overflow-hidden"
+          class="h-7 w-7 border bg-green-800 text-2xl overflow-hidden"
           v-for="(col, j) in row"
           :key="j"
           :class="[
@@ -27,7 +30,8 @@
           @click.stop="moveUp(true)"
           :class="[
             {
-              'text-slate-400 bg-slate-300 bg-opacity-30': hasGivenUp,
+              'text-slate-200 text-opacity-50 bg-slate-300 bg-opacity-30':
+                hasGivenUp,
               'text-black bg-slate-200 hover:bg-slate-400': !hasGivenUp,
             },
           ]"
@@ -41,7 +45,8 @@
           @click.stop="moveLeft(true)"
           :class="[
             {
-              'text-slate-400 bg-slate-300 bg-opacity-30': hasGivenUp,
+              'text-slate-200 text-opacity-50 bg-slate-300 bg-opacity-30':
+                hasGivenUp,
               'text-black bg-slate-200 hover:bg-slate-400': !hasGivenUp,
             },
           ]"
@@ -53,7 +58,8 @@
           @click.stop="moveDown(true)"
           :class="[
             {
-              'text-slate-400 bg-slate-300 bg-opacity-30': hasGivenUp,
+              'text-slate-200 text-opacity-50 bg-slate-300 bg-opacity-30':
+                hasGivenUp,
               'text-black bg-slate-200 hover:bg-slate-400': !hasGivenUp,
             },
           ]"
@@ -65,7 +71,8 @@
           @click.stop="moveRight(true)"
           :class="[
             {
-              'text-slate-400 bg-slate-300 bg-opacity-30': hasGivenUp,
+              'text-slate-200 text-opacity-50 bg-slate-300 bg-opacity-30':
+                hasGivenUp,
               'text-black bg-slate-200 hover:bg-slate-400': !hasGivenUp,
             },
           ]"
@@ -141,6 +148,22 @@ export default {
 
       if (res) this.hasReached = true;
       return res;
+    },
+  },
+  watch: {
+    groom: {
+      deep: true,
+      handler(val) {
+        const res =
+          this.groom.row === this.bride.row &&
+          this.groom.col === this.bride.col;
+
+        if (res) {
+          this.hasReached = true;
+          this.animateHearts();
+        }
+        return res;
+      },
     },
   },
   mounted() {
@@ -375,6 +398,28 @@ export default {
       setTimeout(() => {
         this.autoMoveGroomToBride(row, col);
       }, 40);
+    },
+    animateHearts() {
+      for (let i = 0; i < 50; i++) {
+        setTimeout(() => {
+          const container = document.getElementById("green-activity");
+          const heart = document.createElement("div");
+          heart.innerText = "💚";
+          heart.style.position = "absolute";
+          heart.style.top = `${Math.random() * 100}%`;
+          heart.style.left = `${Math.random() * 100}%`;
+          heart.style.fontSize = "1rem";
+          heart.style.transform = "translateX(-50%)";
+
+          container.appendChild(heart);
+          this.$gsap.to(heart, {
+            opacity: 0,
+            y: -100,
+            duration: 1.5,
+            fontSize: "4rem",
+          });
+        }, 25 * i);
+      }
     },
   },
 };
