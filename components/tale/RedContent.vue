@@ -44,8 +44,15 @@
         </li>
       </ul>
       <span>{{ _content.epilogue[lang] }}</span>
-      <div v-if="_content.hasCustom" class="flex flex-col">
+      <div v-if="_content.hasCustom" class="flex flex-col gap-2">
         <RedMusics />
+        <h6 class="text-xs">
+          {{
+            lang === "EN"
+              ? "(or you can always change the music using the music button in the bottom right)"
+              : "(atau kamu juga bisa mengganti musik sewaktu-waktu dengan tombol musik di kanan bawah)"
+          }}
+        </h6>
       </div>
     </div>
 

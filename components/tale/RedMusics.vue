@@ -19,16 +19,23 @@
         </div>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
 import musics from "~/assets/data/musics.json";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       musics,
     };
+  },
+  computed: {
+    ...mapGetters({
+      lang: "data/getLang",
+    }),
   },
   methods: {
     playAudio(i, j) {
