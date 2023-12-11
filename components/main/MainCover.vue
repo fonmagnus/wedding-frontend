@@ -48,7 +48,7 @@
       <span class="text-xs mt-4">You have been invited to our wedding</span>
       <Button
         class="py-2 px-4 rounded-xl bg-black text-yellow-500 mt-2 cursor-pointer hover:bg-yellow-500 hover:text-black transition-all"
-        @click="$router.push(`invitation?code=${(code = $route.query.code)}`)"
+        @click="openInvitation"
       >
         <h6><span class="fa fa-envelope"></span> &nbsp; Open Invitation</h6>
       </Button>
@@ -66,6 +66,12 @@ export default {
     ...mapGetters({
       invitee: "data/getInvitee",
     }),
+  },
+  methods: {
+    openInvitation() {
+      this.$nuxt.$emit("randomAudio");
+      this.$router.push(`invitation?code=${this.$route.query.code}`);
+    },
   },
 };
 </script>

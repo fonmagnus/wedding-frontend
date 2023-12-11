@@ -42,6 +42,13 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+    <GreenContent
+      id="green-content"
+      :page="page"
+      class="absolute top-0"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
     <TaleNavigation
       class="z-30"
       :page="page"
@@ -57,6 +64,7 @@ export default {
     return {
       page: 0,
       pages: [
+        "green-content",
         "tale-cover",
         "prewed-video-content",
         "black-content",
