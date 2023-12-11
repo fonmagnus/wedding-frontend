@@ -44,7 +44,6 @@ export default {
       hasPlayed: false,
     };
   },
-
   mounted() {
     let tag = document.createElement("script");
     tag.src = "https://www.youtube.com/iframe_api";
@@ -58,6 +57,7 @@ export default {
   },
   watch: {
     page(val) {
+      this.pauseVideo();
       if (val !== 1) return;
       this.changeBackgroundColor();
       this.timeline.pause();
@@ -69,6 +69,7 @@ export default {
       this.player = new YT.Player("youtube-player", {
         events: {
           onStateChange: this.onPlayerStateChange,
+          onReady: this.onPlayerReady,
         },
       });
     },
@@ -80,6 +81,14 @@ export default {
         this.timeline.resume();
       } else {
         this.timeline.pause();
+      }
+    },
+    onPlayerReady(event) {
+      this.player.pauseVideo();
+    },
+    pauseVideo() {
+      if (this.player && this.player.pauseVideo) {
+        this.player.pauseVideo();
       }
     },
     adjustTimeline(videoDuration) {
