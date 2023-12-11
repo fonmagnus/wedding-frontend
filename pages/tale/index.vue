@@ -64,13 +64,13 @@ export default {
     return {
       page: 0,
       pages: [
-        "green-content",
         "tale-cover",
         "prewed-video-content",
         "black-content",
         "red-content",
         "orange-content",
         "yellow-content",
+        "green-content",
       ],
       startX: 0,
     };
