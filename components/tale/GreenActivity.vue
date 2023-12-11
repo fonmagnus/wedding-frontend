@@ -154,9 +154,7 @@ export default {
     groom: {
       deep: true,
       handler(val) {
-        const res =
-          this.groom.row === this.bride.row &&
-          this.groom.col === this.bride.col;
+        const res = val.row === this.bride.row && val.col === this.bride.col;
 
         if (res) {
           this.hasReached = true;
@@ -417,7 +415,9 @@ export default {
             y: -100,
             duration: 1.5,
             fontSize: "4rem",
-            visibility: "hidden",
+            onComplete: () => {
+              heart.parentNode.removeChild(heart);
+            },
           });
         }, 25 * i);
       }
