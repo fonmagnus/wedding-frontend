@@ -180,6 +180,7 @@ export default {
       this.musicIsStopped = false;
     },
     pauseAudio() {
+      if (!this.activeMusic) return;
       this.musicPlayer = this.$refs[`music-${this.activeMusic}`][0];
       this.musicPlayer.pause();
       this.musicIsPlayed = false;
