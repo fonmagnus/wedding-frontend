@@ -26,7 +26,7 @@
     <div v-if="!hasReached" class="flex flex-col items-center gap-2">
       <div class="flex justify-center gap-2">
         <div
-          class="flex justify-center items-center rounded-lg h-12 w-12"
+          class="flex justify-center items-center rounded-lg h-14 w-14"
           @click.stop="moveUp(true)"
           :class="[
             {
@@ -41,7 +41,7 @@
       </div>
       <div class="flex justify-center gap-2">
         <div
-          class="flex justify-center items-center rounded-lg h-12 w-12"
+          class="flex justify-center items-center rounded-lg h-14 w-14"
           @click.stop="moveLeft(true)"
           :class="[
             {
@@ -54,7 +54,7 @@
           <i class="fa fa-arrow-left text-2xl"></i>
         </div>
         <div
-          class="flex justify-center items-center rounded-lg h-12 w-12"
+          class="flex justify-center items-center rounded-lg h-14 w-14"
           @click.stop="moveDown(true)"
           :class="[
             {
@@ -67,7 +67,7 @@
           <i class="fa fa-arrow-down text-2xl"></i>
         </div>
         <div
-          class="flex justify-center items-center rounded-lg h-12 w-12"
+          class="flex justify-center items-center rounded-lg h-14 w-14"
           @click.stop="moveRight(true)"
           :class="[
             {
@@ -417,7 +417,7 @@ export default {
             y: -100,
             duration: 1.5,
             fontSize: "4rem",
-            visibility: "hidden"
+            visibility: "hidden",
           });
         }, 25 * i);
       }
