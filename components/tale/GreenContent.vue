@@ -88,8 +88,8 @@ export default {
 
       contentSectionSubtitle: [
         {
-          EN: "It feels like home",
-          ID: "Rasanya seperti kembali pulang",
+          EN: "It feels like going home",
+          ID: "Rasanya Seperti Menemukan Jalan Pulang",
         },
         {
           EN: "to find his bride",
@@ -100,8 +100,8 @@ export default {
       content: [
         {
           prologue: {
-            EN: "Green resemble moments in our relationship where we feel belong to each other. It is a sense of shelter that gives each other peaceful feelings. When we stand side by side, our souls can truly sense a feeling at home where we can truly become ourselves",
-            ID: "Hijau melambangkan momen dalam hubungan kami dimana kami saling memiliki satu sama lain. Sebuah rasa dilindungi yang memberikan kedamaian. Ketika kita di sisi satu sama lain, jiwa kami bisa merasakan perasaan kembali ke rumah dimana kami bisa menjadi diri kami masing-masing",
+            EN: "Let's lie down under the comforting tree and a wide sereneful meadow. Green represents moment where we found peace and shelter on each other. Together, we trust that we are made for each other to provide safety and being our true self. Having someone beside ourselves, a hand to hold, and a shoulder to lean on. Our soul find its own way to home",
+            ID: "Mari berbaring bersama di bawah keteduhan pohon dan luasnya rumput hijau. Warna ini melambangkan momen di mana kami menemukan kedamaian dan perlindungan. Keyakinan bahwa kami ada untuk satu sama lain memberikan rasa aman untuk menjadi diri sendiri. Ada teman yang duduk di sebelah. Ada tangan untuk digenggam. Ada bahu untuk bersandar. Jiwa kami menemukan jalan untuk pulang ke rumah. ",
           },
           children: [],
           epilogue: {},

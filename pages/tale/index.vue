@@ -49,6 +49,13 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+    <BlueContent
+      id="blue-content"
+      :page="page"
+      class="absolute top-0"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
     <TaleNavigation
       class="z-30"
       :page="page"
@@ -64,6 +71,7 @@ export default {
     return {
       page: 0,
       pages: [
+        "blue-content",
         "tale-cover",
         "prewed-video-content",
         "black-content",

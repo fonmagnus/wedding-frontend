@@ -6,6 +6,23 @@
 import { TweenLite, TweenMax, Linear, Sine } from "gsap";
 
 export default {
+  props: {
+    variant1: {
+      type: String,
+      default:
+        "https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Flowers-PNG/Flower_PNG_White_Transparent_Clipart.png?m=1618826388",
+    },
+    variant2: {
+      type: String,
+      default:
+        "https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Flowers-PNG/Flower_PNG_White_Transparent_Clipart.png?m=1618826388",
+    },
+    variant3: {
+      type: String,
+      default:
+        "https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Flowers-PNG/Flower_PNG_White_Transparent_Clipart.png?m=1618826388",
+    },
+  },
   mounted() {
     const container = this.$refs.flower;
     const w = window.innerWidth;
@@ -15,29 +32,13 @@ export default {
 
     for (let i = 0; i < total; i++) {
       let Div = document.createElement("div");
+      this.setStyle(Div, "dot", this.variant1);
+
       let Div2 = document.createElement("div");
+      this.setStyle(Div2, "dot2", this.variant2);
+
       let Div3 = document.createElement("div");
-
-      TweenLite.set(Div, {
-        attr: { class: "dot" },
-        x: this.R(0, w),
-        y: this.R(-200, -150),
-        z: this.R(-200, 200),
-      });
-
-      TweenLite.set(Div2, {
-        attr: { class: "dot2" },
-        x: this.R(0, w),
-        y: this.R(-200, -150),
-        z: this.R(-200, 200),
-      });
-
-      TweenLite.set(Div3, {
-        attr: { class: "dot3" },
-        x: this.R(0, w),
-        y: this.R(-200, -150),
-        z: this.R(-200, 200),
-      });
+      this.setStyle(Div3, "dot3", this.variant3);
 
       container.appendChild(Div);
       container.appendChild(Div2);
@@ -49,6 +50,16 @@ export default {
     }
   },
   methods: {
+    setStyle(elm, className, bgUrl) {
+      elm.style.background = `url(${bgUrl})`;
+      TweenLite.set(elm, {
+        attr: { class: className },
+        x: this.R(0, window.innerWidth),
+        y: this.R(-200, -150),
+        z: this.R(-200, 200),
+        backgroundSize: "100% 100%",
+      });
+    },
     animm(elm) {
       TweenMax.to(elm, this.R(6, 15), {
         y: window.innerHeight + 100,
@@ -124,21 +135,21 @@ export default {
   width: 20px;
   height: 20px;
   position: absolute;
-  background: url(http://img.babathe.com/upload/specialDisplay/htmlImage/2019/20190104_rose2.png);
+  /* background: url(http://img.babathe.com/upload/specialDisplay/htmlImage/2019/20190104_rose2.png); */
   background-size: 100% 100%;
 }
 .dot2 {
   width: 20px;
   height: 20px;
   position: absolute;
-  background: url(http://img.babathe.com/upload/specialDisplay/htmlImage/2019/20190104_rose.png);
+  /* background: url(http://img.babathe.com/upload/specialDisplay/htmlImage/2019/20190104_rose.png); */
   background-size: 100% 100%;
 }
 .dot3 {
   width: 20px;
   height: 20px;
   position: absolute;
-  background: url(http://img.babathe.com/upload/specialDisplay/htmlImage/2019/20190104_rose3.png);
+  /* background: url(http://img.babathe.com/upload/specialDisplay/htmlImage/2019/20190104_rose3.png); */
   background-size: 100% 100%;
 }
 html,
