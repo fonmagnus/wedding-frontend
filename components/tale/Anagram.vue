@@ -65,7 +65,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.musicPlayer = this.$refs["anagram-sparkle"];
-      // this.musicPlayer.play();
+      this.musicPlayer.play();
       this.animateAnagram();
     }, 1500);
   },
