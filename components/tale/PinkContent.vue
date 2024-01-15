@@ -1,7 +1,7 @@
 
 <template>
   <div
-    class="flex flex-col h-full w-full items-center bg-pink-300 py-8 gap-6 text-black overflow-y-auto overflow-x-hidden relative"
+    class="flex flex-col h-full w-full items-center bg-pink-300 py-8 gap-6 text-black overflow-y-auto overflow-x-hidden"
   >
     <div class="w-full fixed top-0 bg-pink-300 py-3 z-20">
       <h3 class="text-center">PINK</h3>

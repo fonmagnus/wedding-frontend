@@ -6,7 +6,6 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
-
     <PreweddingVideoContent
       id="prewed-video-content"
       :page="page"
@@ -186,6 +185,7 @@ export default {
       for (let i = 0; i < this.pages.length; i++) {
         const elem = document.getElementById(`${this.pages[i]}`);
         elem.style.zIndex = this.pages.length - i;
+        console.log(elem.style.zIndex);
       }
     },
   },
