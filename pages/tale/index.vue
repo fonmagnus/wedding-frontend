@@ -63,6 +63,13 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+    <PinkContent
+      id="pink-content"
+      :page="page"
+      class="absolute top-0"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
     <TaleNavigation
       class="z-30"
       :page="page"
@@ -87,6 +94,7 @@ export default {
         "green-content",
         "blue-content",
         "violet-content",
+        "pink-content",
       ],
       startX: 0,
     };

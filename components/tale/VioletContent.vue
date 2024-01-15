@@ -35,27 +35,22 @@
       :class="[
         {
           ' px-4': !_content.hasCustom,
-          'bg-blue-900': _content.componentName === 'blue-treasure',
         },
       ]"
       :id="_content.hasCustom ? 'blue-activity' : ''"
     >
-      <divider :class="[{ 'px-4': _content.hasCustom }]" />
+      <divider />
       <h2 class="text-center">{{ contentSectionTitle[j][lang] }}</h2>
       <h3 class="text-sm text-center italic font-bold">
         {{ contentSectionSubtitle[j][lang] }}
       </h3>
-      <span :class="[{ 'px-4': _content.hasCustom }]">{{
-        _content.prologue[lang]
-      }}</span>
+      <span>{{ _content.prologue[lang] }}</span>
       <ul class="px-4">
         <li v-for="(c, i) in _content.children" :key="i">
           <span v-html="renderedMarkdown(c[lang])"> </span>
         </li>
       </ul>
-      <span :class="[{ 'px-4': _content.hasCustom }]">{{
-        _content.epilogue[lang]
-      }}</span>
+      <span>{{ _content.epilogue[lang] }}</span>
       <div v-if="_content.hasCustom" class="flex flex-col">
         <VioletActivityMan
           v-if="_content.componentName === 'violet-activity-arnold'"
