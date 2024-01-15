@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col h-full w-full items-center bg-blue-500 pt-8 text-white overflow-y-auto overflow-x-hidden"
+    class="flex flex-col h-full w-full items-center bg-blue-400 pt-8 text-white overflow-y-auto overflow-x-hidden"
   >
-    <div class="w-full fixed top-0 bg-blue-500 py-3 z-20">
+    <div class="w-full fixed top-0 bg-blue-400 py-3 z-20">
       <h3 class="text-center">BLUE</h3>
     </div>
     <div
