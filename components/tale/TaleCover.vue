@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full h-full max-h-screen items-center">
+  <div class="flex flex-col w-full h-full items-center">
     <img
       src="@/assets/images/tale/head.png"
       alt=""
