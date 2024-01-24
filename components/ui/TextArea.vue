@@ -8,7 +8,7 @@
       v-model="inputValue"
       @input="updateValue($event.target.value)"
       class="form-textarea h-48 w-full border-2 border-gray-300 focus:border-black rounded-md text-gray-700 py-2 px-2 leading-tight focus:outline-none focus:bg-white focus:ring-0 transition duration-150 ease-in-out resize-none"
-      placeholder="Type your message here..."
+      placeholder="Message..."
     ></textarea>
   </div>
 </template>

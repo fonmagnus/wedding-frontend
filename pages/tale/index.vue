@@ -69,6 +69,13 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
     />
+    <WhiteContent
+      id="white-content"
+      :page="page"
+      class="absolute top-0"
+      @prevPage="prevPage"
+      @nextPage="nextPage"
+    />
     <TaleNavigation
       class="z-30"
       :page="page"
@@ -94,6 +101,7 @@ export default {
         "blue-content",
         "violet-content",
         "pink-content",
+        "white-content",
       ],
       startX: 0,
     };
@@ -185,7 +193,6 @@ export default {
       for (let i = 0; i < this.pages.length; i++) {
         const elem = document.getElementById(`${this.pages[i]}`);
         elem.style.zIndex = this.pages.length - i;
-        console.log(elem.style.zIndex);
       }
     },
   },

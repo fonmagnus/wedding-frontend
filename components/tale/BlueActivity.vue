@@ -2,7 +2,7 @@
   <intersect @enter="enterHandler" @leave="leaveHandler" :threshold="[0.1]">
     <div
       id="ocean"
-      class="flex flex-col h-full bg-gradient-to-b from-blue-400 via-blue-800 to-blue-900 ocean relative"
+      class="flex flex-col h-full bg-gradient-to-b from-blue-400 via-blue-900 to-blue-900 ocean relative"
     >
       <!-- <h6 class="text-3xl text-white fixed bottom-0">
         {{ depth }}

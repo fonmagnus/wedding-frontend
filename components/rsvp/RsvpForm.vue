@@ -1,12 +1,15 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-4">
+    <h2 class="text-center">RSVP Form</h2>
     <form v-if="!formSubmitted" class="flex flex-col gap-2 text-center">
       <span
-        >Dear <b class="font-black">{{ invitee.name }}</b></span
+        >Dear <b class="font-black text-lg">{{ invitee.name }}</b></span
       >
-      <span class="text-sm"
-        >Please confirm your attendance by filling up the form below</span
-      >
+      <span class="text-sm">{{
+        lang === "EN"
+          ? "Please confirm your attendance by filling up the form below"
+          : "Konfirmasi kehadiranmu dengan mengisi form di bawah ini"
+      }}</span>
 
       <Radio
         class="flex justify-center"
@@ -14,15 +17,27 @@
         v-model="formData.is_attended"
       />
 
-      <NumericInput v-model="formData.quota" label="Number of People" />
+      <NumericInput
+        v-model="formData.quota"
+        :label="lang === 'EN' ? 'Number of People' : 'Jumlah Tamu'"
+      />
 
-      <TextArea v-model="formData.message" label="Drop us your message" />
+      <TextArea
+        v-model="formData.message"
+        :label="
+          lang === 'EN' ? 'Drop us your message' : 'Kirimkan pesan untuk kami'
+        "
+      />
 
       <Button
         class="hover:bg-black hover:text-black border-2 border-black text-white bg-black transition-all"
         @click="submitRsvp"
       >
-        <h6>Submit</h6>
+        <h6>
+          {{ lang === "EN" ? "Send Message" : "Kirim Pesan" }}&nbsp;<i
+            class="fa fa-paper-plane"
+          ></i>
+        </h6>
       </Button>
     </form>
     <div v-else class="flex flex-col gap-2">
@@ -40,8 +55,11 @@ export default {
   data() {
     return {
       attendanceOptions: [
-        { label: "Attending", value: true },
-        { label: "Not attending", value: false },
+        { label: `${this.lang === "EN" ? "Attending" : "Hadir"}`, value: true },
+        {
+          label: `${this.lang === "EN" ? "Not Attending" : "Tidak Hadir"}`,
+          value: false,
+        },
       ],
       formData: {
         is_attended: true,
@@ -62,6 +80,7 @@ export default {
   computed: {
     ...mapGetters({
       invitee: "data/getInvitee",
+      lang: "data/getLang",
     }),
   },
   methods: {

@@ -46,6 +46,7 @@ export default {
   plugins: [
     { src: '~/plugins/vuex-persist.js', mode: 'client'},
     '~/plugins/gsap.js',
+    '~/plugins/moment.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
