@@ -21,7 +21,7 @@
         ]"
       />
     </div>
-    <div class="flex flex-col gap-12 items-center text-center px-8 text-sm">
+    <div class="flex flex-col gap-12 items-center text-center text-sm">
       <div class="flex flex-col gap-4 items-center text-center text-sm">
         <span>Countdown</span>
         <div class="flex">

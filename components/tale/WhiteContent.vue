@@ -91,7 +91,7 @@
       }}</span>
       <Button
         class="mt-8 w-full border border-black hover:bg-white text-white bg-black hover:text-black px-4 transition-all"
-        @click="$router.push(`rsvp?code=${$route.query.code}`)"
+        @click="$router.push(`/rsvp?code=${$route.query.code}`)"
       >
         <h6>RSVP</h6>
       </Button>
