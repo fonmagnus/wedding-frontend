@@ -13,8 +13,8 @@
         #ATaleGaloreInAGrandBridalOath
       </h3>
     </div>
-
-    <div class="flex flex-col gap-2 items-center text-center px-8 text-sm">
+    <br />
+    <div class="flex flex-col gap-2 items-center text-center px-8 text-base">
       <!-- <span class="text-xl">Holy Matrimony</span> -->
       <span>
         <a
@@ -47,7 +47,7 @@
       <h4 class="text-2xl">{{ invitee.name }}</h4>
       <span class="text-xs mt-4">You have been invited to our wedding</span>
       <Button
-        class="py-2 px-4 rounded-xl bg-black text-yellow-500 mt-2 cursor-pointer hover:bg-yellow-500 hover:text-black transition-all"
+        class="py-2 px-4 rounded-xl bg-black text-white mt-2 cursor-pointer hover:bg-white hover:text-black transition-all"
         @click="openInvitation"
       >
         <h6><span class="fa fa-envelope"></span> &nbsp; Open Invitation</h6>

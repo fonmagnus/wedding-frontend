@@ -11,9 +11,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://img.freepik.com/premium-photo/asian-couple-blue-shirt-with-coffee-cup-vintage-camera-picnic-mountain-near-beach-sea-view-happy-smile-face_1286-3059.jpg?w=2000',
-            'https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Chevanon%20Photography,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1562905719/tmpusd6ix9kstgggl34b.jpg',
-            'https://media.istockphoto.com/id/513549946/photo/young-romantic-asian-couple-in-paris-france.jpg?s=612x612&w=0&k=20&c=5yJTBG5Sr7LsPSq7PtniFKCxQiucH5reznvNT_3xelw=',
+            require('~/assets/images/spectrum/blue/DSC08136 Large.jpeg'),
+            require('~/assets/images/spectrum/blue/DSC08097 Large.jpeg'),
+            require('~/assets/images/spectrum/blue/DSC08125 Large.jpeg'),
+            require('~/assets/images/spectrum/blue/DSC08146 Large.jpeg'),
+            require('~/assets/images/spectrum/blue/DSC08185 Large.jpeg'),
           ]"
         />
       </div>
@@ -58,6 +60,18 @@
       <div v-if="_content.hasCustom" class="flex flex-col">
         <BlueActivity v-if="_content.componentName === 'blue-activity'" />
         <BlueTreasure v-if="_content.componentName === 'blue-treasure'" />
+      </div>
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
+        />
       </div>
     </div>
   </div>
@@ -123,6 +137,11 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/blue/DSC08153 Large.jpeg"),
+            require("~/assets/images/spectrum/blue/DSC08218 Large.jpeg"),
+            require("~/assets/images/spectrum/blue/DSC08225 Large.jpeg"),
+          ],
         },
         {
           prologue: {

@@ -11,9 +11,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://www.shutterstock.com/image-photo/young-beautiful-smiling-happy-stylish-600nw-2220514941.jpg',
-            'https://static.vecteezy.com/system/resources/previews/002/877/763/large_2x/young-asian-couple-enjoying-summer-vacation-on-the-beach-photo.jpg',
-            'https://img.freepik.com/free-photo/happy-asian-couple_1150-15901.jpg',
+            require('~/assets/images/spectrum/yellow/DSC07637 Large.jpeg'),
+            require('~/assets/images/spectrum/yellow/DSC09351 Large.jpeg'),
+            require('~/assets/images/spectrum/yellow/DSC07686 Large.jpeg'),
+            require('~/assets/images/spectrum/yellow/DSC09406 Large.jpeg'),
+            require('~/assets/images/spectrum/yellow/DSC08021 Large.jpeg'),
           ]"
         />
       </div>
@@ -46,6 +48,19 @@
       <span>{{ _content.epilogue[lang] }}</span>
       <div v-if="_content.hasCustom" class="flex flex-col">
         <YellowActivity />
+      </div>
+
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
+        />
       </div>
     </div>
 
@@ -105,6 +120,14 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/yellow/DSC07606 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/DSC09400 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/DSC08011 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/DSC08022 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/DSC07629 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/DSC09340 Large.jpeg"),
+          ],
         },
         {
           prologue: {

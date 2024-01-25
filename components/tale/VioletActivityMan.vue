@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col py-4 px-4 bg-violet-700">
+  <div class="flex flex-col py-4 px-4 bg-violet-800">
     <div class="flex flex-col gap-2 violet-bg relative px-4 py-8 rounded-lg">
       <span class="italic text-sm" v-for="(line, i) in lines[lang]" :key="i">
         {{ line }}

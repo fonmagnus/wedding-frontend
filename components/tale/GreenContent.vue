@@ -11,9 +11,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://familychristmaspajamasbyjenny.com/wp-content/uploads/2021/12/I-Wear-the-Ears-I-Buy-the-Beers-Matching-Disney-Shirts-4.jpg',
-            'https://www.catenya.com/wp-content/uploads/2021/10/gettyimages-1143282705.jpeg',
-            'https://ae01.alicdn.com/kf/H9656fadcb7e64894a3d39804c2471943h/Korean-Couple-Matching-Clothes-College-High-School-Fashion-Pair-Lovers-Women-Green-Waist-Hoodie-Dress-Sweatshirt.jpg',
+            require('~/assets/images/spectrum/green/DSC09429 Large.jpeg'),
+            require('~/assets/images/spectrum/green/DSC07408 Large.jpeg'),
+            require('~/assets/images/spectrum/green/DSC07705 Large.jpeg'),
+            require('~/assets/images/spectrum/green/DSC07720 Large.jpeg'),
+            require('~/assets/images/spectrum/green/DSC07445 Large.jpeg'),
           ]"
         />
       </div>
@@ -46,6 +48,19 @@
       <span>{{ _content.epilogue[lang] }}</span>
       <div v-if="_content.hasCustom" class="flex flex-col">
         <GreenActivity />
+      </div>
+
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
+        />
       </div>
     </div>
 
@@ -105,6 +120,14 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/green/DSC07422 Large.jpeg"),
+            require("~/assets/images/spectrum/green/DSC07737 Large.jpeg"),
+            require("~/assets/images/spectrum/green/DSC07434 Large.jpeg"),
+            require("~/assets/images/spectrum/green/DSC07761 Large.jpeg"),
+            require("~/assets/images/spectrum/green/DSC07418 Large.jpeg"),
+            require("~/assets/images/spectrum/green/DSC07450 Large.jpeg"),
+          ],
         },
         {
           prologue: {

@@ -13,10 +13,16 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://i.pinimg.com/originals/1a/e3/08/1ae308b31330526c5afbf241644ed443.jpg',
-            'https://brideandbreakfast.ph/wp-content/uploads/2021/12/Couple-Wearing-Matching-Suits-05.jpg',
-            'https://www.thefashionisto.com/wp-content/uploads/2021/06/Model-Couple-White-Dress-Shirt-Outfits.jpg',
-            'https://brideandbreakfast.ph/wp-content/uploads/2021/12/COVER-Jason-and-Kara-White-Suits-for-Reception.jpg',
+            require('~/assets/images/spectrum/white/DSC08487 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08642 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC09142 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08739 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08673 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08648 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC07942 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC09107 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC09161 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08709 Large.jpeg'),
           ]"
         />
       </div>
@@ -51,6 +57,18 @@
       <div v-if="_content.hasCustom" class="flex flex-col px-4">
         <WhiteActivity v-if="_content.componentName === 'white-activity'" />
         <WhiteBride v-if="_content.componentName === 'white-bride'" />
+      </div>
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full px-4"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
+        />
       </div>
     </div>
 
@@ -146,6 +164,17 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/white/DSC07998 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC08726 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC08619 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC08570 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC09149 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC08534 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC08626 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC09173 Large.jpeg"),
+            require("~/assets/images/spectrum/white/DSC07940 Large.jpeg"),
+          ],
         },
         {
           prologue: {

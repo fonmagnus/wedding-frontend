@@ -16,8 +16,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://miro.medium.com/v2/resize:fit:1400/1*NvQM_lGjGcd0ER4LMJKcoQ.jpeg',
-            'https://images.unsplash.com/photo-1543495843-1a119fbbb2fe?q=80&w=1000',
+            require('~/assets/images/spectrum/black/DSC08977 Large.jpeg'),
+            require('~/assets/images/spectrum/black/DSC09237 Large.jpeg'),
+            require('~/assets/images/spectrum/black/DSC08911 Large.jpeg'),
+            require('~/assets/images/spectrum/black/DSC09258 Large.jpeg'),
+            require('~/assets/images/spectrum/black/DSC09279 Large.jpeg'),
           ]"
         />
       </div>
@@ -48,6 +51,10 @@
         </li>
       </ul>
       <span>{{ _content.epilogue[lang] }}</span>
+      <ImageCollection
+        v-if="_content.images && _content.images.length > 0"
+        :images="_content.images"
+      />
     </div>
     <Swipe />
   </div>
@@ -154,6 +161,12 @@ export default {
             EN: "In tones of rainbow and joyful light, the stroke of a love brush draws in our canvas as we draw it together. Every color has a poem that visualize our emotions toward its meaning. Each line of the poem is designed with rhyming words",
             ID: "Sesuai dengan warna pelangi dan cahaya, kuas cinta melukis kanvas kami sebagaimana kami melukisnya. Setiap warna memiliki puisi yang menggambarkan suasana perasaan yang berhubungan dengan makna warna tersebut. Bait per bait puisi dirangkai dengan rima yang sama dalam bahasa inggris",
           },
+          images: [
+            require("~/assets/images/spectrum/black/DSC09231 Large.jpeg"),
+            require("~/assets/images/spectrum/black/DSC09248 Large.jpeg"),
+            require("~/assets/images/spectrum/black/DSC09241 Large.jpeg"),
+            require("~/assets/images/spectrum/black/DSC09283 Large.jpeg"),
+          ],
         },
 
         {

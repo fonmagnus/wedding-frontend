@@ -12,9 +12,12 @@
     <div class="w-full">
       <ImageCollection
         :images="[
-          'https://images.squarespace-cdn.com/content/5ac85e52266c07e4bc095c2c/1608198796086-SSR4CC21BM2CD9K3IW6S/Aloft_hotel_asian_wedding_ceremony_4b.jpg?content-type=image%2Fjpeg',
-          'https://media.istockphoto.com/id/912075632/photo/portrait-of-an-asian-wedding-couple.jpg?s=612x612&w=0&k=20&c=YERAvuPug5EepdMSlf24STS21j7ySwfq9GyBM5b5-Qg=',
-          'https://media.istockphoto.com/id/899308396/photo/portrait-of-newlywed-asian-couple.webp?b=1&s=170667a&w=0&k=20&c=LNzuBGreTRGG69MLlM0XpAxIaKGJ-pCXpktbCb3uYac=',
+          require('~/assets/images/spectrum/white/DSC08518 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08774 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08816 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC09186 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08606 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08001 Large.jpeg'),
         ]"
       />
     </div>

@@ -1,29 +1,33 @@
 <template>
-  <intersect @enter="enterHandler" @leave="leaveHandler" :threshold="[0.1]">
-    <div
-      id="ocean"
-      class="flex flex-col h-full bg-gradient-to-b from-blue-400 via-blue-900 to-blue-900 ocean relative"
-    >
-      <!-- <h6 class="text-3xl text-white fixed bottom-0">
+  <div
+    id="ocean"
+    class="flex flex-col h-full bg-gradient-to-b from-blue-400 via-blue-900 to-blue-900 ocean relative"
+  >
+    <!-- <h6 class="text-3xl text-white fixed bottom-0">
         {{ depth }}
       </h6> -->
-      <h6
-        id="current-date-mark"
-        class="text-xl fixed bottom-0 left-1/2 -translate-x-1/2 text-white opacity-0 bg-blue-700 w-full text-center py-2"
-      >
-        {{ currentIdx >= 0 ? moments[currentIdx].date : "" }}
-      </h6>
+    <h6
+      id="current-date-mark"
+      class="text-xl left-1/2 -translate-x-1/2 text-white bg-blue-700 w-full text-center py-2 opacity-0"
+      :style="{
+        position: 'fixed',
+        bottom: '0px',
+        zIndex: '30',
+      }"
+    >
+      {{ currentIdx >= 0 ? moments[currentIdx].date : "" }}
+    </h6>
 
-      <div
-        class="flex flex-col gap-4 mx-4 my-36 blue-photo photo-container"
-        v-for="(moment, i) in moments"
-        :key="i"
-      >
-        <img class="h-72" :id="`blue-photo-${i}`" :src="moment.photo" alt="" />
-        <h6>{{ moment.caption[lang] }}</h6>
-      </div>
+    <div
+      class="flex flex-col gap-4 mx-4 my-36 blue-photo photo-container text-center"
+      v-for="(moment, i) in moments"
+      :key="i"
+    >
+      <h6>{{ moment.date }}</h6>
+      <ImageCollection :images="moment.photos" />
+      <h6>{{ moment.caption[lang] }}</h6>
     </div>
-  </intersect>
+  </div>
 </template>
 
 <script>
@@ -49,7 +53,10 @@ export default {
       moments: [
         {
           date: "07 May 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-05-07-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-05-07-2.jpg"),
+          ],
           caption: {
             EN: "Memutuskan untuk berpacaran.",
             ID: "Memutuskan untuk berpacaran.",
@@ -57,15 +64,38 @@ export default {
         },
         {
           date: "21 May 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-05-20-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-05-20-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-05-20-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-05-20-4.jpg"),
+          ],
           caption: {
             EN: "Naik bianglala bersama (Note: baru tahu Bekasi sejauh itu).",
             ID: "Naik bianglala bersama (Note: baru tahu Bekasi sejauh itu).",
           },
         },
         {
+          date: "June 2021",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-06-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-06-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-06-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-06-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-06-5.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-06-6.jpg"),
+          ],
+          caption: {
+            EN: "Bermain Escape Room bersama di Pandora",
+            ID: "Bermain Escape Room bersama di Pandora",
+          },
+        },
+        {
           date: "July 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-07-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-07-2.jpg"),
+          ],
           caption: {
             EN: "Gaby terserang Covid sehingga kami tidak bertemu untuk waktu yang lama (Note: kami berkomunikasi lewat telepon dan surat).",
             ID: "Gaby terserang Covid sehingga kami tidak bertemu untuk waktu yang lama (Note: kami berkomunikasi lewat telepon dan surat).",
@@ -73,7 +103,15 @@ export default {
         },
         {
           date: "19-22 October 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-10-19-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-10-19-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-10-19-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-10-19-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-10-19-5.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-10-19-6.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-10-19-7.jpg"),
+          ],
           caption: {
             EN: "Jalan-jalan keluarga pertama (Note: kami melihat panda).",
             ID: "Jalan-jalan keluarga pertama (Note: kami melihat panda).",
@@ -81,7 +119,10 @@ export default {
         },
         {
           date: "24 October 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-10-24-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-10-24-2.jpg"),
+          ],
           caption: {
             EN: "Ulang tahun Gaby.",
             ID: "Ulang tahun Gaby.",
@@ -89,7 +130,10 @@ export default {
         },
         {
           date: "8 November 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-11-8-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-11-8-2.jpg"),
+          ],
           caption: {
             EN: "Gaby mengirim surat untuk Arnold melalui kantor pos, hingga saat ini suratnya tidak sampai.",
             ID: "Gaby mengirim surat untuk Arnold melalui kantor pos, hingga saat ini suratnya tidak sampai.",
@@ -97,7 +141,9 @@ export default {
         },
         {
           date: "6 December 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-12-6.jpg"),
+          ],
           caption: {
             EN: "Pandora & Seluncur Es (Note: Gaby terpacu belajar berjalan di es karena mau mengimbangi Arnold yang bisa ice skating)",
             ID: "Pandora & Seluncur Es (Note: Gaby terpacu belajar berjalan di es karena mau mengimbangi Arnold yang bisa ice skating)",
@@ -105,7 +151,11 @@ export default {
         },
         {
           date: "7 December 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-12-7-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-12-7-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-12-7-3.jpg"),
+          ],
           caption: {
             EN: "Kafe Anjing (Note: Arnold & Gaby senang mengelus bulu binatang yang fluffy dan melihat kelakuan kami yang lucu).",
             ID: "Kafe Anjing (Note: Arnold & Gaby senang mengelus bulu binatang yang fluffy dan melihat kelakuan kami yang lucu).",
@@ -113,7 +163,13 @@ export default {
         },
         {
           date: "25 December 2021",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2021-12-25-1.webp"),
+            require("~/assets/images/spectrum/blue/activity/2021-12-25-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-12-25-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-12-25-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2021-12-25-5.jpg"),
+          ],
           caption: {
             EN: "Natal pertama",
             ID: "Natal pertama",
@@ -121,7 +177,10 @@ export default {
         },
         {
           date: "1 February 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-02-01-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-02-01-2.jpg"),
+          ],
           caption: {
             EN: "Imlek pertama",
             ID: "Imlek pertama",
@@ -129,7 +188,10 @@ export default {
         },
         {
           date: "14 February 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-02-14-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-02-14-2.jpg"),
+          ],
           caption: {
             EN: "Valentine pertama (Note: Kami membuat bola-bola cokelat dan mengisi buku aktivitas khusus pasangan).",
             ID: "Valentine pertama (Note: Kami membuat bola-bola cokelat dan mengisi buku aktivitas khusus pasangan).",
@@ -137,7 +199,14 @@ export default {
         },
         {
           date: "April 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-04-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-5.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-6.jpg"),
+          ],
           caption: {
             EN: "Arnold berencana pindah ke Singapura karena pekerjaan (Note: tetapi akhirnya batal walau sudah sedih dan saling menangis).",
             ID: "Arnold berencana pindah ke Singapura karena pekerjaan (Note: tetapi akhirnya batal walau sudah sedih dan saling menangis).",
@@ -145,15 +214,35 @@ export default {
         },
         {
           date: "27 April 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-04-27-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-27-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-27-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-27-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-04-27-5.jpg"),
+          ],
           caption: {
             EN: "Ulang tahun Arnold.",
             ID: "Ulang tahun Arnold.",
           },
         },
         {
+          date: "2 May 2022",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-05-02-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-05-02-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-05-02-3.jpg"),
+          ],
+          caption: {
+            EN: "Ziarek bersama umat Stella Maris",
+            ID: "Ziarek bersama umat Stella Maris",
+          },
+        },
+        {
           date: "7 May 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-05-07.webp"),
+          ],
           caption: {
             EN: "Perayaan hari jadi pertama (Note: sejauh ini kami belum pernah merayakan hari jadi).",
             ID: "Perayaan hari jadi pertama (Note: sejauh ini kami belum pernah merayakan hari jadi).",
@@ -161,7 +250,11 @@ export default {
         },
         {
           date: "19 June 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-06-19-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-06-19-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-06-19-3.jpg"),
+          ],
           caption: {
             EN: "Kafe kucing (Note: kami suka melihat kelakuan kucing yang unik dan sombong). ",
             ID: "Kafe kucing (Note: kami suka melihat kelakuan kucing yang unik dan sombong). ",
@@ -169,7 +262,20 @@ export default {
         },
         {
           date: "25-29 July 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-5.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-6.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-7.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-8.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-9.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-10.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-11.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-07-25-12.jpg"),
+          ],
           caption: {
             EN: "Singapore (Note: kami mengobrol sampai malam di sungai depan Clarke Quay hingga melewatkan kereta terakhir dan harus berjalan kaki sampai hotel tanpa berbekal peta).",
             ID: "Singapore (Note: kami mengobrol sampai malam di sungai depan Clarke Quay hingga melewatkan kereta terakhir dan harus berjalan kaki sampai hotel tanpa berbekal peta).",
@@ -177,7 +283,13 @@ export default {
         },
         {
           date: "24 October 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-10-24-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-10-24-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-10-24-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-10-24-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-10-24-5.jpg"),
+          ],
           caption: {
             EN: "Ulang tahun Gaby dan Kencan ke Aquarium",
             ID: "Ulang tahun Gaby dan Kencan ke Aquarium",
@@ -185,7 +297,12 @@ export default {
         },
         {
           date: "December 2022",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2022-12-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-12-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-12-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2022-12-4.jpg"),
+          ],
           caption: {
             EN: "Ke Bandung",
             ID: "Ke Bandung ",
@@ -193,7 +310,11 @@ export default {
         },
         {
           date: "March 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-03-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-03-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-03-3.jpg"),
+          ],
           caption: {
             EN: "Tiba-tiba pergi ke Henshin (Note: tidak ada momen khusus).",
             ID: "Tiba-tiba pergi ke Henshin (Note: tidak ada momen khusus).",
@@ -201,7 +322,13 @@ export default {
         },
         {
           date: "27 April 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-04-27-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-04-27-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-04-27-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-04-27-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-04-27-5.jpg"),
+          ],
           caption: {
             EN: "Ulang tahun Arnold (Note: Sengaja ke Angus Plaza Indonesia demi bertemu Mbak Pelayan dengan ingatan fotografis ini).",
             ID: "Ulang tahun Arnold (Note: Sengaja ke Angus Plaza Indonesia demi bertemu Mbak Pelayan dengan ingatan fotografis ini).",
@@ -209,15 +336,40 @@ export default {
         },
         {
           date: "May 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-05-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-5.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-6.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-7.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-8.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-9.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-10.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-11.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-12.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-13.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-14.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-15.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-16.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-17.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-05-18.jpg"),
+          ],
           caption: {
             EN: "Pergi naik kapal pesiar dan Keliling Singapura.",
             ID: "Pergi naik kapal pesiar dan Keliling Singapura.",
           },
         },
         {
-          date: "10 June 2023",
-          photo: "https://picsum.photos/200/300",
+          date: "June 2023",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-06-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-06-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-06-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-06-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-06-5.jpg"),
+          ],
           caption: {
             EN: "Kafe Anjing (Note: kami suka melihat binatang).",
             ID: "Kafe Anjing (Note: kami suka melihat binatang).",
@@ -225,31 +377,22 @@ export default {
         },
         {
           date: "28 June 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-06-27.jpg"),
+          ],
           caption: {
             EN: "Bu Nanik (Note: Tak sengaja bertemu dan diajak berfoto oleh Bu Nanik).",
             ID: "Bu Nanik (Note: Tak sengaja bertemu dan diajak berfoto oleh Bu Nanik).",
           },
         },
         {
-          date: "29 June 2023",
-          photo: "https://picsum.photos/200/300",
-          caption: {
-            EN: "Kafe Anjing (lagi).",
-            ID: "Kafe Anjing (lagi).",
-          },
-        },
-        {
-          date: "20 August 2023",
-          photo: "https://picsum.photos/200/300",
-          caption: {
-            EN: "Pandora (Note: kami senang bermain dan beberapa kali menghabiskan seharian untuk main Pandora).",
-            ID: "Pandora (Note: kami senang bermain dan beberapa kali menghabiskan seharian untuk main Pandora).",
-          },
-        },
-        {
           date: "16 September 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-09-16-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-16-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-16-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-16-4.jpg"),
+          ],
           caption: {
             EN: "Jalan-jalan ke gunung.",
             ID: "Jalan-jalan ke gunung.",
@@ -257,7 +400,16 @@ export default {
         },
         {
           date: "24 September 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-5.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-6.png"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-7.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-09-24-8.jpg"),
+          ],
           caption: {
             EN: "Van Gogh & Jakarta Aquarium (Note: Jalan-jalan bersama Mami Gaby).",
             ID: "Van Gogh & Jakarta Aquarium (Note: Jalan-jalan bersama Mami Gaby).",
@@ -265,7 +417,11 @@ export default {
         },
         {
           date: "24 October 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-10-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-10-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-10-3.jpg"),
+          ],
           caption: {
             EN: "Ulang Tahun Gaby (Note: Ditemani oleh Le Petit Chef)",
             ID: "Ulang Tahun Gaby (Note: Ditemani oleh Le Petit Chef)",
@@ -273,7 +429,13 @@ export default {
         },
         {
           date: "5 November 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-11-4-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-4-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-4-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-4-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-4-5.jpg"),
+          ],
           caption: {
             EN: "Sunset Dinner (Note: Seharusnya makan di taman ditemani Alpaca, tapi hujan ☹)",
             ID: "Sunset Dinner (Note: Seharusnya makan di taman ditemani Alpaca, tapi hujan ☹)",
@@ -281,23 +443,27 @@ export default {
         },
         {
           date: "25-26 November 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-11-25-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-25-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-25-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-25-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-11-25-5.jpg"),
+          ],
           caption: {
             EN: "Ziarah Rekreasi ke Semarang",
             ID: "Ziarah Rekreasi ke Semarang",
           },
         },
         {
-          date: "3 December 2023",
-          photo: "https://picsum.photos/200/300",
-          caption: {
-            EN: "Sesi 1 Foto Pranikah",
-            ID: "Sesi 1 Foto Pranikah",
-          },
-        },
-        {
           date: "8-10 December 2023",
-          photo: "https://picsum.photos/200/300",
+          photos: [
+            require("~/assets/images/spectrum/blue/activity/2023-12-8-1.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-12-8-2.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-12-8-3.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-12-8-4.jpg"),
+            require("~/assets/images/spectrum/blue/activity/2023-12-8-5.jpg"),
+          ],
           caption: {
             EN: "Ret-ret ke Biara (Note: Arnold melamar Gaby di Gua Maria)",
             ID: "Ret-ret ke Biara (Note: Arnold melamar Gaby di Gua Maria)",

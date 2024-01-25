@@ -1,9 +1,9 @@
 
 <template>
   <div
-    class="flex flex-col h-full w-full items-center bg-violet-700 py-8 gap-6 text-white overflow-y-auto overflow-x-hidden"
+    class="flex flex-col h-full w-full items-center bg-violet-800 py-8 gap-6 text-white overflow-y-auto overflow-x-hidden"
   >
-    <div class="w-full fixed top-0 bg-violet-700 py-3 z-20">
+    <div class="w-full fixed top-0 bg-violet-800 py-3 z-20">
       <h3 class="text-center">VIOLET</h3>
     </div>
     <div
@@ -12,9 +12,10 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://www.shutterstock.com/shutterstock/videos/1102079497/thumb/6.jpg',
-            'https://favim.com/pd/p/orig/2018/09/01/boy-asian-hazy-Favim.com-6255947.jpg',
-            'https://favim.com/pd/s11/orig/8/884/8847/88477/boy-asian-couple-girl-Favim.com-8847774.jpg',
+            require('~/assets/images/spectrum/violet/DSC07816 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/DSC07794 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/DSC07821 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/DSC07786 Large.jpeg'),
           ]"
         />
       </div>
@@ -57,6 +58,18 @@
         />
         <VioletActivityWoman
           v-if="_content.componentName === 'violet-activity-gaby'"
+        />
+      </div>
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
         />
       </div>
     </div>
@@ -124,6 +137,11 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/violet/DSC07784 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/DSC07809 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/DSC07799 Large.jpeg"),
+          ],
         },
         {
           prologue: {

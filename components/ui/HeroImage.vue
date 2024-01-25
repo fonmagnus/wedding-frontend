@@ -1,6 +1,6 @@
 <template>
   <div class="hero-background" :style="backgroundStyle">
-    <div v-if="overlay" class="absolute inset-0 bg-black opacity-60"></div>
+    <div v-if="overlay" class="absolute inset-0 bg-black opacity-40"></div>
   </div>
 </template>
 
@@ -9,8 +9,7 @@ export default {
   props: {
     src: {
       type: String,
-      default:
-        "https://shanewebber.com/wp-content/uploads/2018/09/how-to-get-the-best-wedding-portraits-10001.jpg",
+      default: "/DSC08834 Large.jpeg",
     },
     overlay: {
       type: Boolean,
@@ -20,7 +19,7 @@ export default {
   computed: {
     backgroundStyle() {
       return {
-        backgroundImage: `url(${this.src})`,
+        backgroundImage: `url('${this.src}')`,
         backgroundPosition: "center center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

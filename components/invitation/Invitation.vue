@@ -1,13 +1,13 @@
 <template>
   <div
-    class="flex flex-col absolute top-0 h-screen w-full overflow-auto items-center justify-between gap-4 px-8 py-10"
+    class="flex flex-col absolute top-0 h-screen w-full overflow-auto items-center justify-between gap-4 px-4 py-10"
   >
     <div class="flex flex-col text-center">
       <span>Dear Our Beloved,</span>
       <h4 class="text-2xl italic">
         {{ invitee && invitee.name ? invitee.name : "Guest" }}
       </h4>
-      <span class="text-sm mt-4" v-html="renderedMarkdown"></span>
+      <span class="text-base mt-4" v-html="renderedMarkdown"></span>
 
       <span v-if="invitee && invitee.name" class="mt-12 text-xs"
         >My RSVP Code is :</span

@@ -3,9 +3,7 @@
     id="invitation-page"
     class="page-container w-full flex flex-col text-white relative opacity-0"
   >
-    <HeroImage
-      src="https://images.squarespace-cdn.com/content/v1/5a70d9e2017db2025000ed6b/1646362214398-QBLNFH617EX1XDR4YPTH/DSCF1654+copy+%281%29.jpg?format=1000w"
-    />
+    <HeroImage src="/DSC08617 Large.jpeg" />
     <Invitation />
   </div>
 </template>

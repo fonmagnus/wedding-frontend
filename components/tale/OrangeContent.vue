@@ -11,9 +11,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://img.freepik.com/premium-photo/young-asian-couple-wearing-orange-t-shirt-blue-background_296537-3648.jpg',
-            'https://charactermedia.com/wp-content/uploads/2019/01/Screen-Shot-2014-02-19-at-3.20.50-PM.png',
-            'https://images.pexels.com/photos/10678782/pexels-photo-10678782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            require('~/assets/images/spectrum/orange/DSC08305 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08332 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08250 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC09411 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08431 Large.jpeg'),
           ]"
         />
       </div>
@@ -46,6 +48,18 @@
       <span>{{ _content.epilogue[lang] }}</span>
       <div v-if="_content.hasCustom" class="flex flex-col">
         <OrangeActivity />
+      </div>
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
+        />
       </div>
     </div>
 
@@ -105,6 +119,14 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/orange/DSC08263 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/DSC08246 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/DSC08406 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/DSC08345 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/DSC08382 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/DSC08316 Large.jpeg"),
+          ],
         },
         {
           prologue: {

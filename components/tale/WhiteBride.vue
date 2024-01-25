@@ -3,7 +3,6 @@
     id="white-bride"
     class="flex flex-col py-4 px-4 bg-gray-200 relative items-center justify-center gap-12"
   >
-    
     <intersect
       @enter="enterHandler('white-bride-man')"
       @leave="leaveHandler"
@@ -14,7 +13,7 @@
         id="white-bride-man"
       >
         <img
-          src="https://media.istockphoto.com/id/1329787511/photo/asian-young-men-wearing-white-shirt-and-eyeglasses-at-park.jpg?s=612x612&w=0&k=20&c=9Gh5l5EoMwGskbyLJ5oyNblC29hhmr3AhGB7JNPBodI="
+          :src="require('~/assets/images/spectrum/white/DSC08555 Large.jpeg')"
           class="rounded-full w-32 h-32 object-cover"
         />
         <h3 class="text-xl font-black">Arnold Ardianto</h3>
@@ -44,7 +43,7 @@
         id="white-bride-woman"
       >
         <img
-          src="https://img.freepik.com/premium-photo/asian-woman-wearing-white-tshirt-smiling-white-background_80983-4321.jpg"
+          :src="require('~/assets/images/spectrum/white/DSC08570 Large.jpeg')"
           class="rounded-full w-32 h-32 object-cover"
         />
         <h3 class="text-xl font-black">Gabrielle Agatha</h3>

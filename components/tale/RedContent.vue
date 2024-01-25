@@ -11,9 +11,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://img.freepik.com/premium-photo/young-attractive-asian-couple-wearing-red-t-shirt-white-shorts-sitting-man-playing-ukulele-against-white-background-concept-pre-wedding-photography-isolated_102814-716.jpg?w=2000',
-            'https://media.istockphoto.com/id/1097021538/photo/happy-asian-chinese-couple-wearing-cheongsam-traditional-red-dress-and-t-shirt-and-looking-on.jpg?s=170667a&w=0&k=20&c=HXddNfdu7v0N0RKBKLmJtLBTRQd2qmFm2tw2gMqrWpU=',
-            'https://i.pinimg.com/736x/33/5b/fe/335bfe1d127c0be5b6536f1e0966748c.jpg',
+            require('~/assets/images/spectrum/red/DSC07373 Large.jpeg'),
+            require('~/assets/images/spectrum/red/DSC07353 Large.jpeg'),
+            require('~/assets/images/spectrum/red/DSC07259 Large.jpeg'),
+            require('~/assets/images/spectrum/red/DSC07266 Large.jpeg'),
+            require('~/assets/images/spectrum/red/DSC07302 Large.jpeg'),
           ]"
         />
       </div>
@@ -53,6 +55,18 @@
               : "(atau kamu juga bisa mengganti musik sewaktu-waktu dengan tombol musik di kanan bawah)"
           }}
         </h6>
+      </div>
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
+        />
       </div>
     </div>
 
@@ -112,6 +126,14 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/red/DSC07293 Large.jpeg"),
+            require("~/assets/images/spectrum/red/DSC07237 Large.jpeg"),
+            require("~/assets/images/spectrum/red/DSC07388 Large.jpeg"),
+            require("~/assets/images/spectrum/red/DSC07379 Large.jpeg"),
+            require("~/assets/images/spectrum/red/DSC07395 Large.jpeg"),
+            require("~/assets/images/spectrum/red/DSC07287 Large.jpeg"),
+          ],
         },
         {
           prologue: {
@@ -136,3 +158,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.image-portrait {
+  height: auto; /* Adjust height as necessary */
+  max-width: 100%; /* Ensures the image is not wider than its container */
+}
+</style>

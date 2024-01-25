@@ -12,9 +12,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            'https://live.staticflickr.com/4204/34421955684_b275b8ef6d_b.jpg',
-            'https://i.pinimg.com/474x/92/a2/39/92a23938a26f796151033ce41931cfc7.jpg',
-            'https://www.shutterstock.com/image-photo/side-profile-full-length-cheerful-600nw-2039564273.jpg',
+            require('~/assets/images/spectrum/pink/DSC07521 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC09014 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07554 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07502 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07554 Large.jpeg'),
           ]"
         />
       </div>
@@ -49,6 +51,19 @@
       <span>{{ _content.epilogue[lang] }}</span>
       <div v-if="_content.hasCustom" class="flex flex-col">
         <PinkActivity v-if="_content.componentName === 'pink-activity'" />
+      </div>
+
+      <div
+        v-if="_content.images && _content.images.length > 0"
+        class="grid grid-cols-12 gap-4 w-full"
+      >
+        <img
+          v-for="(image, i) in _content.images"
+          :key="i"
+          :src="image"
+          alt=""
+          class="h-48 col-span-4"
+        />
       </div>
     </div>
     <Swipe />
@@ -107,6 +122,11 @@ export default {
           },
           children: [],
           epilogue: {},
+          images: [
+            require("~/assets/images/spectrum/pink/DSC07540 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/DSC07567 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/DSC07545 Large.jpeg"),
+          ],
         },
         {
           prologue: {

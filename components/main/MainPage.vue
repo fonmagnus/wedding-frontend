@@ -1,6 +1,5 @@
 <template>
   <div id="container" class="flex flex-col gap-12 relative w-screen">
-    <!-- <FallingFlower /> -->
     <HeroImage />
     <MainCover />
   </div>
