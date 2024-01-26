@@ -77,6 +77,7 @@ export default {
       if (!val) return;
       this.$gsap.to(".content", { opacity: 1, duration: 1.5 });
       this.$gsap.to(".flower-tale-content", { opacity: 0.6, duration: 1.5 });
+      this.$emit('activateSwipePage')
     },
   },
   methods: {

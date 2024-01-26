@@ -5,6 +5,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @activateSwipePage="enableSwipePage = true"
     />
     <PreweddingVideoContent
       id="prewed-video-content"
@@ -104,6 +105,7 @@ export default {
         "white-content",
       ],
       startX: 0,
+      enableSwipePage: false,
     };
   },
   mounted() {
@@ -120,6 +122,7 @@ export default {
   },
   watch: {
     page(newVal, oldVal) {
+      if (!this.enableSwipePage) return;
       // open page to right
       if (newVal > oldVal) {
         this.$gsap.to(`#${this.pages[oldVal]}`, {
@@ -148,21 +151,25 @@ export default {
   },
   methods: {
     nextPage() {
+      if (!this.enableSwipePage) return;
       this.page++;
       if (this.page >= this.pages.length) this.page = this.pages.length - 1;
       const ele = document.getElementById(`${this.pages[this.page]}`);
       ele.scrollTo({ top: 0 });
     },
     prevPage() {
+      if (!this.enableSwipePage) return;
       this.page--;
       if (this.page < 0) this.page = 0;
       const ele = document.getElementById(`${this.pages[this.page]}`);
       ele.scrollTo({ top: 0 });
     },
     onTouchStart(e) {
+      if (!this.enableSwipePage) return;
       this.startX = e.changedTouches[0].screenX;
     },
     onTouchHold(e) {
+      if (!this.enableSwipePage) return;
       const d = e.changedTouches[0].screenX - this.startX;
       const x = d;
       const ele = document.getElementById("tale-page");
@@ -184,6 +191,7 @@ export default {
       }
     },
     onTouchEnd(e) {
+      if (!this.enableSwipePage) return;
       const d = e.changedTouches[0].screenX - this.startX;
       const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
       if (d < 0 && percentOnScreen <= 25) {
