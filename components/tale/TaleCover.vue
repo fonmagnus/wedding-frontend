@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col w-full h-full items-center overflow-hidden">
+  <div
+    class="flex flex-col w-full h-full items-center overflow-hidden min-h-screen"
+  >
     <FallingFlower class="content-out opacity-50" />
     <FallingFlower class="flower-tale-content opacity-0" />
     <h1 class="mt-12 content-out">(The Wedding of)</h1>
@@ -40,7 +42,7 @@
     }}</span> -->
     <Swipe class="absolute bottom-20 opacity-0 content" />
     <Button
-      class="content-out rounded-xl border-yellow-400 border text-yellow-500 font-black text-xl bg-black z-20"
+      class="content-out rounded-xl border-yellow-400 border text-yellow-500 font-black text-xl bg-black z-20 select-none"
       @click.stop="doStartTale"
     >
       <h6>START TALE 📖</h6>
