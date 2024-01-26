@@ -36,8 +36,7 @@ export default {
       setIsZoomingImage: "data/setIsZoomingImage",
     }),
     zoomIn() {
-      if (this.isZoomingImage) return;
-      this.setIsZoomingImage(true);
+      console.log("zoomin");
       this.$gsap.to(`#${this.name}-overlay`, {
         opacity: 0.7,
         visibility: "visible",
@@ -51,8 +50,7 @@ export default {
       });
     },
     zoomOut() {
-      if (!this.isZoomingImage) return;
-      this.setIsZoomingImage(false);
+      console.log("zoomout");
       this.$gsap.to(`#${this.name}-overlay`, {
         opacity: 0,
         visibility: "hidden",
