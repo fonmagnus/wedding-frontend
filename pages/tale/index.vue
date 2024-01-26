@@ -87,6 +87,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -114,14 +115,21 @@ export default {
     window.addEventListener("touchmove", this.onTouchHold);
     window.addEventListener("touchend", this.onTouchEnd);
     this.assignZIndex();
+    this.setIsZoomingImage(false);
   },
   destroyed() {
     window.removeEventListener("touchstart", this.onTouchStart);
     window.removeEventListener("touchmove", this.onTouchHold);
     window.removeEventListener("touchend", this.onTouchEnd);
   },
+  computed: {
+    ...mapGetters({
+      isZoomingImage: "data/getIsZoomingImage",
+    }),
+  },
   watch: {
     page(newVal, oldVal) {
+      if (this.isZoomingImage) return;
       if (!this.enableSwipePage) return;
       // open page to right
       if (newVal > oldVal) {
@@ -150,8 +158,12 @@ export default {
     },
   },
   methods: {
+    ...mapActions({
+      setIsZoomingImage: "data/setIsZoomingImage",
+    }),
     nextPage() {
       if (!this.enableSwipePage) return;
+      if (this.isZoomingImage) return;
       this.page++;
       if (this.page >= this.pages.length) this.page = this.pages.length - 1;
       const ele = document.getElementById(`${this.pages[this.page]}`);
@@ -159,6 +171,7 @@ export default {
     },
     prevPage() {
       if (!this.enableSwipePage) return;
+      if (this.isZoomingImage) return;
       this.page--;
       if (this.page < 0) this.page = 0;
       const ele = document.getElementById(`${this.pages[this.page]}`);
@@ -166,10 +179,12 @@ export default {
     },
     onTouchStart(e) {
       if (!this.enableSwipePage) return;
+      if (this.isZoomingImage) return;
       this.startX = e.changedTouches[0].screenX;
     },
     onTouchHold(e) {
       if (!this.enableSwipePage) return;
+      if (this.isZoomingImage) return;
       const d = e.changedTouches[0].screenX - this.startX;
       const x = d;
       const ele = document.getElementById("tale-page");
@@ -192,6 +207,7 @@ export default {
     },
     onTouchEnd(e) {
       if (!this.enableSwipePage) return;
+      if (this.isZoomingImage) return;
       const d = e.changedTouches[0].screenX - this.startX;
       const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
       if (d < 0 && percentOnScreen <= 25) {
