@@ -98,7 +98,7 @@
       </template>
     </div>
 
-    <div class="fixed top-2 right-2 z-20 flex gap-0.5 font-black">
+    <!-- <div class="fixed top-2 right-2 z-20 flex gap-0.5 font-black">
       <div
         class="w-12 border-2 rounded-full text-center transition-all"
         :class="[
@@ -123,7 +123,7 @@
       >
         <h6>ID</h6>
       </div>
-    </div>
+    </div> -->
 
     <nuxt-child />
   </div>
