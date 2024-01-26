@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col w-full h-full items-center">
+  <div class="flex flex-col w-full h-full items-center overflow-hidden">
+    <FallingFlower class="content-out opacity-50" />
+    <FallingFlower class="flower-tale-content opacity-0" />
+    <h1 class="mt-12 content-out">(The Wedding of)</h1>
     <img
       src="@/assets/images/tale/head.png"
       alt=""
@@ -10,7 +13,11 @@
       alt=""
       class="w-96 object-fit content opacity-0"
     />
-    <Anagram @animationEnded="letterInPlace++" />
+    <Anagram
+      class="z-20"
+      @animationEnded="letterInPlace++"
+      :is-start-animation="isStartAnimation"
+    />
     <LanguageSelection class="opacity-0 absolute content" />
     <img
       src="@/assets/images/tale/body.png"
@@ -32,6 +39,12 @@
       lang === "EN" ? "or" : "atau"
     }}</span> -->
     <Swipe class="absolute bottom-20 opacity-0 content" />
+    <Button
+      class="content-out rounded-xl border-yellow-400 border text-yellow-500 font-black text-xl bg-black z-20"
+      @click.stop="doStartTale"
+    >
+      <h6>START TALE 📖</h6>
+    </Button>
   </div>
 </template>
 
@@ -54,18 +67,29 @@ export default {
         EN: "Read Our Tale",
         ID: "Baca kisah kami",
       },
+      isStartAnimation: false,
     };
   },
   watch: {
     allLetterInPlace(val) {
       if (!val) return;
-      this.$gsap.fromTo(
-        ".content",
-        {
-          opacity: 0,
+      this.$gsap.to(".content", { opacity: 1, duration: 1.5 });
+      this.$gsap.to(".flower-tale-content", { opacity: 0.6, duration: 1.5 });
+    },
+  },
+  methods: {
+    doStartTale() {
+      this.isStartAnimation = true;
+      this.$gsap.to(".content-out", {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+          this.$gsap.to(".content-out", {
+            display: "none",
+            duration: 0,
+          });
         },
-        { opacity: 1 }
-      );
+      });
     },
   },
 };

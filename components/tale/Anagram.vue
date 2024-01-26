@@ -49,6 +49,9 @@ import { TweenLite } from "gsap";
 import sparklingImage from "@/assets/images/tale/sparkling.png";
 
 export default {
+  props: {
+    isStartAnimation: Boolean,
+  },
   data() {
     return {
       coordinates: [],
@@ -62,14 +65,19 @@ export default {
   created() {
     this.initializeCoordinates();
   },
-  mounted() {
-    setTimeout(() => {
+  mounted() {},
+  watch: {
+    isStartAnimation(val) {
+      if (!val) return;
+      this.startAnimation();
+    },
+  },
+  methods: {
+    startAnimation() {
       this.musicPlayer = this.$refs["anagram-sparkle"];
       this.musicPlayer.play();
       this.animateAnagram();
-    }, 1500);
-  },
-  methods: {
+    },
     initializeCoordinates() {
       const leftOffset = [-10, -23, -10];
       this.coordinates = [
@@ -245,18 +253,20 @@ export default {
         const x = targetX - rect.left + add;
         const y = targetY - rect.top;
 
-        const duration = Math.random() * 2.5 + 1;
-        this.$gsap.to(elem, { x, y, duration });
+        // const duration = Math.random() * 2.5 + 1;
+        const duration = 0.6;
+        const delay = i * 0.14 + 0.4;
+        this.$gsap.to(elem, { x, y, duration, delay });
         setTimeout(() => {
           this.$emit("animationEnded");
-        }, duration * 1000);
+        }, duration * 1000 + (delay + 0.2) * 1000);
 
         const repeat = Math.floor(Math.random(20) + 20);
 
         for (let j = 0; j < repeat; j++) {
           setTimeout(() => {
             this.animateStars(elem, i, j);
-          }, (j / repeat) * duration * 1000);
+          }, (j / repeat) * duration * 1000 + delay * 1000);
         }
       }
     },

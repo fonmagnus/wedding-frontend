@@ -126,6 +126,10 @@ export default {
           x: -window.innerWidth,
           duration: 1.5,
           transform: "rotateY(160deg)",
+          onComplete: () => {
+            const ele = document.getElementById(`${this.pages[newVal]}`);
+            ele.style.transform = "";
+          },
         });
       }
       // open page to left
@@ -134,6 +138,10 @@ export default {
           x: 0,
           duration: 1.5,
           transform: "rotateY(0)",
+          onComplete: () => {
+            const ele = document.getElementById(`${this.pages[newVal]}`);
+            ele.style.transform = "";
+          },
         });
       }
     },

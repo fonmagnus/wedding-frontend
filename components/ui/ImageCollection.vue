@@ -2,7 +2,7 @@
   <div class="image-collection w-full flex relative justify-center h-64">
     <div
       v-for="(image, index) in images"
-      :key="image"
+      :key="`${image}-${index}`"
       class="image-wrapper h-full w-full"
       :class="{ 'is-active': index === activeIndex }"
     >

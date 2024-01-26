@@ -62,12 +62,13 @@
         v-if="_content.images && _content.images.length > 0"
         class="grid grid-cols-12 gap-4 w-full px-4"
       >
-        <img
+        <ZoomableImage
           v-for="(image, i) in _content.images"
           :key="i"
           :src="image"
           alt=""
           class="h-48 col-span-4"
+          :name="`white-content-image-${i}`"
         />
       </div>
     </div>
