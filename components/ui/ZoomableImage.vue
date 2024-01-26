@@ -55,7 +55,7 @@ export default {
       this.setIsZoomingImage(false);
       this.$gsap.to(`#${this.name}-overlay`, {
         opacity: 0,
-        duration: 1,
+        duration: 0.2,
         onComplete: () => {
           this.$gsap.to(`#${this.name}-overlay`, {
             visibility: "hidden",

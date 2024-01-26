@@ -8,7 +8,11 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        glow: '0 0 10px rgb(229 231 235)',
+      },
+    },
   },
   plugins: [],
 }

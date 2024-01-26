@@ -97,12 +97,40 @@
         </template>
       </template>
     </div>
+
+    <div class="fixed top-2 right-2 z-20 flex gap-0.5 font-black">
+      <div
+        class="w-12 border-2 rounded-full text-center transition-all"
+        :class="[
+          {
+            'bg-black text-gray-200 border-black shadow-glow': lang === 'EN',
+            'bg-gray-200 text-black border-black': lang === 'ID',
+          },
+        ]"
+        @click.stop="setLang('EN')"
+      >
+        <h6>EN</h6>
+      </div>
+      <div
+        class="w-12 border-2 rounded-full text-center transition-all"
+        :class="[
+          {
+            'bg-black text-gray-200 border-black shadow-glow': lang === 'ID',
+            'bg-gray-200 text-black border-black': lang === 'EN',
+          },
+        ]"
+        @click.stop="setLang('ID')"
+      >
+        <h6>ID</h6>
+      </div>
+    </div>
+
     <nuxt-child />
   </div>
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 import musics from "~/assets/data/musics.json";
 
 export default {
@@ -117,6 +145,11 @@ export default {
       musicPlayer: null,
       musicSrcSet: musics,
     };
+  },
+  computed: {
+    ...mapGetters({
+      lang: "data/getLang",
+    }),
   },
   mounted() {
     // this.playAudio();
@@ -157,6 +190,7 @@ export default {
   methods: {
     ...mapActions({
       setInvitee: "data/setInvitee",
+      setLang: "data/setLang",
     }),
     selectAudio() {},
     playAudio(i, j) {

@@ -2,8 +2,8 @@
   <div
     class="flex flex-col w-full h-full items-center overflow-hidden min-h-screen"
   >
-    <FallingFlower class="content-out opacity-50" />
-    <FallingFlower class="flower-tale-content opacity-0" />
+    <!-- <FallingFlower class="content-out opacity-50" />
+    <FallingFlower class="flower-tale-content opacity-0" /> -->
     <h1 class="mt-12 content-out">(The Wedding of)</h1>
     <img
       src="@/assets/images/tale/head.png"
@@ -77,7 +77,7 @@ export default {
       if (!val) return;
       this.$gsap.to(".content", { opacity: 1, duration: 1.5 });
       this.$gsap.to(".flower-tale-content", { opacity: 0.6, duration: 1.5 });
-      this.$emit('activateSwipePage')
+      this.$emit("activateSwipePage");
     },
   },
   methods: {

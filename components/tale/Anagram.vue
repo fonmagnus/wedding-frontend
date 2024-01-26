@@ -253,15 +253,15 @@ export default {
         const x = targetX - rect.left + add;
         const y = targetY - rect.top;
 
-        // const duration = Math.random() * 2.5 + 1;
-        const duration = 0.6;
-        const delay = i * 0.14 + 0.4;
+        const duration = Math.random() * 1.5 + 0.75;
+        // const duration = 0.6;
+        const delay = Math.random() * 0.3 + 0.25;
         this.$gsap.to(elem, { x, y, duration, delay });
         setTimeout(() => {
           this.$emit("animationEnded");
         }, duration * 1000 + (delay + 0.2) * 1000);
 
-        const repeat = Math.floor(Math.random(20) + 20);
+        const repeat = Math.floor(Math.random(15) + 15);
 
         for (let j = 0; j < repeat; j++) {
           setTimeout(() => {

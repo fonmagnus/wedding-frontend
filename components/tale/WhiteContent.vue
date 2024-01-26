@@ -9,7 +9,7 @@
     <div
       class="w-full flex flex-col min-h-[96dvh] justify-center gap-8 relative"
     >
-      <FallingFlower class="z-10 opacity-70" />
+      <FallingFlower class="opacity-70" />
       <div class="w-full">
         <ImageCollection
           :images="[
@@ -41,7 +41,7 @@
       :key="j"
       class="flex flex-col gap-2 w-full"
     >
-      <FallingFlower class="z-10 opacity-70" />
+      <FallingFlower class="opacity-70" />
       <divider class="px-4" />
       <h2 class="text-center px-4">{{ contentSectionTitle[j][lang] }}</h2>
       <h3 class="text-sm text-center italic font-bold px-4">
