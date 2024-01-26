@@ -3,6 +3,7 @@ export const state = () => ({
   invitee: {},
   lang: 'EN',
   loveGiven: 0,
+  isZoomingImage: false,
 })
 
 export const mutations = {
@@ -17,6 +18,9 @@ export const mutations = {
   },
   setLoveGiven(state, loveGiven) {
     state.loveGiven = loveGiven;
+  },
+  setIsZoomingImage(state, isZoomingImage) {
+    state.isZoomingImage = isZoomingImage;
   }
 }
 
@@ -32,6 +36,9 @@ export const getters = {
   },
   getLoveGiven(state) {
     return state.loveGiven;
+  },
+  getIsZoomingImage(state) {
+    return state.isZoomingImage;
   }
 }
 
@@ -47,5 +54,8 @@ export const actions = {
   },
   setLoveGiven({ commit }, loveGiven) {
     commit('setLoveGiven', loveGiven);
+  },
+  setIsZoomingImage({ commit }, isZoomingImage) {
+    commit('setIsZoomingImage', isZoomingImage);
   }
 }

@@ -20,13 +20,24 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 export default {
   props: {
     src: String,
     name: String,
   },
+  computed: {
+    ...mapGetters({
+      isZoomingImage: "data/getIsZoomingImage",
+    }),
+  },
   methods: {
+    ...mapActions({
+      setIsZoomingImage: "data/setIsZoomingImage",
+    }),
     zoomIn() {
+      if (this.isZoomingImage) return;
+      this.setIsZoomingImage(true);
       this.$gsap.to(`#${this.name}-overlay`, {
         opacity: 0.7,
         visibility: "visible",
@@ -40,6 +51,8 @@ export default {
       });
     },
     zoomOut() {
+      if (!this.isZoomingImage) return;
+      this.setIsZoomingImage(false);
       this.$gsap.to(`#${this.name}-overlay`, {
         opacity: 0,
         visibility: "hidden",
