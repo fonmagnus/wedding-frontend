@@ -196,7 +196,13 @@ export default {
       const percentOnScreen = (Math.abs(d) / window.innerWidth) * 100;
       if (d < 0 && percentOnScreen <= 25) {
         if (this.page === this.pages.length - 1) return;
-        this.$gsap.to(`#${this.pages[this.page]}`, { x: 0 });
+        this.$gsap.to(`#${this.pages[this.page]}`, {
+          x: 0,
+          onComplete: () => {
+            const ele = document.getElementById(`${this.pages[this.page]}`);
+            ele.style.transform = "";
+          },
+        });
       }
       if (d > 0 && percentOnScreen <= 25) {
         if (this.page === 0) return;
