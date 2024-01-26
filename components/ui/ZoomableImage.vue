@@ -38,8 +38,8 @@ export default {
     zoomIn() {
       console.log("zoomin");
       this.$gsap.to(`#${this.name}-overlay`, {
-        opacity: 0.7,
         visibility: "visible",
+        opacity: 0.7,
         duration: 0.6,
       });
 
@@ -53,8 +53,12 @@ export default {
       console.log("zoomout");
       this.$gsap.to(`#${this.name}-overlay`, {
         opacity: 0,
-        visibility: "hidden",
         duration: 1,
+        onComplete: () => {
+          this.$gsap.to(`#${this.name}-overlay`, {
+            visibility: "hidden",
+          });
+        },
       });
 
       this.$gsap.to(`#${this.name}`, {
