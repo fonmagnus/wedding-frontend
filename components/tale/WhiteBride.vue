@@ -13,7 +13,7 @@
         id="white-bride-man"
       >
         <img
-          :src="require('~/assets/images/spectrum/white/DSC08555 Large.jpeg')"
+          :src="require('~/assets/images/spectrum/white/Arnold_s Bio.jpg')"
           class="rounded-full w-32 h-32 object-cover"
         />
         <h3 class="text-xl font-black">Arnold Ardianto</h3>
@@ -43,7 +43,7 @@
         id="white-bride-woman"
       >
         <img
-          :src="require('~/assets/images/spectrum/white/DSC08570 Large.jpeg')"
+          :src="require('~/assets/images/spectrum/white/Gabrielle_s Bio.jpg')"
           class="rounded-full w-32 h-32 object-cover"
         />
         <h3 class="text-xl font-black">Gabrielle Agatha</h3>
@@ -59,7 +59,7 @@
           </span>
           <span> & </span>
           <span>
-            {{ lang === "EN" ? "Mrs." : "Ibu." }} It Lian (Gouw Lian)
+            {{ lang === "EN" ? "Mrs." : "Ibu." }} It Lian (Gouw It Lian)
           </span>
         </div>
       </div>

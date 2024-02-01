@@ -9,7 +9,7 @@ export default {
   props: {
     src: {
       type: String,
-      default: "/DSC08834 Large.jpeg",
+      default: "/Home Large.jpeg",
     },
     overlay: {
       type: Boolean,

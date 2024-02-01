@@ -46,7 +46,7 @@ export default {
 
       this.$gsap.to(`#${this.name}`, {
         duration: 0.6,
-        height: "50%",
+        height: "75%",
         opacity: 1,
       });
     },

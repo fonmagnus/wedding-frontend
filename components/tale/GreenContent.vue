@@ -11,11 +11,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            require('~/assets/images/spectrum/green/DSC09429 Large.jpeg'),
-            require('~/assets/images/spectrum/green/DSC07408 Large.jpeg'),
+            require('~/assets/images/spectrum/green/DSC07423 Large.jpeg'),
             require('~/assets/images/spectrum/green/DSC07705 Large.jpeg'),
-            require('~/assets/images/spectrum/green/DSC07720 Large.jpeg'),
-            require('~/assets/images/spectrum/green/DSC07445 Large.jpeg'),
+            require('~/assets/images/spectrum/green/DSC07715 Large.jpeg'),
+            require('~/assets/images/spectrum/green/DSC09423 Large.jpeg'),
+            require('~/assets/images/spectrum/green/IMG_20240129_151016 Large.jpeg'),
           ]"
         />
       </div>
@@ -122,12 +122,15 @@ export default {
           children: [],
           epilogue: {},
           images: [
-            require("~/assets/images/spectrum/green/DSC07422 Large.jpeg"),
-            require("~/assets/images/spectrum/green/DSC07737 Large.jpeg"),
-            require("~/assets/images/spectrum/green/DSC07434 Large.jpeg"),
-            require("~/assets/images/spectrum/green/DSC07761 Large.jpeg"),
-            require("~/assets/images/spectrum/green/DSC07418 Large.jpeg"),
-            require("~/assets/images/spectrum/green/DSC07450 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07408 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07449 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07761 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07413 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07697 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07723 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07735 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07759 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07434 Large.jpeg"),
           ],
         },
         {

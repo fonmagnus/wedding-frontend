@@ -24,8 +24,14 @@
       :key="i"
     >
       <h6>{{ moment.date }}</h6>
-      <ImageCollection :images="moment.photos" />
-      <h6>{{ moment.caption[lang] }}</h6>
+      <ImageCollection :images="moment.photos" orientation="portrait" />
+      <h6>
+        {{ moment.caption[lang] }} <br />
+
+        <span v-if="moment.subcaption" class="text-xs">
+          {{ moment.subcaption[lang] }}
+        </span>
+      </h6>
     </div>
   </div>
 </template>
@@ -71,8 +77,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2021-05-20-4.jpg"),
           ],
           caption: {
-            EN: "Naik bianglala bersama (Note: baru tahu Bekasi sejauh itu).",
-            ID: "Naik bianglala bersama (Note: baru tahu Bekasi sejauh itu).",
+            EN: "Naik bianglala bersama.",
+            ID: "Naik bianglala bersama.",
+          },
+          subcaption: {
+            EN: "(baru tahu Bekasi sejauh itu)",
+            ID: "(baru tahu Bekasi sejauh itu)",
           },
         },
         {
@@ -97,8 +107,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2021-07-2.jpg"),
           ],
           caption: {
-            EN: "Gaby terserang Covid sehingga kami tidak bertemu untuk waktu yang lama (Note: kami berkomunikasi lewat telepon dan surat).",
-            ID: "Gaby terserang Covid sehingga kami tidak bertemu untuk waktu yang lama (Note: kami berkomunikasi lewat telepon dan surat).",
+            EN: "Gaby terserang Covid sehingga kami tidak bertemu untuk waktu yang lama",
+            ID: "Gaby terserang Covid sehingga kami tidak bertemu untuk waktu yang lama",
+          },
+          subcaption: {
+            EN: "(kami berkomunikasi lewat telepon dan surat).",
+            ID: "(kami berkomunikasi lewat telepon dan surat).",
           },
         },
         {
@@ -113,8 +127,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2021-10-19-7.jpg"),
           ],
           caption: {
-            EN: "Jalan-jalan keluarga pertama (Note: kami melihat panda).",
-            ID: "Jalan-jalan keluarga pertama (Note: kami melihat panda).",
+            EN: "Jalan-jalan keluarga pertama",
+            ID: "Jalan-jalan keluarga pertama",
+          },
+          subcaption: {
+            EN: "(kami melihat panda).",
+            ID: "(kami melihat panda).",
           },
         },
         {
@@ -145,8 +163,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2021-12-6.jpg"),
           ],
           caption: {
-            EN: "Pandora & Seluncur Es (Note: Gaby terpacu belajar berjalan di es karena mau mengimbangi Arnold yang bisa ice skating)",
-            ID: "Pandora & Seluncur Es (Note: Gaby terpacu belajar berjalan di es karena mau mengimbangi Arnold yang bisa ice skating)",
+            EN: "Pandora & Seluncur Es",
+            ID: "Pandora & Seluncur Es",
+          },
+          subcaption: {
+            EN: "(Gaby terpacu belajar berjalan di es karena mau mengimbangi Arnold yang bisa ice skating)",
+            ID: "(Gaby terpacu belajar berjalan di es karena mau mengimbangi Arnold yang bisa ice skating)",
           },
         },
         {
@@ -157,8 +179,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2021-12-7-3.jpg"),
           ],
           caption: {
-            EN: "Kafe Anjing (Note: Arnold & Gaby senang mengelus bulu binatang yang fluffy dan melihat kelakuan kami yang lucu).",
-            ID: "Kafe Anjing (Note: Arnold & Gaby senang mengelus bulu binatang yang fluffy dan melihat kelakuan kami yang lucu).",
+            EN: "Kafe Anjing",
+            ID: "Kafe Anjing",
+          },
+          subcaption: {
+            EN: "(Arnold & Gaby senang mengelus bulu binatang yang fluffy dan melihat kelakuan kami yang lucu).",
+            ID: "(Arnold & Gaby senang mengelus bulu binatang yang fluffy dan melihat kelakuan kami yang lucu).",
           },
         },
         {
@@ -193,8 +219,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2022-02-14-2.jpg"),
           ],
           caption: {
-            EN: "Valentine pertama (Note: Kami membuat bola-bola cokelat dan mengisi buku aktivitas khusus pasangan).",
-            ID: "Valentine pertama (Note: Kami membuat bola-bola cokelat dan mengisi buku aktivitas khusus pasangan).",
+            EN: "Valentine pertama",
+            ID: "Valentine pertama",
+          },
+          subcaption: {
+            EN: "(Kami membuat bola-bola cokelat dan mengisi buku aktivitas khusus pasangan).",
+            ID: "(Kami membuat bola-bola cokelat dan mengisi buku aktivitas khusus pasangan).",
           },
         },
         {
@@ -208,8 +238,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2022-04-6.jpg"),
           ],
           caption: {
-            EN: "Arnold berencana pindah ke Singapura karena pekerjaan (Note: tetapi akhirnya batal walau sudah sedih dan saling menangis).",
-            ID: "Arnold berencana pindah ke Singapura karena pekerjaan (Note: tetapi akhirnya batal walau sudah sedih dan saling menangis).",
+            EN: "Arnold berencana pindah ke Singapura karena pekerjaan",
+            ID: "Arnold berencana pindah ke Singapura karena pekerjaan",
+          },
+          subcaption: {
+            EN: "(tetapi akhirnya batal walau sudah sedih dan saling menangis).",
+            ID: "(tetapi akhirnya batal walau sudah sedih dan saling menangis).",
           },
         },
         {
@@ -244,8 +278,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2022-05-07.webp"),
           ],
           caption: {
-            EN: "Perayaan hari jadi pertama (Note: sejauh ini kami belum pernah merayakan hari jadi).",
-            ID: "Perayaan hari jadi pertama (Note: sejauh ini kami belum pernah merayakan hari jadi).",
+            EN: "Perayaan hari jadi pertama",
+            ID: "Perayaan hari jadi pertama",
+          },
+          subcaption: {
+            EN: "(sejauh ini kami belum pernah merayakan hari jadi).",
+            ID: "(sejauh ini kami belum pernah merayakan hari jadi).",
           },
         },
         {
@@ -256,8 +294,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2022-06-19-3.jpg"),
           ],
           caption: {
-            EN: "Kafe kucing (Note: kami suka melihat kelakuan kucing yang unik dan sombong). ",
-            ID: "Kafe kucing (Note: kami suka melihat kelakuan kucing yang unik dan sombong). ",
+            EN: "Kafe kucing",
+            ID: "Kafe kucing",
+          },
+          subcaption: {
+            EN: "(kami suka melihat kelakuan kucing yang unik dan sombong). ",
+            ID: "(kami suka melihat kelakuan kucing yang unik dan sombong). ",
           },
         },
         {
@@ -277,8 +319,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2022-07-25-12.jpg"),
           ],
           caption: {
-            EN: "Singapore (Note: kami mengobrol sampai malam di sungai depan Clarke Quay hingga melewatkan kereta terakhir dan harus berjalan kaki sampai hotel tanpa berbekal peta).",
-            ID: "Singapore (Note: kami mengobrol sampai malam di sungai depan Clarke Quay hingga melewatkan kereta terakhir dan harus berjalan kaki sampai hotel tanpa berbekal peta).",
+            EN: "Singapore",
+            ID: "Singapore",
+          },
+          subcaption: {
+            EN: "(kami mengobrol sampai malam di sungai depan Clarke Quay hingga melewatkan kereta terakhir dan harus berjalan kaki sampai hotel tanpa berbekal peta).",
+            ID: "(kami mengobrol sampai malam di sungai depan Clarke Quay hingga melewatkan kereta terakhir dan harus berjalan kaki sampai hotel tanpa berbekal peta).",
           },
         },
         {
@@ -316,8 +362,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-03-3.jpg"),
           ],
           caption: {
-            EN: "Tiba-tiba pergi ke Henshin (Note: tidak ada momen khusus).",
-            ID: "Tiba-tiba pergi ke Henshin (Note: tidak ada momen khusus).",
+            EN: "Tiba-tiba pergi ke Henshin",
+            ID: "Tiba-tiba pergi ke Henshin",
+          },
+          subcaption: {
+            EN: "(tidak ada momen khusus).",
+            ID: "(tidak ada momen khusus).",
           },
         },
         {
@@ -330,8 +380,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-04-27-5.jpg"),
           ],
           caption: {
-            EN: "Ulang tahun Arnold (Note: Sengaja ke Angus Plaza Indonesia demi bertemu Mbak Pelayan dengan ingatan fotografis ini).",
-            ID: "Ulang tahun Arnold (Note: Sengaja ke Angus Plaza Indonesia demi bertemu Mbak Pelayan dengan ingatan fotografis ini).",
+            EN: "Ulang tahun Arnold",
+            ID: "Ulang tahun Arnold",
+          },
+          subcaption: {
+            EN: "(Sengaja ke Angus Plaza Indonesia demi bertemu Mbak Pelayan dengan ingatan fotografis ini).",
+            ID: "(Sengaja ke Angus Plaza Indonesia demi bertemu Mbak Pelayan dengan ingatan fotografis ini).",
           },
         },
         {
@@ -371,8 +425,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-06-5.jpg"),
           ],
           caption: {
-            EN: "Kafe Anjing (Note: kami suka melihat binatang).",
-            ID: "Kafe Anjing (Note: kami suka melihat binatang).",
+            EN: "Kafe Anjing",
+            ID: "Kafe Anjing",
+          },
+          subcaption: {
+            EN: "(kami suka melihat binatang).",
+            ID: "(kami suka melihat binatang).",
           },
         },
         {
@@ -381,8 +439,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-06-27.jpg"),
           ],
           caption: {
-            EN: "Bu Nanik (Note: Tak sengaja bertemu dan diajak berfoto oleh Bu Nanik).",
-            ID: "Bu Nanik (Note: Tak sengaja bertemu dan diajak berfoto oleh Bu Nanik).",
+            EN: "Bu Nanik",
+            ID: "Bu Nanik",
+          },
+          subcaption: {
+            EN: "(Tak sengaja bertemu dan diajak berfoto oleh Bu Nanik).",
+            ID: "(Tak sengaja bertemu dan diajak berfoto oleh Bu Nanik).",
           },
         },
         {
@@ -411,8 +473,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-09-24-8.jpg"),
           ],
           caption: {
-            EN: "Van Gogh & Jakarta Aquarium (Note: Jalan-jalan bersama Mami Gaby).",
-            ID: "Van Gogh & Jakarta Aquarium (Note: Jalan-jalan bersama Mami Gaby).",
+            EN: "Van Gogh & Jakarta Aquarium",
+            ID: "Van Gogh & Jakarta Aquarium",
+          },
+          subcaption: {
+            EN: "(Jalan-jalan bersama Mami Gaby).",
+            ID: "(Jalan-jalan bersama Mami Gaby).",
           },
         },
         {
@@ -423,8 +489,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-10-3.jpg"),
           ],
           caption: {
-            EN: "Ulang Tahun Gaby (Note: Ditemani oleh Le Petit Chef)",
-            ID: "Ulang Tahun Gaby (Note: Ditemani oleh Le Petit Chef)",
+            EN: "Ulang Tahun Gaby",
+            ID: "Ulang Tahun Gaby",
+          },
+          subcaption: {
+            EN: "(Ditemani oleh Le Petit Chef)",
+            ID: "(Ditemani oleh Le Petit Chef)",
           },
         },
         {
@@ -437,8 +507,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-11-4-5.jpg"),
           ],
           caption: {
-            EN: "Sunset Dinner (Note: Seharusnya makan di taman ditemani Alpaca, tapi hujan ☹)",
-            ID: "Sunset Dinner (Note: Seharusnya makan di taman ditemani Alpaca, tapi hujan ☹)",
+            EN: "Sunset Dinner",
+            ID: "Sunset Dinner",
+          },
+          subcaption: {
+            EN: "(Seharusnya makan di taman ditemani Alpaca, tapi hujan ☹)",
+            ID: "(Seharusnya makan di taman ditemani Alpaca, tapi hujan ☹)",
           },
         },
         {
@@ -465,8 +539,12 @@ export default {
             require("~/assets/images/spectrum/blue/activity/2023-12-8-5.jpg"),
           ],
           caption: {
-            EN: "Ret-ret ke Biara (Note: Arnold melamar Gaby di Gua Maria)",
-            ID: "Ret-ret ke Biara (Note: Arnold melamar Gaby di Gua Maria)",
+            EN: "Ret-ret ke Biara",
+            ID: "Ret-ret ke Biara",
+          },
+          subcaption: {
+            EN: "(Arnold melamar Gaby di Gua Maria)",
+            ID: "(Arnold melamar Gaby di Gua Maria)",
           },
         },
       ],

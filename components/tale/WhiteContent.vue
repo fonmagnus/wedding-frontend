@@ -13,16 +13,16 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            require('~/assets/images/spectrum/white/DSC08487 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC08642 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC09142 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC08739 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC08673 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC08648 Large.jpeg'),
             require('~/assets/images/spectrum/white/DSC07942 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC09107 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC09161 Large.jpeg'),
-            require('~/assets/images/spectrum/white/DSC08709 Large.jpeg'),
+            require('~/assets/images/spectrum/white/PSFix_20240129_165637.jpg'),
+            require('~/assets/images/spectrum/white/DSC08005 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08516 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08707 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08002 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08739 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC09162 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08003 Large.jpeg'),
+            require('~/assets/images/spectrum/white/DSC08813 Large.jpeg'),
           ]"
         />
       </div>
@@ -166,15 +166,16 @@ export default {
           children: [],
           epilogue: {},
           images: [
-            require("~/assets/images/spectrum/white/DSC07998 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC08726 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC08619 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC08570 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC09149 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC08534 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC08626 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC09173 Large.jpeg"),
-            require("~/assets/images/spectrum/white/DSC07940 Large.jpeg"),
+            // require("~/assets/images/spectrum/white/Portrait/DSC07939 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC07940 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/PSFix_20240130_091733 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC07988 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC07986 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC07998 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC08626 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC08618 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC08730-1 Large.jpeg"),
+            require("~/assets/images/spectrum/white/Portrait/DSC08827 Large.jpeg"),
           ],
         },
         {

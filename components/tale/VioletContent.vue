@@ -12,10 +12,9 @@
       <div class="w-full">
         <ImageCollection
           :images="[
+            require('~/assets/images/spectrum/violet/DSC07804 Large.jpeg'),
             require('~/assets/images/spectrum/violet/DSC07816 Large.jpeg'),
-            require('~/assets/images/spectrum/violet/DSC07794 Large.jpeg'),
-            require('~/assets/images/spectrum/violet/DSC07821 Large.jpeg'),
-            require('~/assets/images/spectrum/violet/DSC07786 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/DSC07819 Large.jpeg'),
           ]"
         />
       </div>
@@ -139,9 +138,11 @@ export default {
           children: [],
           epilogue: {},
           images: [
-            require("~/assets/images/spectrum/violet/DSC07784 Large.jpeg"),
-            require("~/assets/images/spectrum/violet/DSC07809 Large.jpeg"),
-            require("~/assets/images/spectrum/violet/DSC07799 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07786 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07800 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07801 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07808 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07809 Large.jpeg"),
           ],
         },
         {

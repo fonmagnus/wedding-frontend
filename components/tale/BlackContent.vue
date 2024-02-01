@@ -16,11 +16,11 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            require('~/assets/images/spectrum/black/DSC08977 Large.jpeg'),
-            require('~/assets/images/spectrum/black/DSC09237 Large.jpeg'),
-            require('~/assets/images/spectrum/black/DSC08911 Large.jpeg'),
-            require('~/assets/images/spectrum/black/DSC09258 Large.jpeg'),
-            require('~/assets/images/spectrum/black/DSC09279 Large.jpeg'),
+            require('~/assets/images/spectrum/black/Atas/DSC08914 Large.jpeg'),
+            require('~/assets/images/spectrum/black/Atas/DSC09238 Large.jpeg'),
+            require('~/assets/images/spectrum/black/Atas/DSC09248 Large.jpeg'),
+            require('~/assets/images/spectrum/black/Atas/Picsart_24-01-29_06-38-34-350 Large.jpeg'),
+            require('~/assets/images/spectrum/black/Atas/Picsart_24-01-29_06-59-36-511 Large.jpeg'),
           ]"
         />
       </div>
@@ -162,10 +162,12 @@ export default {
             ID: "Sesuai dengan warna pelangi dan cahaya, kuas cinta melukis kanvas kami sebagaimana kami melukisnya. Setiap warna memiliki puisi yang menggambarkan suasana perasaan yang berhubungan dengan makna warna tersebut. Bait per bait puisi dirangkai dengan rima yang sama dalam bahasa inggris",
           },
           images: [
-            require("~/assets/images/spectrum/black/DSC09231 Large.jpeg"),
-            require("~/assets/images/spectrum/black/DSC09248 Large.jpeg"),
-            require("~/assets/images/spectrum/black/DSC09241 Large.jpeg"),
-            require("~/assets/images/spectrum/black/DSC09283 Large.jpeg"),
+            require("~/assets/images/spectrum/black/Bawah/DSC09231 Large.jpeg"),
+            require("~/assets/images/spectrum/black/Bawah/DSC09257 Large.jpeg"),
+            require("~/assets/images/spectrum/black/Bawah/DSC09279 Large.jpeg"),
+            require("~/assets/images/spectrum/black/Bawah/DSC09289 Large.jpeg"),
+            require("~/assets/images/spectrum/black/Bawah/DSC09293 Large.jpeg"),
+            require("~/assets/images/spectrum/black/Bawah/DSC09324 Large.jpeg"),
           ],
         },
 

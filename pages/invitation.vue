@@ -3,7 +3,7 @@
     id="invitation-page"
     class="page-container w-full flex flex-col text-white relative opacity-0"
   >
-    <HeroImage src="/DSC08617 Large.jpeg" />
+    <HeroImage src="/Cover Large.jpeg" />
     <Invitation />
   </div>
 </template>

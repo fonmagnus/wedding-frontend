@@ -12,11 +12,15 @@
       <div class="w-full">
         <ImageCollection
           :images="[
-            require('~/assets/images/spectrum/pink/DSC07521 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07496 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07523 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07533 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07555 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC08980 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC08992 Large.jpeg'),
             require('~/assets/images/spectrum/pink/DSC09014 Large.jpeg'),
-            require('~/assets/images/spectrum/pink/DSC07554 Large.jpeg'),
-            require('~/assets/images/spectrum/pink/DSC07502 Large.jpeg'),
-            require('~/assets/images/spectrum/pink/DSC07554 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC09022 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/IMG_20240128_213238 Large.jpeg'),
           ]"
         />
       </div>
@@ -124,9 +128,12 @@ export default {
           children: [],
           epilogue: {},
           images: [
-            require("~/assets/images/spectrum/pink/DSC07540 Large.jpeg"),
-            require("~/assets/images/spectrum/pink/DSC07567 Large.jpeg"),
-            require("~/assets/images/spectrum/pink/DSC07545 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07474 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07498 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07546 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07559 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07589 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/IMG_20240128_213333 Large.jpeg"),
           ],
         },
         {

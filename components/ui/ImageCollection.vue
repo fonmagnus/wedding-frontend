@@ -1,5 +1,13 @@
 <template>
-  <div class="image-collection w-full flex relative justify-center h-64">
+  <div
+    class="image-collection flex relative justify-center"
+    :class="[
+      {
+        'h-64 w-full': orientation === 'landscape',
+        'h-96 w-full': orientation === 'portrait',
+      },
+    ]"
+  >
     <div
       v-for="(image, index) in images"
       :key="`${image}-${index}`"
@@ -24,6 +32,10 @@ export default {
       type: Array,
       required: true,
     },
+    orientation: {
+      type: String,
+      default: "landscape",
+    },
   },
   data() {
     return {
@@ -45,7 +57,7 @@ export default {
       const currentImage = this.$el.children[currentIndex];
       const nextImage = this.$el.children[nextIndex];
 
-      gsap.to(currentImage, { opacity: 0, duration: 0.7 });
+      gsap.to(currentImage, { opacity: 0, duration: 0.5 });
       gsap.fromTo(nextImage, { opacity: 0 }, { opacity: 1, duration: 0.5 });
     },
   },

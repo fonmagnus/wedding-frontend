@@ -11,11 +11,17 @@
       <div class="w-full">
         <ImageCollection
           :images="[
+            require('~/assets/images/spectrum/orange/DSC08251 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08286 Large.jpeg'),
             require('~/assets/images/spectrum/orange/DSC08305 Large.jpeg'),
-            require('~/assets/images/spectrum/orange/DSC08332 Large.jpeg'),
-            require('~/assets/images/spectrum/orange/DSC08250 Large.jpeg'),
-            require('~/assets/images/spectrum/orange/DSC09411 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08314 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08328 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08335 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08350 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08357 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC08423 Large.jpeg'),
             require('~/assets/images/spectrum/orange/DSC08431 Large.jpeg'),
+            require('~/assets/images/spectrum/orange/DSC09411 Large.jpeg'),
           ]"
         />
       </div>
@@ -121,12 +127,15 @@ export default {
           children: [],
           epilogue: {},
           images: [
-            require("~/assets/images/spectrum/orange/DSC08263 Large.jpeg"),
-            require("~/assets/images/spectrum/orange/DSC08246 Large.jpeg"),
-            require("~/assets/images/spectrum/orange/DSC08406 Large.jpeg"),
-            require("~/assets/images/spectrum/orange/DSC08345 Large.jpeg"),
-            require("~/assets/images/spectrum/orange/DSC08382 Large.jpeg"),
-            require("~/assets/images/spectrum/orange/DSC08316 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08249 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08293 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08412 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08316 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08263 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08344 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08396 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08394 Large.jpeg"),
+            require("~/assets/images/spectrum/orange/Bawah (Portrait)/DSC08406 Large.jpeg"),
           ],
         },
         {

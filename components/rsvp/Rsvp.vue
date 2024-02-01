@@ -12,12 +12,13 @@
     <div class="w-full">
       <ImageCollection
         :images="[
-          require('~/assets/images/spectrum/white/DSC08518 Large.jpeg'),
-          require('~/assets/images/spectrum/white/DSC08774 Large.jpeg'),
-          require('~/assets/images/spectrum/white/DSC08816 Large.jpeg'),
-          require('~/assets/images/spectrum/white/DSC09186 Large.jpeg'),
-          require('~/assets/images/spectrum/white/DSC08606 Large.jpeg'),
-          require('~/assets/images/spectrum/white/DSC08001 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08477 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC07993 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08598 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08860 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08635 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC09178 Large.jpeg'),
+          require('~/assets/images/spectrum/white/DSC08777 Large.jpeg'),
         ]"
       />
     </div>
