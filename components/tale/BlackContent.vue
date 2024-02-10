@@ -31,7 +31,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="2" />
+      <SwipeDown :page="page" :on-page="2" variant="black" />
     </div>
 
     <div
@@ -56,7 +56,8 @@
         :images="_content.images"
       />
     </div>
-    <Swipe />
+
+    <Swipe @enter="$emit('endTale')" />
   </div>
 </template>
 

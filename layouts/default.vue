@@ -26,35 +26,12 @@
       >
         <i class="fa fa-close"></i>
       </div>
-      <div class="w-full px-3 py-4 flex flex-col top-0 gap-6 overflow-auto">
-        <div
-          v-for="(genre, i) in musicSrcSet"
-          :key="i"
-          class="flex flex-col gap-2"
-        >
-          <h6 class="font-black">{{ genre.genre }}</h6>
-          <div
-            v-for="(music, j) in genre.music"
-            :key="j"
-            class="flex gap-2 rounded-lg pl-2 py-2 hover:bg-slate-800 transition-all"
-            :class="[
-              {
-                'bg-slate-800':
-                  i === activeMusicGenreIndex && j === activeMusicIndex,
-              },
-            ]"
-            @click.stop="playAudio(i, j)"
-          >
-            <img :src="music.icon" alt="" class="w-12 h-12 object-cover" />
-            <div class="flex flex-col justify-center">
-              <h6 class="text-sm">
-                {{ music.title }}
-              </h6>
-              <h6 class="text-xs">{{ music.artist }}</h6>
-            </div>
-          </div>
-        </div>
-      </div>
+      <MusicPlayer
+        :active-music-genre-index="activeMusicGenreIndex"
+        :active-music-index="activeMusicIndex"
+        :music-src-set="musicSrcSet"
+        @playAudio="listenEmitAudio"
+      />
       <div class="flex justify-end gap-2 absolute bottom-4 right-4">
         <div
           @click.stop="randomAudio"
@@ -193,6 +170,9 @@ export default {
       setLang: "data/setLang",
     }),
     selectAudio() {},
+    listenEmitAudio({ i, j }) {
+      this.playAudio(i, j);
+    },
     playAudio(i, j) {
       if (i === null) {
         i = this.activeMusicGenreIndex;

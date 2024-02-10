@@ -81,7 +81,6 @@ export default {
   },
   methods: {
     enterHandler(id) {
-      console.log(id);
       const ele = document.getElementById(id);
       this.$gsap.to(ele, { opacity: 1, duration: 2 });
     },

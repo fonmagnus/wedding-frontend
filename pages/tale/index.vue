@@ -13,6 +13,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <BlackContent
       id="black-content"
@@ -20,6 +21,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <RedContent
       id="red-content"
@@ -27,6 +29,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <OrangeContent
       id="orange-content"
@@ -34,6 +37,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <YellowContent
       id="yellow-content"
@@ -41,6 +45,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <GreenContent
       id="green-content"
@@ -48,6 +53,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <BlueContent
       id="blue-content"
@@ -55,6 +61,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <VioletContent
       id="violet-content"
@@ -62,6 +69,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <PinkContent
       id="pink-content"
@@ -69,6 +77,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <WhiteContent
       id="white-content"
@@ -76,6 +85,7 @@
       class="absolute top-0"
       @prevPage="prevPage"
       @nextPage="nextPage"
+      @endTale="taleHasEnded = true"
     />
     <TaleNavigation
       class="z-30"
@@ -107,6 +117,7 @@ export default {
       ],
       startX: 0,
       enableSwipePage: false,
+      taleHasEnded: false,
     };
   },
   mounted() {
@@ -162,6 +173,7 @@ export default {
       setIsZoomingImage: "data/setIsZoomingImage",
     }),
     nextPage() {
+      this.taleHasEnded = false;
       if (!this.enableSwipePage) return;
       if (this.isZoomingImage) return;
       this.page++;
@@ -170,6 +182,7 @@ export default {
       ele.scrollTo({ top: 0 });
     },
     prevPage() {
+      this.taleHasEnded = false;
       if (!this.enableSwipePage) return;
       if (this.isZoomingImage) return;
       this.page--;
@@ -232,6 +245,12 @@ export default {
         const elem = document.getElementById(`${this.pages[i]}`);
         elem.style.zIndex = this.pages.length - i;
       }
+    },
+    navNextPage() {
+      if (this.taleHasEnded) this.nextPage();
+    },
+    navPrevPage() {
+      if (this.taleHasEnded) this.prevPage();
     },
   },
 };

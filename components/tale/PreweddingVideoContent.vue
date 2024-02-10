@@ -22,7 +22,7 @@
       </div>
       <h3 class="text-center">#ATaleGaloreInAGrandBridalOath</h3>
     </div>
-    <Swipe />
+    <Swipe @enter="$emit('endTale')"/>
   </div>
 </template>
 

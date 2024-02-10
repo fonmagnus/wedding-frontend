@@ -27,7 +27,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="3" />
+      <SwipeDown :page="page" :on-page="3" variant="blue"/>
     </div>
 
     <div
