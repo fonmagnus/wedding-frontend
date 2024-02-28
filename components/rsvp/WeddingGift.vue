@@ -8,25 +8,23 @@
     }}</span>
 
     <span class="text-lg font-bold text-center">Arnold Ardianto</span>
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
-      alt=""
-    />
+
     <span class="text-center"
       >BCA
-      <span class="text-blue-600 cursor-pointer font-bold text-lg"
+      <span
+        @click="copy('5271578581')"
+        class="text-blue-600 cursor-pointer font-bold text-lg"
         >5271578581</span
       >
       a.n. Arnold Ardianto</span
     >
     <span class="text-lg font-bold text-center">Gabrielle Agatha</span>
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
-      alt=""
-    />
+
     <span class="text-center"
       >BCA
-      <span class="text-blue-600 cursor-pointer font-bold text-lg"
+      <span
+        @click="copy('2060316221')"
+        class="text-blue-600 cursor-pointer font-bold text-lg"
         >2060316221</span
       >
       a.n. Gabrielle Agatha</span
@@ -41,6 +39,11 @@ export default {
     ...mapGetters({
       lang: "data/getLang",
     }),
+  },
+  methods: {
+    copy(text) {
+      navigator.clipboard.writeText(text);
+    },
   },
 };
 </script>
