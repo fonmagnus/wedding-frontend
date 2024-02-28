@@ -12,9 +12,16 @@
       <div class="w-full">
         <ImageCollection
           :images="[
+            require('~/assets/images/spectrum/violet/DSC00384 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/PSFix_20240217_200824 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/PSFix_20240217_195116 Large.jpeg'),
             require('~/assets/images/spectrum/violet/DSC07804 Large.jpeg'),
-            require('~/assets/images/spectrum/violet/DSC07816 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/DSC00309-1 Large.jpeg'),
             require('~/assets/images/spectrum/violet/DSC07819 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/PSFix_20240217_195210 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/PSFix_20240217_200859 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/DSC00396 Large.jpeg'),
+            require('~/assets/images/spectrum/violet/DSC07816 Large.jpeg'),
           ]"
         />
       </div>
@@ -25,7 +32,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="3" variant="violet"/>
+      <SwipeDown :page="page" :on-page="3" variant="violet" />
     </div>
 
     <div
@@ -73,7 +80,7 @@
         />
       </div>
     </div>
-    <Swipe @enter="$emit('endTale')"/>
+    <Swipe @enter="$emit('endTale')" />
   </div>
 </template>
 
@@ -138,11 +145,15 @@ export default {
           children: [],
           epilogue: {},
           images: [
-            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07786 Large.jpeg"),
-            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07800 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/PSFix_20240217_195304 Large.jpeg"),
             require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07801 Large.jpeg"),
-            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07808 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07800 Large.jpeg"),
             require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07809 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC00441 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC00473 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC00482 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/DSC07786 Large.jpeg"),
+            require("~/assets/images/spectrum/violet/Bawah (Portrait)/PSFix_20240217_131228 Large.jpeg"),
           ],
         },
         {

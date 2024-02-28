@@ -20,10 +20,21 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Saudara terkasih. Kami, Arnold & Gaby ingin mengundang saudara untuk hadir dalam pesta pernikahan kami' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      // Open Graph / Facebook
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:title', property: 'og:title', content: 'Your Website Title' },
+      { hid: 'og:description', property: 'og:description', content: 'Your website description' },
+      { hid: 'og:image', property: 'og:image', content: 'https://atalegalore.com/thumbnail.jpeg' },
+      { hid: 'og:url', property: 'og:url', content: 'https://atalegalore.com' },
+      // Twitter
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Your Website Title' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'Your website description' },
+      { hid: 'twitter:image', name: 'twitter:image', content: 'https://atalegalore.com/thumbnail.jpeg' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet' }
     ]
   },
