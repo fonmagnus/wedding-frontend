@@ -215,7 +215,8 @@ export default {
         this.activeMusicIndex =
           (this.activeMusicIndex + 1) %
           this.musicSrcSet[this.activeMusicGenreIndex].music.length;
-      this.playAudio(this.activeMusicGenreIndex, this.activeMusicIndex);
+      // this.playAudio(this.activeMusicGenreIndex, this.activeMusicIndex);
+      this.randomAudio();
     },
     getInvitee() {
       fetch(`${process.env.API_URL}/main/me/${this.$route.query.code}`)
