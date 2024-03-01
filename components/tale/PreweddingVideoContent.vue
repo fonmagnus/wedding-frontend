@@ -192,3 +192,27 @@ export default {
   },
 };
 </script>
+
+<!--
+
+black 0-40        40
+black->red 40-42   2
+red 42-76         34
+red->orange 76-79  3
+orange 79-104     25
+orange->yellow 104-107 3
+yellow 107-142    35
+yellow->green 142-145 3
+green 145-173     28
+green->blue 173-176 3
+blue 176-210      34
+blue->violet 210-213 3
+violet 213-246    33
+violet->pink 246-249 3
+pink 249-279      30
+pink->white 279-282 3
+white 282-367     85
+white->black 367-370 3
+black 370-380 10
+
+-->
