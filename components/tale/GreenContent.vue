@@ -26,7 +26,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="3" variant="green"/>
+      <SwipeDown :page="page" :on-page="3" variant="green" />
     </div>
 
     <div
@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <Swipe @enter="$emit('endTale')"/>
+    <Swipe @enter="$emit('endTale')" />
   </div>
 </template>
 
@@ -122,7 +122,7 @@ export default {
           children: [],
           epilogue: {},
           images: [
-            require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07408 Large.jpeg"),
+            require("~/assets/images/spectrum/green/Bawah (Portrait)/PSFix_20240206_091621 Large.jpeg"),
             require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07449 Large.jpeg"),
             require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07761 Large.jpeg"),
             require("~/assets/images/spectrum/green/Bawah (Portrait)/DSC07413 Large.jpeg"),

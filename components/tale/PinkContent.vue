@@ -21,6 +21,7 @@
             require('~/assets/images/spectrum/pink/DSC09014 Large.jpeg'),
             require('~/assets/images/spectrum/pink/DSC09022 Large.jpeg'),
             require('~/assets/images/spectrum/pink/IMG_20240128_213238 Large.jpeg'),
+            require('~/assets/images/spectrum/pink/DSC07478 Large.jpeg'),
           ]"
         />
       </div>
@@ -31,7 +32,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="3" variant="pink"/>
+      <SwipeDown :page="page" :on-page="3" variant="pink" />
     </div>
 
     <div
@@ -71,7 +72,7 @@
         />
       </div>
     </div>
-    <Swipe @enter="$emit('endTale')"/>
+    <Swipe @enter="$emit('endTale')" />
   </div>
 </template>
 
@@ -134,6 +135,9 @@ export default {
             require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07559 Large.jpeg"),
             require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07589 Large.jpeg"),
             require("~/assets/images/spectrum/pink/Bawah (Portrait)/IMG_20240128_213333 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07511 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/DSC07542 Large.jpeg"),
+            require("~/assets/images/spectrum/pink/Bawah (Portrait)/IMG_20240301_211943 Large.jpeg"),
           ],
         },
         {

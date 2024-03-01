@@ -17,6 +17,7 @@
             require('~/assets/images/spectrum/yellow/DSC07686 Large.jpeg'),
             require('~/assets/images/spectrum/yellow/DSC08029 Large.jpeg'),
             require('~/assets/images/spectrum/yellow/DSC09352 Large.jpeg'),
+            require('~/assets/images/spectrum/yellow/DSC07685 Large.jpeg'),
             require('~/assets/images/spectrum/yellow/PSFix_20240129_172549 Large.jpeg'),
             require('~/assets/images/spectrum/yellow/PSFix_20240130_091331 Large.jpeg'),
           ]"
@@ -29,7 +30,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="3" variant="yellow"/>
+      <SwipeDown :page="page" :on-page="3" variant="yellow" />
     </div>
 
     <div
@@ -68,7 +69,7 @@
       </div>
     </div>
 
-    <Swipe @enter="$emit('endTale')"/>
+    <Swipe @enter="$emit('endTale')" />
   </div>
 </template>
 
@@ -131,6 +132,9 @@ export default {
             require("~/assets/images/spectrum/yellow/Bawah (Portrait)/DSC08022 Large.jpeg"),
             require("~/assets/images/spectrum/yellow/Bawah (Portrait)/DSC09400 Large.jpeg"),
             require("~/assets/images/spectrum/yellow/Bawah (Portrait)/DSC09338 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/Bawah (Portrait)/DSC09396 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/Bawah (Portrait)/DSC08009 Large.jpeg"),
+            require("~/assets/images/spectrum/yellow/Bawah (Portrait)/DSC07629 Large.jpeg"),
           ],
         },
         {

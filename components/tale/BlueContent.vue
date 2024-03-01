@@ -27,7 +27,7 @@
         </h3>
       </div>
 
-      <SwipeDown :page="page" :on-page="3" variant="blue"/>
+      <SwipeDown :page="page" :on-page="3" variant="blue" />
     </div>
 
     <div
@@ -146,6 +146,9 @@ export default {
             require("~/assets/images/spectrum/blue/Bawah (Portrait)/DSC08227-1 Large.jpeg"),
             require("~/assets/images/spectrum/blue/Bawah (Portrait)/DSC08137-1 Large.jpeg"),
             require("~/assets/images/spectrum/blue/Bawah (Portrait)/DSC08160 Large.jpeg"),
+            require("~/assets/images/spectrum/blue/Bawah (Portrait)/DSC08153 Large.jpeg"),
+            require("~/assets/images/spectrum/blue/Bawah (Portrait)/DSC08040 (1) Large.jpeg"),
+            require("~/assets/images/spectrum/blue/Bawah (Portrait)/DSC08141 Large.jpeg"),
           ],
         },
         {
