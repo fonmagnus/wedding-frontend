@@ -13,7 +13,7 @@
         <iframe
           id="youtube-player"
           class="w-full h-48 object-cover"
-          src="https://www.youtube.com/embed/fq2CdnfijhQ?enablejsapi=1"
+          src="https://www.youtube.com/embed/y0fkTcRZvwU?si=SwwPmhre2CMRfcWV&enablejsapi=1"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -22,7 +22,7 @@
       </div>
       <h3 class="text-center">#ATaleGaloreInAGrandBridalOath</h3>
     </div>
-    <Swipe @enter="$emit('endTale')"/>
+    <Swipe @enter="$emit('endTale')" />
   </div>
 </template>
 
@@ -105,40 +105,88 @@ export default {
     changeBackgroundColor() {
       this.timeline
         .to(".prewedding-container", {
+          backgroundColor: "black",
+          duration: 40,
+        })
+        // * black -> red
+        .to(".prewedding-container", {
           backgroundColor: "rgb(153 27 27)",
-          duration: 50,
+          duration: 2,
+        })
+        .to(".prewedding-container", {
+          backgroundColor: "rgb(153 27 27)",
+          duration: 34,
+        })
+        // * red -> orange
+        .to(".prewedding-container", {
+          backgroundColor: "rgb(194 65 12)",
+          duration: 3,
         })
         .to(".prewedding-container", {
           backgroundColor: "rgb(194 65 12)",
           duration: 25,
         })
+        // * orange -> yellow
         .to(".prewedding-container", {
           backgroundColor: "rgb(202 138 4)",
-          duration: 25,
+          duration: 3,
+        })
+        .to(".prewedding-container", {
+          backgroundColor: "rgb(202 138 4)",
+          duration: 35,
+        })
+        // * yellow -> green
+        .to(".prewedding-container", {
+          backgroundColor: "rgb(21 128 61)",
+          duration: 3,
         })
         .to(".prewedding-container", {
           backgroundColor: "rgb(21 128 61)",
-          duration: 25,
+          duration: 28,
+        })
+        // * green -> blue
+        .to(".prewedding-container", {
+          backgroundColor: "rgb(96 165 250)",
+          duration: 3,
         })
         .to(".prewedding-container", {
-          backgroundColor: "rgb(30 64 175)",
-          duration: 25,
+          backgroundColor: "rgb(96 165 250)",
+          duration: 34,
+        })
+        // * blue -> violet
+        .to(".prewedding-container", {
+          backgroundColor: "rgb(91 33 182)",
+          duration: 3,
         })
         .to(".prewedding-container", {
           backgroundColor: "rgb(91 33 182)",
-          duration: 25,
+          duration: 33,
+        })
+        // * violet -> pink
+        .to(".prewedding-container", {
+          backgroundColor: "rgb(249 168 212)",
+          duration: 3,
         })
         .to(".prewedding-container", {
-          backgroundColor: "rgb(190 24 93)",
-          duration: 25,
+          backgroundColor: "rgb(249 168 212)",
+          duration: 28,
+        })
+        // * pink -> white
+        .to(".prewedding-container", {
+          backgroundColor: "white",
+          duration: 3,
         })
         .to(".prewedding-container", {
           backgroundColor: "white",
-          duration: 25,
+          duration: 87.5,
         })
         .to(".prewedding-container", {
           backgroundColor: "black",
-          duration: 25,
+          duration: 3,
+        })
+        .to(".prewedding-container", {
+          backgroundColor: "black",
+          duration: 9.5,
         });
     },
   },
