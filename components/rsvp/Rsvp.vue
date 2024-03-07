@@ -70,6 +70,19 @@
           </span>
           <br />
         </span>
+
+        <Button
+          class="mt-1 border-2 border-black text-white bg-black transition-all"
+          @click="addToGoogleCalendar"
+        >
+          <h6>
+            {{
+              lang === "EN"
+                ? "Save to Google Calendar"
+                : "Simpan di Google Calendar"
+            }}&nbsp;<i class="fa fa-calendar"></i>
+          </h6>
+        </Button>
       </div>
     </div>
     <WeddingGift />
@@ -141,6 +154,36 @@ export default {
           hours: 0,
         };
       }
+    },
+
+    addToGoogleCalendar() {
+      const locationLink = "https://g.co/kgs/zD7haph"; // Your location link
+      const event = {
+        title: "The Wedding of Arnold and Gaby",
+        details: `Come visit our Holy Matrimony and become the witness of our Wedding Ceremony: ${locationLink}`,
+        location:
+          "Catholic Church Of Stella Maris Pluit, Jl. Taman Pluit Permai Timur No.17, Pluit, Kec. Penjaringan, Jkt Utara, Daerah Khusus Ibukota Jakarta 14450, Indonesia",
+        start: "2024-05-04T04:00:00Z", // Converted to UTC
+        end: "2024-05-04T06:00:00Z", // Converted to UTC
+      };
+
+      const baseUrl = "https://www.google.com/calendar/render";
+      const params = new URLSearchParams({
+        action: "TEMPLATE",
+        text: event.title,
+        details: event.details,
+        location: event.location,
+        dates: `${this.formatDateTime(event.start)}/${this.formatDateTime(
+          event.end
+        )}`,
+      }).toString();
+
+      const url = `${baseUrl}?${params}`;
+      window.open(url, "_blank");
+    },
+    formatDateTime(dateTime) {
+      // Convert the datetime to the format: YYYYMMDDTHHmmssZ
+      return dateTime.replace(/-|:|\.\d{3}/g, "") + "Z";
     },
   },
   beforeDestroy() {

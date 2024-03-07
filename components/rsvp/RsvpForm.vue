@@ -30,7 +30,7 @@
       />
 
       <Button
-        class="hover:bg-black hover:text-black border-2 border-black text-white bg-black transition-all"
+        class="border-2 border-black text-white bg-black transition-all"
         @click="submitRsvp"
       >
         <h6>
