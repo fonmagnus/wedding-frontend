@@ -15,7 +15,7 @@
         <iframe
           id="youtube-player"
           class="w-full h-64 object-cover"
-          src="https://www.youtube.com/embed/G8_RKOw6rHw?si=E4bxtUwqUE6lpnGB&enablejsapi=1&rel=0"
+          src="https://www.youtube.com/embed/G8_RKOw6rHw?si=E4bxtUwqUE6lpnGB?vq=hd720p&enablejsapi=1&rel=0"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
