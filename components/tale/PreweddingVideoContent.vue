@@ -15,7 +15,7 @@
         <iframe
           id="youtube-player"
           class="w-full h-64 object-cover"
-          src="https://www.youtube.com/embed/G8_RKOw6rHw?si=E4bxtUwqUE6lpnGB&enablejsapi=1"
+          src="https://www.youtube.com/embed/G8_RKOw6rHw?si=E4bxtUwqUE6lpnGB&enablejsapi=1&rel=0"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -34,9 +34,7 @@
         <span class="text-sm text-center"><b>Stefani Leoni</b>, Genius behind the <b>soundtrack</b></span>
       </div>
     </div>
-    <Swipe :class="[{
-        'opacity-0': isPlayingVideo
-      }]" @enter="$emit('endTale')" 
+    <Swipe @enter="$emit('endTale')" 
     />
   </div>
 </template>
