@@ -8,21 +8,36 @@
     <div
       class="w-full flex flex-col min-h-[85dvh] justify-center gap-8 relative"
     >
-      <h3 class="text-center">Our Tale</h3>
+      <h3 class="text-center" :class="[{
+        'opacity-0': isPlayingVideo
+      }]">Our Tale</h3>
       <div class="w-full">
         <iframe
           id="youtube-player"
           class="w-full h-48 object-cover"
-          src="https://www.youtube.com/embed/y0fkTcRZvwU?si=SwwPmhre2CMRfcWV&enablejsapi=1"
+          src="https://www.youtube.com/embed/G8_RKOw6rHw?si=E4bxtUwqUE6lpnGB&enablejsapi=1"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
       </div>
-      <h3 class="text-center">#ATaleGaloreInAGrandBridalOath</h3>
+      <h3 class="text-center" :class="[{
+        'opacity-0': isPlayingVideo
+      }]">#ATaleGaloreInAGrandBridalOath</h3>
+      
+      <div class="flex flex-col" :class="[{
+        'opacity-0': isPlayingVideo
+      }]">
+        <span class="text-xs text-center">Credits to our beloved friends:</span>
+        <span class="text-sm text-center"><b>Reinard Sulaiman</b>, Genius behind the <b>video</b></span>
+        <span class="text-sm text-center"><b>Stefani Leoni</b>, Genius behind the <b>soundtrack</b></span>
+      </div>
     </div>
-    <Swipe @enter="$emit('endTale')" />
+    <Swipe :class="[{
+        'opacity-0': isPlayingVideo
+      }]" @enter="$emit('endTale')" 
+    />
   </div>
 </template>
 
@@ -42,6 +57,7 @@ export default {
     return {
       timeline: null,
       hasPlayed: false,
+      isPlayingVideo: false,
     };
   },
   mounted() {
@@ -79,8 +95,10 @@ export default {
         const videoDuration = this.player.getDuration();
         this.adjustTimeline(videoDuration);
         this.timeline.resume();
+        this.isPlayingVideo = true;
       } else {
         this.timeline.pause();
+        this.isPlayingVideo = false;
       }
     },
     onPlayerReady(event) {
@@ -89,6 +107,7 @@ export default {
     pauseVideo() {
       if (this.player && this.player.pauseVideo) {
         this.player.pauseVideo();
+        this.isPlayingVideo = false;
       }
     },
     adjustTimeline(videoDuration) {

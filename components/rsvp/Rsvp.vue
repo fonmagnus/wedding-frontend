@@ -176,6 +176,7 @@ export default {
         dates: `${this.formatDateTime(event.start)}/${this.formatDateTime(
           event.end
         )}`,
+        reminders: "REMINDER_MINUTES=1440"
       }).toString();
 
       const url = `${baseUrl}?${params}`;
