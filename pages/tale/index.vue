@@ -14,6 +14,8 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
       @endTale="taleHasEnded = true"
+      @play="enableNavPage = false"
+      @stop="enableNavPage = true"
     />
     <BlackContent
       id="black-content"
@@ -88,6 +90,7 @@
       @endTale="taleHasEnded = true"
     />
     <TaleNavigation
+      v-if="enableNavPage"
       class="z-30"
       :page="page"
       @prevPage="prevPage"
@@ -117,6 +120,7 @@ export default {
       ],
       startX: 0,
       enableSwipePage: false,
+      enableNavPage: true,
       taleHasEnded: false,
     };
   },

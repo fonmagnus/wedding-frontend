@@ -6,7 +6,7 @@
       <h3 class="text-center">SPECTRUMS</h3>
     </div>
     <div
-      class="w-full flex flex-col min-h-[85dvh] justify-center gap-8 relative"
+      class="w-full flex flex-col min-h-[85dvh] justify-center items-center gap-8 relative"
     >
       <h3 class="text-center" :class="[{
         'opacity-0': isPlayingVideo
@@ -14,7 +14,7 @@
       <div class="w-full">
         <iframe
           id="youtube-player"
-          class="w-full h-48 object-cover"
+          class="w-full h-64 object-cover"
           src="https://www.youtube.com/embed/G8_RKOw6rHw?si=E4bxtUwqUE6lpnGB&enablejsapi=1"
           title="YouTube video player"
           frameborder="0"
@@ -78,6 +78,10 @@ export default {
       this.changeBackgroundColor();
       this.timeline.pause();
     },
+    isPlayingVideo(val) {
+      if(val) this.$emit('play');
+      else this.$emit('stop');
+    }
   },
 
   methods: {
