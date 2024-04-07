@@ -11,17 +11,17 @@
       <h3 class="text-center" :class="[{
         'opacity-0': isPlayingVideo
       }]">Our Tale</h3>
-      <div class="w-full">
+      <div class="video-responsive">
         <iframe
           id="youtube-player"
-          class="h-[13.7rem] w-full"
-          src="https://www.youtube.com/embed/n_kbAC8uOd4?si=HJ0FNNLIscWKZJcU?vq=hd720p&enablejsapi=1&rel=0"
+          src="https://www.youtube.com/embed/n_kbAC8uOd4?enablejsapi=1&rel=0&vq=hd720"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
+
       <h3 class="text-center" :class="[{
         'opacity-0': isPlayingVideo
       }]">#ATaleGaloreInAGrandBridalOath</h3>
@@ -214,6 +214,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.video-responsive {
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    width: 100%;
+}
+
+.video-responsive iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+</style>
 
 <!--
 
