@@ -146,6 +146,9 @@ export default {
     this.$nuxt.$on("randomAudio", () => {
       this.randomAudio();
     });
+    this.$nuxt.$on("mainMusicPlay", () => {
+      this.playAudio(0, 0);
+    });
   },
   watch: {
     isOpenMusicDialog(val) {

@@ -1,5 +1,17 @@
 [
   {
+    "genre": "Original Soundtrack",
+    "music": [
+      {
+        "slug": "a-tale-galore",
+        "title": "A Tale Galore In A Grand Bridal Oath",
+        "artist": "Stefani Leoni",
+        "src": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/OST/AG_Music_Only.mp3",
+        "icon": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/OST/logo.png"
+      }
+    ]
+  },
+  {
     "genre": "Vintage",
     "music": [
       {
@@ -114,7 +126,6 @@
       }
     ]
   },
-
   {
     "genre": "Church",
     "music": [
@@ -155,7 +166,6 @@
       }
     ]
   },
-
   {
     "genre": "Magical",
     "music": [
@@ -185,25 +195,24 @@
         "title": "Inochi no Namae (Spirited Away)",
         "artist": "Hayao Miyazaki",
         "src": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Magical/The+Name+of+Life+(Spirited+Away).mp3",
-        "icon" : "https://steamuserimages-a.akamaihd.net/ugc/955230308954303575/F4608B07CE55F8529DDBBAF781EF8CD254315130/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+        "icon": "https://steamuserimages-a.akamaihd.net/ugc/955230308954303575/F4608B07CE55F8529DDBBAF781EF8CD254315130/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
       },
       {
         "slug": "once-upon-a-dream",
         "title": "Once Upon A Dream",
         "artist": "Emily Osment",
         "src": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Magical/Once+Upon+a+Dream+(Sleeping+Beauty)+-+Emily+Osment.mp3",
-        "icon" : "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Magical/Once+Upon+a+Dream.jpg"
+        "icon": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Magical/Once+Upon+a+Dream.jpg"
       },
       {
         "slug": "so-this-is-love",
         "title": "So This is Love",
         "artist": "Ilene Woods & Mike Douglas",
         "src": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Magical/So+This+Is+Love+(Cinderella)+-+Ilene+Woods+%26+Mike+Douglas.mp3",
-        "icon" : "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Magical/So+This+is+Love.jpg"
+        "icon": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Magical/So+This+is+Love.jpg"
       }
     ]
   },
-
   {
     "genre": "Melancholic",
     "music": [
@@ -251,7 +260,6 @@
       }
     ]
   },
-
   {
     "genre": "Classic",
     "music": [
@@ -285,7 +293,6 @@
       }
     ]
   },
-  
   {
     "genre": "Indie/Rock",
     "music": [
@@ -326,7 +333,6 @@
       }
     ]
   },
-  
   {
     "genre": "Game",
     "music": [
@@ -370,13 +376,10 @@
         "title": "Ragnarok - Prontera",
         "artist": "Lee Seok-Jin",
         "src": "https://atalegalore.s3.ap-southeast-1.amazonaws.com/Music/Game/Ragnarok+Prontera+-+Lee+Seok-Jin.mp3",
-        "icon" : "https://steamuserimages-a.akamaihd.net/ugc/29590816132881763/20494D3A02D88E34138FE29532B145346946D04E/"
+        "icon": "https://steamuserimages-a.akamaihd.net/ugc/29590816132881763/20494D3A02D88E34138FE29532B145346946D04E/"
       }
     ]
   },
-  
-  
-  
   {
     "genre": "Cute",
     "music": [

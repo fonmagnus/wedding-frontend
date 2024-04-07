@@ -69,7 +69,6 @@ export default {
   },
   methods: {
     openInvitation() {
-      this.$nuxt.$emit("randomAudio");
       this.$router.push(`invitation?code=${this.$route.query.code}`);
     },
   },

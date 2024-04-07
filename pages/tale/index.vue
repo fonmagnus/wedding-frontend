@@ -146,6 +146,9 @@ export default {
     page(newVal, oldVal) {
       if (this.isZoomingImage) return;
       if (!this.enableSwipePage) return;
+      if (this.pages[newVal] === 'black-content') {
+        this.$nuxt.$emit("mainMusicPlay");
+      }
       // open page to right
       if (newVal > oldVal) {
         this.$gsap.to(`#${this.pages[oldVal]}`, {
