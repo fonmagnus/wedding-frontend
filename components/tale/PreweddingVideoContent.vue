@@ -14,8 +14,8 @@
       <div class="w-full">
         <iframe
           id="youtube-player"
-          class="w-full h-64 object-cover"
-          src="https://www.youtube.com/embed/G8_RKOw6rHw?si=E4bxtUwqUE6lpnGB?vq=hd720p&enablejsapi=1&rel=0"
+          class="h-[13.7rem] w-full"
+          src="https://www.youtube.com/embed/n_kbAC8uOd4?si=HJ0FNNLIscWKZJcU?vq=hd720p&enablejsapi=1&rel=0"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -35,6 +35,7 @@
       </div>
     </div>
     <Swipe @enter="$emit('endTale')" 
+      :class="[{ 'opacity-0': isPlayingVideo }]"
     />
   </div>
 </template>
@@ -149,11 +150,11 @@ export default {
         })
         // * orange -> yellow
         .to(".prewedding-container", {
-          backgroundColor: "rgb(202 138 4)",
+          backgroundColor: "#fde047",
           duration: 3,
         })
         .to(".prewedding-container", {
-          backgroundColor: "rgb(202 138 4)",
+          backgroundColor: "#fde047",
           duration: 35,
         })
         // * yellow -> green

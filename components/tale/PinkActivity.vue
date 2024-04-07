@@ -23,33 +23,46 @@ export default {
   data() {
     return {
       isGray: false,
+      loveGiven: 0,
     };
   },
   computed: {
     bgColor() {
       return this.isGray ? "bg-gray-300" : "bg-white";
     },
-    ...mapGetters({
-      loveGiven: "data/getLoveGiven",
-    }),
   },
+  created() {
+    fetch(`${process.env.API_URL}/main/get-loves`)
+      .then((res) => res.json())
+      .then((data) => {
+        this.loveGiven = data.loves;
+      });
+  },  
   mounted() {
-    this.initializeLoveGiven();
+    // this.initializeLoveGiven();
   },
   methods: {
-    ...mapActions({
-      setLoveGiven: "data/setLoveGiven",
-    }),
-    initializeLoveGiven() {
-      this.setLoveGiven(this.loveGiven + Math.floor(Math.random() * 10));
-    },
     toggleBackground() {
       this.isGray = true;
       setTimeout(() => {
         this.isGray = false;
       }, 100); // Time in milliseconds
       this.fadeHeart();
-      this.setLoveGiven(this.loveGiven + 1);
+      // this.setLoveGiven(this.loveGiven + 1);
+      this.loveGiven += 1;
+      fetch(
+        `${process.env.API_URL}/main/send-loves/${this.$route.query.code}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          this.loveGiven = data.loves;
+        });
     },
     fadeHeart() {
       const container = document.getElementById("pink-activity");

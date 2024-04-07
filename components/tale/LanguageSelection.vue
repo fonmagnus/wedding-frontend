@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col absolute bottom-28 w-full items-center gap-2">
+  <div class="flex flex-col absolute bottom-28 w-full items-center gap-1">
     <span class="text-center">{{ contentTitle[lang] }}</span>
     <div class="flex gap-4">
       <div class="flex flex-col gap-1 items-center">
@@ -27,6 +27,7 @@
         >
       </div>
     </div>
+    <h6 class="text-center text-sm">{{ contentSubtitle[lang] }}</h6>
   </div>
 </template>
 
@@ -44,6 +45,10 @@ export default {
         EN: "Select Language",
         ID: "Pilih Bahasa",
       },
+      contentSubtitle: {
+        EN: "Turn on sound for better experience 🔉",
+        ID: "Nyalakan suara untuk pengalaman yang lebih seru 🔉"
+      }
     };
   },
   methods: {
