@@ -14,8 +14,8 @@
       @prevPage="prevPage"
       @nextPage="nextPage"
       @endTale="taleHasEnded = true"
-      @play="enableNavPage = false"
-      @stop="enableNavPage = true"
+      @play="enableNavPage = false; enableSwipePage = false"
+      @stop="enableNavPage = true; enableSwipePage = true"
     />
     <BlackContent
       id="black-content"
