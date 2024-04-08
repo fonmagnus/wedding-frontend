@@ -87,8 +87,8 @@
       </h3>
       <span class="px-4">{{
         lang === "EN"
-          ? "We would be very eager for you to attend our wedding ceremony by confirm your attendance through RSVP menu below"
-          : "Kami dengan senang menunggu kehadiranmu dalam pesta pernikahan kami dengan mengeklik tombol RSVP dibawah ini untuk mengkonfirmasi kehadiranmu"
+          ? "We would be very eager for you to attend our wedding ceremony by clicking the RSVP button below to confirm your attendance and write your best wishes for us 👇👇"
+          : "Kami dengan senang menunggu kehadiranmu dalam pesta pernikahan kami dengan mengeklik tombol RSVP dibawah ini untuk mengkonfirmasi kehadiranmu 👇👇"
       }}</span>
       <Button
         class="mt-8 w-full border border-black hover:bg-white text-white bg-black hover:text-black px-4 transition-all"
