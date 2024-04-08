@@ -128,7 +128,7 @@ export default {
       this.timeline
         .to(".prewedding-container", {
           backgroundColor: "black",
-          duration: 40,
+          duration: 44,
         })
         // * black -> red
         .to(".prewedding-container", {
@@ -137,7 +137,7 @@ export default {
         })
         .to(".prewedding-container", {
           backgroundColor: "rgb(153 27 27)",
-          duration: 34,
+          duration: 32,
         })
         // * red -> orange
         .to(".prewedding-container", {
@@ -155,7 +155,7 @@ export default {
         })
         .to(".prewedding-container", {
           backgroundColor: "#fde047",
-          duration: 35,
+          duration: 34,
         })
         // * yellow -> green
         .to(".prewedding-container", {
@@ -200,7 +200,7 @@ export default {
         })
         .to(".prewedding-container", {
           backgroundColor: "white",
-          duration: 87.5,
+          duration: 86.5,
         })
         .to(".prewedding-container", {
           backgroundColor: "black",
@@ -208,7 +208,7 @@ export default {
         })
         .to(".prewedding-container", {
           backgroundColor: "black",
-          duration: 9.5,
+          duration: 10,
         });
     },
   },
