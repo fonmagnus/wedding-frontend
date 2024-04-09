@@ -69,7 +69,7 @@
             :key="`${i},${j}`"
             @ended="switchMusic"
           >
-            <source :src="music.src" type="audio/ogg" />
+            <source :src="music.src" type="audio/mpeg" />
           </audio>
         </template>
       </template>

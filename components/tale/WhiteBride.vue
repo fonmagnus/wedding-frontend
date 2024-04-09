@@ -28,7 +28,7 @@
           </span>
           <span> & </span>
           <span>
-            {{ lang === "EN" ? "Mrs." : "Ibu." }} Clementine Ardiati
+            {{ lang === "EN" ? "Mrs." : "Ibu." }} Clementine Ardiati (Sandy)
           </span>
         </div>
       </div>

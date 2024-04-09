@@ -75,6 +75,7 @@ export default {
   computed: {
     ...mapGetters({
       lang: "data/getLang",
+      invitee: "data/getInvitee",
     }),
   },
   mounted() {
@@ -83,6 +84,8 @@ export default {
       .then((data) => {
         this.questions = data.content;
       });
+    
+    this.getMyResponses();
   },
   methods: {
     giveVote(to) {
@@ -105,6 +108,7 @@ export default {
         const otterBoyImage = document.getElementById("otter-boy-image");
         this.makeHearts(otterBoyImage, "otter-boy", 40, -20);
         this.he.push(this.questions[this.activeQuestion]);
+        console.log(this.he);
       }
       if (to == "she") {
         this.$gsap.to("#otter-girl", {
@@ -182,6 +186,19 @@ export default {
           this.$gsap.to(love, { y: -30, opacity: 0, duration: 1 });
         }, i * 1000);
       }
+    },
+
+    getMyResponses() {
+      fetch(
+        `${process.env.API_URL}/main/activity-response/orange/${this.invitee.code}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          this.formData.response = data.response;
+        })
+        .finally(() => {
+          
+        });
     },
   },
 };
