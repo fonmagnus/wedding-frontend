@@ -106,6 +106,7 @@ export default {
     return {
       page: 0,
       pages: [
+        "blue-content",
         "tale-cover",
         "prewed-video-content",
         "black-content",
@@ -113,7 +114,6 @@ export default {
         "orange-content",
         "yellow-content",
         "green-content",
-        "blue-content",
         "violet-content",
         "pink-content",
         "white-content",

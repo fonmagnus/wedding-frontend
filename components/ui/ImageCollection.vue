@@ -43,6 +43,7 @@ export default {
     };
   },
   mounted() {
+    if (this.images.length === 1) return;
     this.startSlideshow();
   },
   methods: {
