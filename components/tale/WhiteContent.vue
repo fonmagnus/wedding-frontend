@@ -32,7 +32,7 @@
           {{ poem }}
         </h3>
       </div>
-
+      
       <SwipeDown :page="page" :on-page="3" variant="white" />
     </div>
 

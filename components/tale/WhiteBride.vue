@@ -24,7 +24,7 @@
           </span>
 
           <span>
-            {{ lang === "EN" ? "Mr." : "Bp." }} Hillarius Handrij Oten
+            {{ lang === "EN" ? "Mr." : "Bp." }} Hilarius Handrij Oten
           </span>
           <span> & </span>
           <span>
