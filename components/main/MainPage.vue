@@ -19,6 +19,15 @@ export default {
       { opacity: 0 },
       { opacity: 1, duration: 1.5 }
     );
+    fetch(
+        `${process.env.API_URL}/main/open-invitation/${this.$route.query.code}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
   },
   methods: {
     playMusic() {
