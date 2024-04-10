@@ -111,6 +111,17 @@ import { mapActions, mapGetters } from "vuex";
 import musics from "~/assets/data/musics.json";
 
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'og-description', 
+          property: 'og:description',
+          content: `The Wedding of Arnold & Gaby${this.invitee ? ' - Invitation for ' + this.invitee.name : ''}`
+        }
+      ]
+    }
+  },
   data() {
     return {
       musicIsPlayed: false,
@@ -126,6 +137,7 @@ export default {
   computed: {
     ...mapGetters({
       lang: "data/getLang",
+      invitee: "data/getInvitee",
     }),
   },
   mounted() {
