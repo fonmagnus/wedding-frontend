@@ -59,7 +59,7 @@ export default {
       const nextImage = this.$el.children[nextIndex];
 
       gsap.to(currentImage, { opacity: 0, duration: 0.5 });
-      gsap.fromTo(nextImage, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+      gsap.fromTo(nextImage, { opacity: 0 }, { opacity: 1, duration: 0.4 });
     },
   },
 };
