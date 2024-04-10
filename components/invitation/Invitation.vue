@@ -22,6 +22,7 @@
     </div>
 
     <div class="flex flex-col gap-2 w-full">
+      <h6 class="text-xs text-center">Untuk melihat kisah cinta kami dan filosofi di baliknya, pilih <b class="font-black">Our Tale</b>. Untuk mengisi daftar hadir, pilih <b class="font-black">RSVP</b></h6>
       <Button
         class="w-full border border-white hover:bg-black transition-all"
         @click="$router.push(`/tale?code=${$route.query.code}`)"
