@@ -34,7 +34,7 @@
         @click="register"
         @keyup.enter="register"
       >
-        <h6>Daftar</h6>
+        <h6>Lihat</h6>
       </Button>
     </div>
   </div>
