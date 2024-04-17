@@ -45,6 +45,10 @@
     <div class="flex flex-col items-center text-center px-8">
       <span>Dear Our Invited Guest,</span>
       <h4 class="text-2xl">{{ invitee.name }}</h4>
+      <div class="flex flex-col items-center">
+        <h6 class="text-sm" v-if="showPhotoOrder && invitee.friend_group && invitee.friend_group.name">Anda akan berfoto bersama dengan grup </h6>
+        <h6 class="text-xl font-black">{{ invitee.friend_group.name }} <span class="text-sm">di urutan</span> {{ invitee.friend_group.photo_order }}</h6>
+      </div>
       <span class="text-xs mt-4">You have been invited to our wedding</span>
       <Button
         class="py-2 px-4 rounded-xl bg-black text-white mt-2 cursor-pointer hover:bg-white hover:text-black transition-all"
@@ -60,7 +64,9 @@
 import { mapGetters } from "vuex";
 export default {
   data() {
-    return {};
+    return {
+      showPhotoOrder: process.env.SHOW_PHOTO_ORDER ?? false,
+    };
   },
   computed: {
     ...mapGetters({

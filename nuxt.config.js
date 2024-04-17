@@ -43,7 +43,8 @@ export default {
   },
 
   env: {
-    API_URL: process.env.API_URL
+    API_URL: process.env.API_URL,
+    SHOW_PHOTO_ORDER: process.env.SHOW_PHOTO_ORDER,
   },
 
 
