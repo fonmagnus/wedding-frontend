@@ -48,6 +48,16 @@ export default {
       name: '',
     }
   },
+  computed: {
+    ...mapGetters({
+      invitee: "data/invitee",
+    }),
+  },
+  mounted() {
+    if (this.invitee && this.invitee.code) {
+      this.$router.replace({ path: '/', query: { code: this.invitee.code } });  
+    }
+  },
   methods: {
     ...mapActions({
       setInvitee: "data/setInvitee",
@@ -65,7 +75,6 @@ export default {
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         this.setInvitee(data);
         this.$router.replace({ path: '/', query: { code: data.code } });  
       });
