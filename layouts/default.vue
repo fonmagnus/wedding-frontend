@@ -234,6 +234,7 @@ export default {
       this.randomAudio();
     },
     getInvitee() {
+      if (this.$route.query.code === undefined) return;
       fetch(`${process.env.API_URL}/main/me/${this.$route.query.code}`)
         .then((response) => {
           if (!response.ok) {

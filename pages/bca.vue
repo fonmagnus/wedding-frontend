@@ -50,7 +50,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      invitee: "data/invitee",
+      invitee: "data/getInvitee",
     }),
   },
   mounted() {
