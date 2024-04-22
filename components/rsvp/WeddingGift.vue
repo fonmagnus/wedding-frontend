@@ -9,26 +9,33 @@
 
     <span class="text-lg font-bold text-center">Arnold Ardianto</span>
 
-    <span class="text-center"
-      >BCA
-      <span
-        @click="copy('5271578581')"
-        class="text-blue-600 cursor-pointer font-bold text-lg"
-        >5271578581</span
+    <div class="flex flex-col items-center gap-1">
+      <span class="text-center"
+        >BCA
+        <span
+          @click="copy('5271578581')"
+          class="text-blue-600 cursor-pointer font-bold text-lg"
+          >5271578581</span
+        >
+        a.n. Arnold Ardianto</span
       >
-      a.n. Arnold Ardianto</span
-    >
-    <span class="text-lg font-bold text-center">Gabrielle Agatha</span>
+      <h6 @click="copy('5271578581')" class="bg-gray-200 hover:bg-gray-300 transition-all w-1/2 text-sm text-center py-2 px-2 rounded-lg border border-black font-black">Copy &nbsp; 🗒️</h6>
+    </div>
 
-    <span class="text-center"
-      >BCA
-      <span
-        @click="copy('2060316221')"
-        class="text-blue-600 cursor-pointer font-bold text-lg"
-        >2060316221</span
+    <div class="flex flex-col items-center gap-1">
+      <span class="text-lg font-bold text-center">Gabrielle Agatha</span>
+  
+      <span class="text-center"
+        >BCA
+        <span
+          @click="copy('2060316221')"
+          class="text-blue-600 cursor-pointer font-bold text-lg"
+          >2060316221</span
+        >
+        a.n. Gabrielle Agatha</span
       >
-      a.n. Gabrielle Agatha</span
-    >
+      <h6 @click="copy('2060316221')" class="bg-gray-200 hover:bg-gray-300 transition-all w-1/2 text-sm text-center py-2 px-2 rounded-lg border border-black font-black">Copy &nbsp; 🗒️</h6>
+    </div>
   </div>
 </template>
 
