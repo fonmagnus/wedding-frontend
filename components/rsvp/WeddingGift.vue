@@ -19,7 +19,7 @@
         >
         a.n. Arnold Ardianto</span
       >
-      <h6 @click="copy('5271578581')" class="bg-gray-200 hover:bg-gray-300 transition-all w-1/2 text-sm text-center py-2 px-2 rounded-lg border border-black font-black">Copy &nbsp; 🗒️</h6>
+      <h6 @click="copy('5271578581')" class="bg-gray-200 hover:bg-gray-300 transition-all w-1/3 text-sm text-center py-2 px-2 rounded-lg border border-gray-400 font-black">Copy &nbsp; 🗒️</h6>
     </div>
 
     <div class="flex flex-col items-center gap-1">
@@ -34,7 +34,7 @@
         >
         a.n. Gabrielle Agatha</span
       >
-      <h6 @click="copy('2060316221')" class="bg-gray-200 hover:bg-gray-300 transition-all w-1/2 text-sm text-center py-2 px-2 rounded-lg border border-black font-black">Copy &nbsp; 🗒️</h6>
+      <h6 @click="copy('2060316221')" class="bg-gray-200 hover:bg-gray-300 transition-all w-1/3 text-sm text-center py-2 px-2 rounded-lg border border-gray-400 font-black">Copy &nbsp; 🗒️</h6>
     </div>
   </div>
 </template>
