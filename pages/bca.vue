@@ -36,6 +36,8 @@
       >
         <h6>Lihat</h6>
       </Button>
+
+      <h6 v-if="error && error.length" class="text-sm font-black text-red-500">{{ error }}</h6>
     </div>
   </div>
 </template>
@@ -46,6 +48,7 @@ export default {
   data() {
     return {
       name: '',
+      error: '',
     }
   },
   computed: {
@@ -63,6 +66,11 @@ export default {
       setInvitee: "data/setInvitee",
     }),
     register() {
+      this.error = '';
+      if (this.name.length === 0) {
+        this.error = 'Mohon memasukkan nama lengkap Anda';
+        return;
+      }
       fetch(`${process.env.API_URL}/main/register-invitee`, {
         method: 'POST',
         headers: {
