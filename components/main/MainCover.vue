@@ -45,7 +45,7 @@
     <div class="flex flex-col items-center text-center px-8">
       <span>Dear Our Invited Guest,</span>
       <h4 class="text-2xl">{{ invitee.name }}</h4>
-      <div v-if="showPhotoOrder && invitee.friend_group && invitee.friend_group.name" class="flex flex-col items-center">
+      <div v-if="showPhotoOrder && invitee.friend_group && invitee.friend_group.name" class="flex flex-col items-center mt-4">
         <h6 class="text-sm">Anda akan berfoto bersama dengan grup </h6>
         <h6 class="text-xl font-black">{{ invitee.friend_group.name }} <span class="text-sm">di urutan</span> {{ invitee.friend_group.photo_order }}</h6>
       </div>
